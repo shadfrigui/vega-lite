@@ -1,0 +1,101 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "padding": {"top": 30, "bottom": 10, "left": 50, "right": 50},
+  "background": "#DECFBF",
+  "vconcat": [
+    {
+      "title": {
+        "text": [
+          "RELATIVE NEGRO POPULATION OF THE STATES OF THE",
+          "UNITED STATES."
+        ],
+        "font": "monospace",
+        "fontSize": 32
+      },
+      "width": 650,
+      "height": 870,
+      "data": {
+        "url": "us-10m.json",
+        "format": {"type": "topojson", "feature": "states"}
+      },
+      "transform": [
+        {
+          "lookup": "id",
+          "from": {
+            "data": {"url": "du-bois-challenge-2022-graph-3-data.csv"},
+            "key": "id",
+            "fields": ["state", "population"]
+          }
+        },
+        {"filter": {"not": {"field": "id", "oneOf": [2, 11, 15]}}}
+      ],
+      "projection": {"type": "albersUsa"},
+      "mark": {"type": "geoshape", "stroke": "black", "strokeWidth": 0.5},
+      "encoding": {
+        "color": {
+          "field": "population",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "750,000 NEGROES AND OVER",
+              "600,000 - 750,000",
+              "500,000 - 600,000",
+              "300,000 - 500,000",
+              "200,000 - 300,000",
+              "100,000 - 200,000",
+              "50,000 - 100,000",
+              "25,000 - 50,000",
+              "10,000 - 25,000",
+              "UNDER - 10,000"
+            ],
+            "range": [
+              "#11100C",
+              "#907B67",
+              "#918571",
+              "#634832",
+              "#361859",
+              "#C4A58E",
+              "#D32544",
+              "#DDA69B",
+              "#E5A406",
+              "#D3C3AA"
+            ]
+          },
+          "legend": {
+            "orient": "none",
+            "legendX": 65,
+            "legendY": 670,
+            "columns": 2,
+            "columnPadding": 80,
+            "rowPadding": 30,
+            "symbolType": "square",
+            "symbolSize": 800,
+            "symbolStrokeWidth": 0.5,
+            "labelOffset": 10,
+            "labelFont": "courier new",
+            "labelFontSize": 15,
+            "labelLimit": 250,
+            "title": null
+          }
+        },
+        "tooltip": [
+          {"field": "state", "type": "nominal", "title": "State"},
+          {"field": "population", "type": "nominal", "title": "Population"}
+        ]
+      }
+    },
+    {
+      "mark": "text",
+      "title": {
+        "dx": -80,
+        "dy": 150,
+        "anchor": "start",
+        "text": ["#DuBoisChallenge2022", "Graphic: @shadfrigui"],
+        "font": "segoe ui",
+        "fontSize": 13,
+        "fontWeight": "lighter",
+        "lineHeight": 20
+      }
+    }
+  ]
+}

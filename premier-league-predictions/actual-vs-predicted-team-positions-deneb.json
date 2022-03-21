@@ -1,0 +1,158 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "usermeta": {
+    "deneb": {
+      "build": "1.1.0.0",
+      "metaVersion": 1,
+      "provider": "vegaLite",
+      "providerVersion": "5.2.0"
+    },
+    "interactivity": {
+      "tooltip": true,
+      "contextMenu": true,
+      "selection": false,
+      "dataPointLimit": 50
+    },
+    "information": {
+      "name": "Actual vs Predicted Team Positions",
+      "description": "A multilayer visual that shows actual vs predicted team positions. This graph can be used during the season to visualize current vs predicted end-of-season positions. It can be also used at the end of the season to visualize how the actual/final positions compare to prediction.",
+      "author": "Shad Frigui",
+      "uuid": "672f2ba4-2010-41e8-9da2-08376071f094",
+      "generated": "2022-03-21T19:08:33.362Z"
+    },
+    "dataset": [
+      {
+        "key": "__0__",
+        "name": "Team",
+        "description": "Team name",
+        "type": "text",
+        "kind": "column"
+      },
+      {
+        "key": "__1__",
+        "name": "Actual",
+        "description": "Actual or current position",
+        "type": "numeric",
+        "kind": "measure"
+      },
+      {
+        "key": "__2__",
+        "name": "Prediction",
+        "description": "Predicted end-of-season position",
+        "type": "numeric",
+        "kind": "measure"
+      }
+    ]
+  },
+  "config": {},
+  "autosize": {"type": "fit"},
+  "view": {"stroke": "transparent"},
+  "data": {"name": "dataset"},
+  "encoding": {
+    "x": {
+      "field": "__0__",
+      "type": "nominal",
+      "sort": {"field": "__1__"},
+      "axis": {
+        "orient": "top",
+        "grid": true,
+        "gridOpacity": 1,
+        "domain": false,
+        "ticks": false,
+        "labelPadding": 110,
+        "labelFont": "segoe ui",
+        "labelFontSize": 13,
+        "title": null
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "width": 15
+      },
+      "encoding": {
+        "y": {
+          "field": "__1__",
+          "type": "quantitative",
+          "sort": "descending",
+          "axis": null
+        },
+        "y2": {"field": "__2__"},
+        "color": {
+          "condition": {
+            "test": "datum['__1__'] < datum['__2__']",
+            "value": "#F34146"
+          },
+          "value": "#81C14F"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 500,
+        "color": {
+          "expr": "datum['__1__'] < datum['__2__'] ? '#F34146' : '#81C14F'"
+        },
+        "opacity": 1
+      },
+      "encoding": {
+        "y": {
+          "field": "__2__",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 600,
+        "color": "#3D195B",
+        "opacity": 1
+      },
+      "encoding": {
+        "y": {
+          "field": "__1__",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dy": {
+          "expr": "datum['__1__'] < datum['__2__'] ? 1 : 0"
+        },
+        "font": "segoe ui",
+        "fontSize": 12,
+        "color": {
+          "expr": "datum['__1__'] < datum['__2__'] ? 'white' : 'black'"
+        }
+      },
+      "encoding": {
+        "y": {
+          "field": "__2__",
+          "type": "quantitative"
+        },
+        "text": {"field": "__2__"}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "font": "segoe ui",
+        "fontSize": 13,
+        "color": "white"
+      },
+      "encoding": {
+        "y": {
+          "field": "__1__",
+          "type": "quantitative"
+        },
+        "text": {"field": "__1__"}
+      }
+    }
+  ]
+}

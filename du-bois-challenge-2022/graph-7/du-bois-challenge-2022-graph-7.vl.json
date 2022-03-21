@@ -1,0 +1,275 @@
+﻿{
+  "padding": {"top": 40, "left": 20, "right": 20},
+  "background": "#DBD1C2",
+  "data": {"url": "du-bois-challenge-2022-graph-7-data.csv"},
+  "vconcat": [
+    {
+      "mark": "text",
+      "title": {
+        "dx": 375,
+        "text": "Conjugal condition of American Negroes according to age periods.",
+        "font": "corgar",
+        "fontSize": 22,
+        "fontWeight": "lighter",
+        "subtitlePadding": 25,
+        "subtitle": [
+          "Condition conjugale des Nègres Américans au point de vue de l'âge.",
+          "Done by Atlanta University."
+        ],
+        "subtitleFont": "corgar",
+        "subtitleFontSize": 15,
+        "subtitleFontWeight": "lighter",
+        "subtitleLineHeight": 35
+      }
+    },
+    {
+      "concat": [
+        {
+          "width": 375,
+          "height": 750,
+          "layer": [
+            {
+              "transform": [{"filter": {"field": "Gender", "equal": "Male"}}],
+              "title": {
+                "offset": -9,
+                "text": "MALES.",
+                "font": "agency fb",
+                "fontSize": 19
+              },
+              "mark": {"type": "bar"},
+              "encoding": {
+                "x": {
+                  "field": "Percentage",
+                  "type": "quantitative",
+                  "sort": "descending",
+                  "axis": {
+                    "gridColor": "black",
+                    "gridOpacity": {
+                      "expr": "(datum.value % 10) == 0 ? 0.3 : 0.1"
+                    },
+                    "ticks": false,
+                    "tickCount": 50,
+                    "labelPadding": 2,
+                    "labelOffset": {"expr": "datum.value == 100 ? -6 : 0"},
+                    "labelExpr": "(datum.value % 10) == 0 ? datum.value : ''",
+                    "labelFont": "agency fb",
+                    "labelFontSize": 13,
+                    "labelFontWeight": "bolder",
+                    "labelColor": {"expr": "datum.value == 0 ? '' : 'black'"},
+                    "title": null,
+                    "zindex": 1
+                  }
+                },
+                "y": {
+                  "field": "Age Group",
+                  "type": "nominal",
+                  "sort": "descending",
+                  "scale": {"paddingInner": 0},
+                  "axis": {
+                    "grid": true,
+                    "tickBand": "extent",
+                    "gridColor": "black",
+                    "gridOpacity": 0.3,
+                    "ticks": false,
+                    "labelPadding": 10,
+                    "labelOffset": -20,
+                    "labelFont": "agency fb",
+                    "labelFontSize": 16,
+                    "labelFontWeight": "bolder",
+                    "title": "AGES.",
+                    "titleAngle": 0,
+                    "titleX": -30,
+                    "titleY": 14,
+                    "titleFont": "agency fb",
+                    "titleFontSize": 15,
+                    "titleFontWeight": "bolder",
+                    "zindex": 1
+                  }
+                },
+                "color": {
+                  "field": "MSID",
+                  "type": "ordinal",
+                  "scale": {
+                    "domain": [1, 2, 3],
+                    "range": ["#004DA6", "#C80B37", "#1F8256"]
+                  },
+                  "legend": null
+                }
+              }
+            },
+            {
+              "data": {"values": [{}]},
+              "mark": {
+                "type": "text",
+                "angle": 310,
+                "text": "SINGLE",
+                "font": "agency fb",
+                "fontSize": 25,
+                "fontWeight": "bolder"
+              },
+              "encoding": {"x": {"value": 240}, "y": {"value": 637}}
+            },
+            {
+              "data": {"values": [{}]},
+              "mark": {
+                "type": "text",
+                "angle": 310,
+                "text": "MARRIED",
+                "font": "agency fb",
+                "fontSize": 25,
+                "fontWeight": "bolder"
+              },
+              "encoding": {"x": {"value": 165}, "y": {"value": 345}}
+            },
+            {
+              "data": {"values": [{}]},
+              "mark": {
+                "type": "text",
+                "angle": 290,
+                "text": "WIDOWED",
+                "font": "agency fb",
+                "fontSize": 20,
+                "fontWeight": "bolder"
+              },
+              "encoding": {"x": {"value": 25}, "y": {"value": 85}}
+            }
+          ]
+        },
+        {
+          "width": 375,
+          "height": 750,
+          "layer": [
+            {
+              "transform": [{"filter": {"field": "Gender", "equal": "Female"}}],
+              "title": {
+                "offset": -9,
+                "text": "FEMALES.",
+                "font": "agency fb",
+                "fontSize": 19
+              },
+              "mark": {"type": "bar"},
+              "encoding": {
+                "x": {
+                  "field": "Percentage",
+                  "type": "quantitative",
+                  "axis": {
+                    "gridColor": "black",
+                    "gridOpacity": {
+                      "expr": "(datum.value % 10) == 0 ? 0.3 : 0.1"
+                    },
+                    "ticks": false,
+                    "tickCount": 50,
+                    "labelPadding": 2,
+                    "labelOffset": {"expr": "datum.value == 100 ? 7 : 0"},
+                    "labelExpr": "(datum.value % 10) == 0 ? datum.value : ''",
+                    "labelFont": "agency fb",
+                    "labelFontSize": 13,
+                    "labelFontWeight": "bolder",
+                    "labelColor": {"expr": "datum.value == 0 ? '' : 'black'"},
+                    "title": null,
+                    "zindex": 1
+                  }
+                },
+                "y": {
+                  "field": "Age Group",
+                  "type": "ordinal",
+                  "sort": "descending",
+                  "scale": {"paddingInner": 0},
+                  "axis": {
+                    "orient": "right",
+                    "grid": true,
+                    "tickBand": "extent",
+                    "gridColor": "black",
+                    "gridOpacity": 0.3,
+                    "ticks": false,
+                    "labelPadding": 10,
+                    "labelOffset": -20,
+                    "labelFont": "agency fb",
+                    "labelFontSize": 16,
+                    "labelFontWeight": "bolder",
+                    "title": "AGES.",
+                    "titleAngle": 0,
+                    "titleX": 30,
+                    "titleY": 14,
+                    "titleFont": "agency fb",
+                    "titleFontSize": 15,
+                    "titleFontWeight": "bolder",
+                    "zindex": 1
+                  }
+                },
+                "color": {
+                  "field": "MSID",
+                  "type": "nominal",
+                  "scale": {
+                    "domain": [1, 2, 3],
+                    "range": ["#004DA6", "#C80B37", "#1F8256"]
+                  },
+                  "legend": null
+                }
+              }
+            },
+            {
+              "data": {"values": [{}]},
+              "mark": {
+                "type": "text",
+                "angle": 50,
+                "text": "SINGLE",
+                "font": "agency fb",
+                "fontSize": 25,
+                "fontWeight": "bolder"
+              },
+              "encoding": {"x": {"value": 130}, "y": {"value": 635}}
+            },
+            {
+              "data": {"values": [{}]},
+              "mark": {
+                "type": "text",
+                "angle": 50,
+                "text": "MARRIED",
+                "font": "agency fb",
+                "fontSize": 25,
+                "fontWeight": "bolder"
+              },
+              "encoding": {"x": {"value": 200}, "y": {"value": 340}}
+            },
+            {
+              "data": {"values": [{}]},
+              "mark": {
+                "type": "text",
+                "angle": 70,
+                "text": "WIDOWED",
+                "font": "agency fb",
+                "fontSize": 20,
+                "fontWeight": "bolder"
+              },
+              "encoding": {"x": {"value": 345}, "y": {"value": 150}}
+            }
+          ]
+        }
+      ],
+      "spacing": -1
+    },
+    {
+      "mark": "text",
+      "title": {
+        "dx": 370,
+        "text": "PER CENTS.",
+        "font": "agency fb",
+        "fontSize": 16
+      }
+    },
+    {
+      "height": 5,
+      "mark": "text",
+      "title": {
+        "dx": -50,
+        "anchor": "start",
+        "text": ["#DuBoisChallenge2022", "Graphic: @shadfrigui"],
+        "font": "segoe ui",
+        "fontSize": 13,
+        "fontWeight": "lighter",
+        "lineHeight": 20
+      }
+    }
+  ]
+}

@@ -1,0 +1,392 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "padding": {"top": 30, "bottom": 10, "left": 50, "right": 50},
+  "background": "#DECFBF",
+  "vconcat": [
+    {
+      "title": {
+        "text": [
+          "RELATIVE NEGRO POPULATION OF THE STATES OF THE",
+          "UNITED STATES."
+        ],
+        "font": "monospace",
+        "fontSize": 32
+      },
+      "width": 650,
+      "height": 870,
+      "data": {
+        "url": "data/us-10m.json",
+        "format": {"type": "topojson", "feature": "states"}
+      },
+      "transform": [
+        {
+          "lookup": "id",
+          "from": {
+            "data": {
+              "values": [
+                {
+                  "id": 1,
+                  "state": "Alabama",
+                  "state abbreviation": "AL",
+                  "population": "600,000 - 750,000"
+                },
+                {
+                  "id": 12,
+                  "state": "Florida",
+                  "state abbreviation": "FL",
+                  "population": "100,000 - 200,000"
+                },
+                {
+                  "id": 5,
+                  "state": "Arkansas",
+                  "state abbreviation": "AR",
+                  "population": "300,000 - 500,000"
+                },
+                {
+                  "id": 6,
+                  "state": "California",
+                  "state abbreviation": "CA",
+                  "population": "10,000 - 25,000"
+                },
+                {
+                  "id": 9,
+                  "state": "Connecticut",
+                  "state abbreviation": "CT",
+                  "population": "10,000 - 25,000"
+                },
+                {
+                  "id": 19,
+                  "state": "Iowa",
+                  "state abbreviation": "IA",
+                  "population": "10,000 - 25,000"
+                },
+                {
+                  "id": 4,
+                  "state": "Arizona",
+                  "state abbreviation": "AZ",
+                  "population": "UNDER - 10,000"
+                },
+                {
+                  "id": 8,
+                  "state": "Colorado",
+                  "state abbreviation": "CO",
+                  "population": "UNDER - 10,000"
+                },
+                {
+                  "id": 16,
+                  "state": "Idaho",
+                  "state abbreviation": "ID",
+                  "population": "UNDER - 10,000"
+                },
+                {
+                  "id": 10,
+                  "state": "Delaware",
+                  "state abbreviation": "DE",
+                  "population": "25,000 - 50,000"
+                },
+                {
+                  "id": 13,
+                  "state": "Georgia",
+                  "state abbreviation": "GA",
+                  "population": "750,000 NEGROES AND OVER"
+                },
+                {
+                  "id": 17,
+                  "state": "Illinois",
+                  "state abbreviation": "IL",
+                  "population": "50,000 - 100,000"
+                },
+                {
+                  "id": 18,
+                  "state": "Indiana",
+                  "state abbreviation": "IN",
+                  "population": "25,000 - 50,000"
+                },
+                {
+                  "id": 20,
+                  "state": "Kansas",
+                  "state abbreviation": "KS",
+                  "population": "25,000 - 50,000"
+                },
+                {
+                  "id": 21,
+                  "state": "Kentucky",
+                  "state abbreviation": "KY",
+                  "population": "200,000 - 300,000"
+                },
+                {
+                  "id": 22,
+                  "state": "Louisiana",
+                  "state abbreviation": "LA",
+                  "population": "500,000 - 600,000"
+                },
+                {
+                  "id": 25,
+                  "state": "Massachusetts",
+                  "state abbreviation": "MA",
+                  "population": "10,000 - 25,000"
+                },
+                {
+                  "id": 24,
+                  "state": "Maryland",
+                  "state abbreviation": "MD",
+                  "population": "200,000 - 300,000"
+                },
+                {
+                  "id": 23,
+                  "state": "Maine",
+                  "state abbreviation": "ME",
+                  "population": "UNDER - 10,000"
+                },
+                {
+                  "id": 26,
+                  "state": "Michigan",
+                  "state abbreviation": "MI",
+                  "population": "10,000 - 25,000"
+                },
+                {
+                  "id": 27,
+                  "state": "Minnesota",
+                  "state abbreviation": "MN",
+                  "population": "UNDER - 10,000"
+                },
+                {
+                  "id": 29,
+                  "state": "Missouri",
+                  "state abbreviation": "MO",
+                  "population": "100,000 - 200,000"
+                },
+                {
+                  "id": 28,
+                  "state": "Mississippi",
+                  "state abbreviation": "MS",
+                  "population": "600,000 - 750,000"
+                },
+                {
+                  "id": 30,
+                  "state": "Montana",
+                  "state abbreviation": "MT",
+                  "population": "UNDER - 10,000"
+                },
+                {
+                  "id": 37,
+                  "state": "North Carolina",
+                  "state abbreviation": "NC",
+                  "population": "500,000 - 600,000"
+                },
+                {
+                  "id": 38,
+                  "state": "North Dakota",
+                  "state abbreviation": "ND",
+                  "population": "UNDER - 10,000"
+                },
+                {
+                  "id": 31,
+                  "state": "Nebraska",
+                  "state abbreviation": "NE",
+                  "population": "UNDER - 10,000"
+                },
+                {
+                  "id": 33,
+                  "state": "New Hampshire",
+                  "state abbreviation": "NH",
+                  "population": "UNDER - 10,000"
+                },
+                {
+                  "id": 32,
+                  "state": "Nevada",
+                  "state abbreviation": "NV",
+                  "population": "UNDER - 10,000"
+                },
+                {
+                  "id": 34,
+                  "state": "New Jersey",
+                  "state abbreviation": "NJ",
+                  "population": "25,000 - 50,000"
+                },
+                {
+                  "id": 35,
+                  "state": "New Mexico",
+                  "state abbreviation": "NM",
+                  "population": "UNDER - 10,000"
+                },
+                {
+                  "id": 36,
+                  "state": "New York",
+                  "state abbreviation": "NY",
+                  "population": "50,000 - 100,000"
+                },
+                {
+                  "id": 39,
+                  "state": "Ohio",
+                  "state abbreviation": "OH",
+                  "population": "50,000 - 100,000"
+                },
+                {
+                  "id": 40,
+                  "state": "Oklahoma",
+                  "state abbreviation": "OK",
+                  "population": "UNDER - 10,000"
+                },
+                {
+                  "id": 41,
+                  "state": "Oregon",
+                  "state abbreviation": "OR",
+                  "population": "UNDER - 10,000"
+                },
+                {
+                  "id": 42,
+                  "state": "Pennsylvania",
+                  "state abbreviation": "PA",
+                  "population": "100,000 - 200,000"
+                },
+                {
+                  "id": 44,
+                  "state": "Rhode Island",
+                  "state abbreviation": "RI",
+                  "population": "UNDER - 10,000"
+                },
+                {
+                  "id": 45,
+                  "state": "South Carolina",
+                  "state abbreviation": "SC",
+                  "population": "600,000 - 750,000"
+                },
+                {
+                  "id": 46,
+                  "state": "South Dakota",
+                  "state abbreviation": "SD",
+                  "population": "UNDER - 10,000"
+                },
+                {
+                  "id": 47,
+                  "state": "Tennessee",
+                  "state abbreviation": "TN",
+                  "population": "300,000 - 500,000"
+                },
+                {
+                  "id": 48,
+                  "state": "Texas",
+                  "state abbreviation": "TX",
+                  "population": "300,000 - 500,000"
+                },
+                {
+                  "id": 49,
+                  "state": "Utah",
+                  "state abbreviation": "UT",
+                  "population": "UNDER - 10,000"
+                },
+                {
+                  "id": 51,
+                  "state": "Virginia",
+                  "state abbreviation": "VA",
+                  "population": "600,000 - 750,000"
+                },
+                {
+                  "id": 50,
+                  "state": "Vermont",
+                  "state abbreviation": "VT",
+                  "population": "UNDER - 10,000"
+                },
+                {
+                  "id": 53,
+                  "state": "Washington",
+                  "state abbreviation": "WA",
+                  "population": "UNDER - 10,000"
+                },
+                {
+                  "id": 54,
+                  "state": "West Virginia",
+                  "state abbreviation": "WV",
+                  "population": "25,000 - 50,000"
+                },
+                {
+                  "id": 55,
+                  "state": "Wisconsin",
+                  "state abbreviation": "WI",
+                  "population": "UNDER - 10,000"
+                },
+                {
+                  "id": 56,
+                  "state": "Wyoming",
+                  "state abbreviation": "WY",
+                  "population": "UNDER - 10,000"
+                }
+              ]
+            },
+            "key": "id",
+            "fields": ["state", "population"]
+          }
+        },
+        {"filter": {"not": {"field": "id", "oneOf": [2, 11, 15]}}}
+      ],
+      "projection": {"type": "albersUsa"},
+      "mark": {"type": "geoshape", "stroke": "black", "strokeWidth": 0.5},
+      "encoding": {
+        "color": {
+          "field": "population",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "750,000 NEGROES AND OVER",
+              "600,000 - 750,000",
+              "500,000 - 600,000",
+              "300,000 - 500,000",
+              "200,000 - 300,000",
+              "100,000 - 200,000",
+              "50,000 - 100,000",
+              "25,000 - 50,000",
+              "10,000 - 25,000",
+              "UNDER - 10,000"
+            ],
+            "range": [
+              "#11100C",
+              "#907B67",
+              "#918571",
+              "#634832",
+              "#361859",
+              "#C4A58E",
+              "#D32544",
+              "#DDA69B",
+              "#E5A406",
+              "#D3C3AA"
+            ]
+          },
+          "legend": {
+            "orient": "none",
+            "legendX": 65,
+            "legendY": 670,
+            "columns": 2,
+            "columnPadding": 80,
+            "rowPadding": 30,
+            "symbolType": "square",
+            "symbolSize": 800,
+            "symbolStrokeWidth": 0.5,
+            "labelOffset": 10,
+            "labelFont": "courier new",
+            "labelFontSize": 15,
+            "labelLimit": 250,
+            "title": null
+          }
+        },
+        "tooltip": [
+          {"field": "state", "type": "nominal", "title": "State"},
+          {"field": "population", "type": "nominal", "title": "Population"}
+        ]
+      }
+    },
+    {
+      "mark": "text",
+      "title": {
+        "dx": -80,
+        "dy": 150,
+        "anchor": "start",
+        "text": ["#DuBoisChallenge2022", "Graphic: @shadfrigui"],
+        "font": "segoe ui",
+        "fontSize": 13,
+        "fontWeight": "lighter",
+        "lineHeight": 20
+      }
+    }
+  ]
+}

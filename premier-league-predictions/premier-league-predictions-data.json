@@ -1,0 +1,102 @@
+[
+ {
+   "Team": "Man City",
+   "Current": 1,
+   "Prediction": 1
+ },
+ {
+   "Team": "Liverpool",
+   "Current": 2,
+   "Prediction": 2
+ },
+ {
+   "Team": "Chelsea",
+   "Current": 3,
+   "Prediction": 3
+ },
+ {
+   "Team": "Arsenal",
+   "Current": 4,
+   "Prediction": 7
+ },
+ {
+   "Team": "Man United",
+   "Current": 5,
+   "Prediction": 4
+ },
+ {
+   "Team": "West Ham",
+   "Current": 6,
+   "Prediction": 9
+ },
+ {
+   "Team": "Tottenham",
+   "Current": 7,
+   "Prediction": 6
+ },
+ {
+   "Team": "Wolves",
+   "Current": 8,
+   "Prediction": 12
+ },
+ {
+   "Team": "Southampton",
+   "Current": 9,
+   "Prediction": 13
+ },
+ {
+   "Team": "Crystal Palace",
+   "Current": 10,
+   "Prediction": 15
+ },
+ {
+   "Team": "Aston Villa",
+   "Current": 11,
+   "Prediction": 8
+ },
+ {
+   "Team": "Leicester",
+   "Current": 12,
+   "Prediction": 5
+ },
+ {
+   "Team": "Brighton",
+   "Current": 13,
+   "Prediction": 16
+ },
+ {
+   "Team": "Newcastle",
+   "Current": 14,
+   "Prediction": 14
+ },
+ {
+   "Team": "Brentford",
+   "Current": 15,
+   "Prediction": 19
+ },
+ {
+   "Team": "Leeds",
+   "Current": 16,
+   "Prediction": 11
+ },
+ {
+   "Team": "Everton",
+   "Current": 17,
+   "Prediction": 10
+ },
+ {
+   "Team": "Burnley",
+   "Current": 18,
+   "Prediction": 18
+ },
+ {
+   "Team": "Watford",
+   "Current": 19,
+   "Prediction": 20
+ },
+ {
+   "Team": "Norwich",
+   "Current": 20,
+   "Prediction": 17
+ }
+]

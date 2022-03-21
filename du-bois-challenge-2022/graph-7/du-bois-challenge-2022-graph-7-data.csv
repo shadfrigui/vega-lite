@@ -1,0 +1,55 @@
+Gender,Age Group,Marital Status,Percentage,MSID
+Male,0-15,Single,100,1
+Male,15-20,Single,99.5,1
+Male,0-15,Married,0,2
+Male,0-15,Widowed,0,3
+Male,15-20,Married,0.5,2
+Male,15-20,Widowed,0,3
+Male,20-25,Single,68,1
+Male,20-25,Married,31.5,2
+Male,20-25,Widowed,0.5,3
+Male,25-30,Single,30,1
+Male,25-30,Married,69,2
+Male,25-30,Widowed,1,3
+Male,30-35,Single,20,1
+Male,30-35,Married,78,2
+Male,30-35,Widowed,2,3
+Male,35-45,Single,8,1
+Male,35-45,Married,86,2
+Male,35-45,Widowed,6,3
+Male,45-55,Single,6,1
+Male,45-55,Married,86,2
+Male,45-55,Widowed,8,3
+Male,55-65,Single,4,1
+Male,55-65,Married,85,2
+Male,55-65,Widowed,11,3
+Male,Over 65,Single,4,1
+Male,Over 65,Married,76,2
+Male,Over 65,Widowed,20,3
+Female,0-15,Single,100,1
+Female,0-15,Married,0,2
+Female,0-15,Widowed,0,3
+Female,15-20,Single,84,1
+Female,15-20,Married,16,2
+Female,15-20,Widowed,0,3
+Female,20-25,Single,38,1
+Female,20-25,Married,58,2
+Female,20-25,Widowed,4,3
+Female,25-30,Single,18,1
+Female,25-30,Married,74,2
+Female,25-30,Widowed,8,3
+Female,30-35,Single,12,1
+Female,30-35,Married,78,2
+Female,30-35,Widowed,10,3
+Female,35-45,Single,8,1
+Female,35-45,Married,76,2
+Female,35-45,Widowed,16,3
+Female,45-55,Single,6,1
+Female,45-55,Married,66,2
+Female,45-55,Widowed,28,3
+Female,55-65,Single,4,1
+Female,55-65,Married,52,2
+Female,55-65,Widowed,44,3
+Female,Over 65,Single,4,1
+Female,Over 65,Married,30,2
+Female,Over 65,Widowed,66,3
