@@ -20,7 +20,7 @@ My first Vega-Lite exploration was recreating a W.E.B Du Bois [graphic](https://
 <br />
 <br />
 <p align="center">
-  <img src="https://github.com/shadfrigui/vega-lite/blob/6ff10f5bde2ff8183e77205f3b3543439b2a926b/du-bois-challenge-2022/resized-graphs/graph-3-original-resized.jpg" />   <img src="https://github.com/shadfrigui/vega-lite/blob/6ff10f5bde2ff8183e77205f3b3543439b2a926b/du-bois-challenge-2022/resized-graphs/graph-3-recreated-resized.png" />
+  <img src="https://github.com/shadfrigui/vega-lite/blob/b7cb5cd2d4ccffe43612b2485d80965b7d231f31/du-bois-challenge-2022/resized-graphs/graph-3-original-resized.jpg" />   <img src="https://github.com/shadfrigui/vega-lite/blob/b7cb5cd2d4ccffe43612b2485d80965b7d231f31/du-bois-challenge-2022/resized-graphs/graph-3-recreated-resized.png" />
 </p>
 <br />
 <br />
@@ -30,20 +30,20 @@ My first Vega-Lite exploration was recreating a W.E.B Du Bois [graphic](https://
 I wanted to experiment more with Vega-Lite's geoshape mark and decided to do a choropleth map with a dark background. Choropleth maps are great for showing the big picture and helping readers recognize patterns in the data. You can easily see that the highest concentration of Black Americans (alone) population is in the South. I added tooltips to help readers access exact values for each county. I used VS Code.
 <br />
 <br />
-![](https://github.com/shadfrigui/vega-lite/blob/6ff10f5bde2ff8183e77205f3b3543439b2a926b/2020-us-black-population/2020-us-black-population.png)
+![](https://github.com/shadfrigui/vega-lite/blob/b7cb5cd2d4ccffe43612b2485d80965b7d231f31/2020-us-black-population/2020-us-black-population.png)
 <br />
 ##### Note
-In 2015, Shannon County, South Dakota (FIPS 46113) was renamed Oglala Lakota County (FIPS 46102). The [2020-us-black-population-data](https://github.com/shadfrigui/vega-lite/blob/6ff10f5bde2ff8183e77205f3b3543439b2a926b/2020-us-black-population/2020-us-black-population-data.csv) has this change reflected whereas the TOPOJSON file, [us-10m.json](https://github.com/shadfrigui/vega-lite/blob/6ff10f5bde2ff8183e77205f3b3543439b2a926b/2020-us-black-population/us-10m.json), has not. I replaced the FIPS code 46102 with the old one, 46113, in the population data.
+In 2015, Shannon County, South Dakota (FIPS 46113) was renamed Oglala Lakota County (FIPS 46102). The [2020-us-black-population-data](https://github.com/shadfrigui/vega-lite/blob/b7cb5cd2d4ccffe43612b2485d80965b7d231f31/2020-us-black-population/2020-us-black-population-data.csv) has this change reflected whereas the TOPOJSON file, [us-10m.json](https://github.com/shadfrigui/vega-lite/blob/b7cb5cd2d4ccffe43612b2485d80965b7d231f31/2020-us-black-population/us-10m.json), has not. I replaced the FIPS code 46102 with the old one, 46113, in the population data.
 <br />
 <br />
 <br />
 
 ## Premier League 2021-22 Current vs Predicted End-of-Seasons-Positions
-I used Deneb + Power BI. Here's the graphic that you get if you paste the [code](https://github.com/shadfrigui/vega-lite/blob/6ff10f5bde2ff8183e77205f3b3543439b2a926b/premier-league-predictions/premier-league-predictions-online-editor.json) in the [online editor](https://vega.github.io/editor/#/custom/vega-lite):
+I used Deneb + Power BI. Here's the graphic that you get if you paste the [code](https://github.com/shadfrigui/vega-lite/blob/b7cb5cd2d4ccffe43612b2485d80965b7d231f31/premier-league-predictions/premier-league-predictions-online-editor.json) in the [online editor](https://vega.github.io/editor/#/custom/vega-lite):
 <br />
 <br />
 <p align="center">
-  <img src="https://github.com/shadfrigui/vega-lite/blob/6ff10f5bde2ff8183e77205f3b3543439b2a926b/premier-league-predictions/premier-league-predictions-online-editor.png" />
+  <img src="https://github.com/shadfrigui/vega-lite/blob/b7cb5cd2d4ccffe43612b2485d80965b7d231f31/premier-league-predictions/premier-league-predictions-online-editor.png" />
 </p>
 <br />
 <br />
@@ -53,7 +53,7 @@ I increased the ```labelPadding``` property for the ```x``` axis to make room fo
 <br />
 <br />
 
-![](https://github.com/shadfrigui/vega-lite/blob/6ff10f5bde2ff8183e77205f3b3543439b2a926b/premier-league-predictions/premier-league-predictions-power-bi.png)
+![](https://github.com/shadfrigui/vega-lite/blob/b7cb5cd2d4ccffe43612b2485d80965b7d231f31/premier-league-predictions/premier-league-predictions-power-bi.png)
 <br />
 <br />
 <br />
@@ -63,7 +63,7 @@ Since I started exploring Vega-Lite, I quickly realized that recreating visuals 
 <br />
 <br />
 <p align="center">
-  <img src="https://github.com/shadfrigui/vega-lite/blob/6ff10f5bde2ff8183e77205f3b3543439b2a926b/du-bois-challenge-2022/resized-graphs/graph-7-original-resized.jpg" />   <img src="https://github.com/shadfrigui/vega-lite/blob/6ff10f5bde2ff8183e77205f3b3543439b2a926b/du-bois-challenge-2022/resized-graphs/graph-7-recreated-resized.png" />
+  <img src="https://github.com/shadfrigui/vega-lite/blob/b7cb5cd2d4ccffe43612b2485d80965b7d231f31/du-bois-challenge-2022/resized-graphs/graph-7-original-resized.jpg" />   <img src="https://github.com/shadfrigui/vega-lite/blob/b7cb5cd2d4ccffe43612b2485d80965b7d231f31/du-bois-challenge-2022/resized-graphs/graph-7-recreated-resized.png" />
 </p>
 <br />
 <br />
