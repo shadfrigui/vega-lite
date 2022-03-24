@@ -1,0 +1,289 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "usermeta": {
+    "deneb": {
+      "build": "1.1.0.0",
+      "metaVersion": 1,
+      "provider": "vegaLite",
+      "providerVersion": "5.2.0"
+    },
+    "interactivity": {
+      "tooltip": true,
+      "contextMenu": true,
+      "selection": true,
+      "dataPointLimit": 50
+    },
+    "information": {
+      "name": "Monthly Variance Analysis",
+      "description": "A multi-view layered visual showing monthly actuals and forecasts along with the variance. Add a single select slicer to show the correct results for each year. Auto-size is not supported for composed views, e.g., vconcat, so change the width and height properties if you want to resize the visual.",
+      "author": "Shad Frigui",
+      "uuid": "4e51c540-bc39-429a-b64b-8f5b550f2f2c",
+      "generated": "2022-03-24T12:53:10.029Z"
+    },
+    "dataset": [
+      {
+        "key": "__0__",
+        "name": "Month",
+        "description": "Month short name",
+        "type": "text",
+        "kind": "column"
+      },
+      {
+        "key": "__1__",
+        "name": "Month Number",
+        "description": "Month number",
+        "type": "numeric",
+        "kind": "measure"
+      },
+      {
+        "key": "__2__",
+        "name": "Forecast",
+        "description": "Monthly forecast measure/value",
+        "type": "numeric",
+        "kind": "measure"
+      },
+      {
+        "key": "__3__",
+        "name": "Actual",
+        "description": "Monthly actual measure/value",
+        "type": "numeric",
+        "kind": "measure"
+      },
+      {
+        "key": "__4__",
+        "name": "Variance Percentage",
+        "description": "Monthly variance percentage measure/value",
+        "type": "numeric",
+        "kind": "measure"
+      }
+    ]
+  },
+  "config": {
+    "background": "#FEEEE0",
+    "view": {"stroke": "transparent"},
+    "font": "Segoe UI",
+    "axis": {
+      "labelFontSize": 11,
+      "title": null
+    },
+    "axisX": {
+      "domainColor": "#D2CAC1",
+      "grid": false,
+      "tickColor": "#D2CAC1",
+      "labelAngle": 0,
+      "labelPadding": 5,
+      "labelColor": "#605E5C"
+    },
+    "axisTop": {"offset": 25},
+    "axisBottom": {
+      "tickBand": "extent",
+      "tickSize": 10
+    },
+    "axisY": {
+      "orient": "right",
+      "domain": false,
+      "ticks": false,
+      "tickCount": 5,
+      "labelPadding": 10
+    },
+    "legend": {
+      "orient": "none",
+      "direction": "horizontal",
+      "legendX": 190,
+      "legendY": 200,
+      "symbolType": "square",
+      "symbolSize": 120,
+      "symbolStrokeColor": "transparent",
+      "labelFontSize": 11,
+      "labelColor": "#433828"
+    },
+    "bar": {"tooltip": true},
+    "rect": {
+      "width": 35,
+      "height": 17,
+      "cornerRadius": 4,
+      "stroke": "#605E5C",
+      "strokeWidth": 0.3,
+      "color": ""
+    },
+    "text": {
+      "color": "#433828",
+      "fontSize": 11
+    },
+    "concat": {"spacing": 40}
+  },
+  "data": {"name": "dataset"},
+  "transform": [
+    {
+      "calculate": "replace(format(datum['__3__'], '.2s'), 'G', 'B')",
+      "as": "ActualTooltip"
+    },
+    {
+      "calculate": "replace(format(datum['__2__'], '.2s'), 'G', 'B')",
+      "as": "ForecastTooltip"
+    }
+  ],
+  "vconcat": [
+    {
+      "width": 600,
+      "height": 200,
+      "encoding": {
+        "x": {
+          "field": "__0__",
+          "type": "nominal",
+          "sort": {
+            "field": "__1__",
+            "op": "sum"
+          },
+          "axis": {"orient": "top"}
+        },
+        "y": {
+          "field": "__4__",
+          "type": "quantitative",
+          "axis": {
+            "format": ".1%",
+            "gridColor": {
+              "expr": "datum.value == 0 ? '#D2CAC1' : ''"
+            },
+            "labelColor": ""
+          }
+        },
+        "opacity": {
+          "condition": {
+            "test": {
+              "field": "__selected__",
+              "equal": "off"
+            },
+            "value": 0.3
+          },
+          "value": 1
+        }
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "bar",
+            "width": 15,
+            "color": {
+              "expr": "datum['__4__'] > 0 ? '#2B86C3' : '#DB6A8B'"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "rect",
+            "yOffset": {
+              "expr": "datum['__4__'] > 0 ? -15 : 15"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "yOffset": {
+              "expr": "datum['__4__'] > 0 ? -14 : 16"
+            }
+          },
+          "encoding": {
+            "text": {
+              "field": "__4__",
+              "format": ".1%"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "width": 600,
+      "height": 250,
+      "encoding": {
+        "x": {
+          "field": "__0__",
+          "type": "nominal",
+          "sort": {"field": "__1__"}
+        },
+        "y": {
+          "axis": {
+            "format": ".2s",
+            "labelExpr": "replace(datum.label, 'G', 'B')",
+            "gridColor": "#D2CAC1",
+            "gridOpacity": 0.5,
+            "labelColor": {
+              "expr": "datum.value == 0 ? '' : '#605E5C'"
+            }
+          }
+        },
+        "color": {
+          "datum": "__2__",
+          "scale": {
+            "domain": [
+              "__2__",
+              "__3__",
+              "Pos Variance",
+              "Neg Variance"
+            ],
+            "range": [
+              "#D2CAC1",
+              "#1E4E88",
+              "#2B86C3",
+              "#DB6A8B"
+            ]
+          }
+        },
+        "opacity": {
+          "condition": {
+            "test": {
+              "field": "__selected__",
+              "equal": "off"
+            },
+            "value": 0.3
+          },
+          "value": 1
+        }
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "bar",
+            "width": 30
+          },
+          "encoding": {
+            "y": {
+              "field": "__2__",
+              "type": "quantitative"
+            },
+            "tooltip": [
+              {"field": "__0__"},
+              {
+                "field": "ForecastTooltip",
+                "title": "__2__"
+              }
+            ]
+          }
+        },
+        {
+          "mark": {
+            "type": "bar",
+            "width": 15,
+            "stroke": "white",
+            "strokeOpacity": 0.7
+          },
+          "encoding": {
+            "y": {
+              "field": "__3__",
+              "type": "quantitative"
+            },
+            "color": {"datum": "__3__"},
+            "tooltip": [
+              {"field": "__0__"},
+              {
+                "field": "ActualTooltip",
+                "title": "__3__"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
