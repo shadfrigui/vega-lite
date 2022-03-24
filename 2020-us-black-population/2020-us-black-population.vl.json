@@ -1,11 +1,18 @@
 {
-  "padding": {"top": 20, "left": 20, "right": 80},
-  "background": "black",
   "vconcat": [
     {
       "width": 900,
       "height": 600,
-      "projection": {"type": "albersUsa"},
+      "title": {
+        "text": ["BLACK AMERICAN", "POPULATION", "in the U.S."],
+        "font": "Georgia",
+        "fontSize": 40,
+        "subtitle": [
+          "In 2020, the Black or African American alone population (41.1 million)",
+          "accounted for 12.4% of all people living in the United States,",
+          "compared with 38.9 million and 12.6% in 2010."
+        ]
+      },
       "layer": [
         {
           "params": [
@@ -29,45 +36,14 @@
             }
           ],
           "mark": "geoshape",
-          "title": {
-            "anchor": "start",
-            "align": "left",
-            "text": ["BLACK AMERICAN", "POPULATION", "in the U.S."],
-            "font": "georgia",
-            "fontSize": 40,
-            "color": "white",
-            "subtitlePadding": 30,
-            "subtitle": [
-              "In 2020, the Black or African American alone population (41.1 million)",
-              "accounted for 12.4% of all people living in the United States,",
-              "compared with 38.9 million and 12.6% in 2010."
-            ],
-            "subtitleFont": "calibri",
-            "subtitleFontSize": 15,
-            "subtitleFontWeight": "lighter",
-            "subtitleColor": "white"
-          },
           "encoding": {
             "color": {
               "field": "percent of total population",
               "type": "quantitative",
               "scale": {"scheme": "darkred"},
               "legend": {
-                "orient": "none",
-                "legendX": 610,
-                "legendY": 570,
-                "direction": "horizontal",
-                "gradientLength": 300,
-                "title": "Percentage of Black Population by County",
-                "titleFont": "segoe ui",
-                "titleFontSize": 11,
-                "titleFontWeight": "lighter",
-                "titleColor": "white",
-                "titleLimit": 300,
-                "labelFont": "segoe ui",
-                "labelFontSize": 10,
-                "labelColor": "white",
-                "format": "%"
+                "format": "%",
+                "title": "Percentage of Black Population by County"
               },
               "condition": {
                 "param": "highlight",
@@ -103,15 +79,42 @@
     },
     {
       "height": 5,
-      "mark": "text",
       "title": {
-        "anchor": "start",
         "text": ["Source: US Census Bureau, June 2020", "Graphic: @shadfrigui"],
-        "font": "segoe ui",
+        "font": "Segoe UI",
         "fontSize": 10,
-        "fontWeight": "lighter",
-        "color": "white"
-      }
+        "fontWeight": "lighter"
+      },
+      "mark": "text"
     }
-  ]
+  ],
+  "config": {
+    "padding": {"top": 20, "left": 20, "right": 80},
+    "background": "black",
+    "legend": {
+      "orient": "none",
+      "direction": "horizontal",
+      "legendX": 610,
+      "legendY": 570,
+      "gradientLength": 300,
+      "labelFont": "Segoe UI",
+      "labelFontSize": 10,
+      "labelColor": "white",
+      "titleFont": "Segoe UI",
+      "titleFontSize": 11,
+      "titleFontWeight": "lighter",
+      "titleColor": "white",
+      "titleLimit": 300
+    },
+    "projection": {"type": "albersUsa"},
+    "title": {
+      "anchor": "start",
+      "color": "white",
+      "subtitlePadding": 30,
+      "subtitleFont": "Calibri",
+      "subtitleFontSize": 15,
+      "subtitleFontWeight": "lighter",
+      "subtitleColor": "white"
+    }
+  }
 }
