@@ -1,0 +1,250 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "values": [
+      {
+        "Month": "Jan",
+        "Month Number": 1,
+        "Forecast": 24186363.25,
+        "Actual": 17585804.48,
+        "Variance Percentage": -0.2729
+      },
+      {
+        "Month": "Feb",
+        "Month Number": 2,
+        "Forecast": 20057628.26,
+        "Actual": 19689491.4,
+        "Variance Percentage": -0.0184
+      },
+      {
+        "Month": "Mar",
+        "Month Number": 3,
+        "Forecast": 21112789.8,
+        "Actual": 21661658.3,
+        "Variance Percentage": 0.026
+      },
+      {
+        "Month": "Apr",
+        "Month Number": 4,
+        "Forecast": 20575096.67,
+        "Actual": 19909348.62,
+        "Variance Percentage": -0.0324
+      },
+      {
+        "Month": "May",
+        "Month Number": 5,
+        "Forecast": 19456777.96,
+        "Actual": 21933572.21,
+        "Variance Percentage": 0.1273
+      },
+      {
+        "Month": "Jun",
+        "Month Number": 6,
+        "Forecast": 20948487.1,
+        "Actual": 22036939.64,
+        "Variance Percentage": 0.052
+      },
+      {
+        "Month": "Jul",
+        "Month Number": 7,
+        "Forecast": 20786367.22,
+        "Actual": 21801968.18,
+        "Variance Percentage": 0.0489
+      },
+      {
+        "Month": "Aug",
+        "Month Number": 8,
+        "Forecast": 19087703.74,
+        "Actual": 20584287.01,
+        "Variance Percentage": 0.0784
+      },
+      {
+        "Month": "Sep",
+        "Month Number": 9,
+        "Forecast": 19290026.91,
+        "Actual": 21465987.69,
+        "Variance Percentage": 0.1128
+      },
+      {
+        "Month": "Oct",
+        "Month Number": 10,
+        "Forecast": 19442982.88,
+        "Actual": 20869430.38,
+        "Variance Percentage": 0.0734
+      },
+      {
+        "Month": "Nov",
+        "Month Number": 11,
+        "Forecast": 18958733.29,
+        "Actual": 21814749.66,
+        "Variance Percentage": 0.1506
+      },
+      {
+        "Month": "Dec",
+        "Month Number": 12,
+        "Forecast": 19382449.46,
+        "Actual": 28172459.08,
+        "Variance Percentage": 0.4535
+      }
+    ]
+  },
+  "transform": [
+    {
+      "calculate": "replace(format(datum['Actual'], '.2s'), 'G', 'B')",
+      "as": "ActualTooltip"
+    },
+    {
+      "calculate": "replace(format(datum['Forecast'], '.2s'), 'G', 'B')",
+      "as": "ForecastTooltip"
+    }
+  ],
+  "vconcat": [
+    {
+      "width": 600,
+      "height": 200,
+      "encoding": {
+        "x": {
+          "field": "Month",
+          "type": "nominal",
+          "sort": {"field": "Month Number", "op": "sum"},
+          "axis": {"orient": "top"}
+        },
+        "y": {
+          "field": "Variance Percentage",
+          "type": "quantitative",
+          "axis": {
+            "format": ".1%",
+            "gridColor": {"expr": "datum.value == 0 ? '#D2CAC1' : ''"},
+            "labelColor": ""
+          }
+        }
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "bar",
+            "width": 15,
+            "color": {
+              "expr": "datum['Variance Percentage'] > 0 ? '#2B86C3' : '#DB6A8B'"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "rect",
+            "yOffset": {"expr": "datum['Variance Percentage'] > 0 ? -15 : 15"}
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "yOffset": {"expr": "datum['Variance Percentage'] > 0 ? -14 : 16"}
+          },
+          "encoding": {
+            "text": {"field": "Variance Percentage", "format": ".1%"}
+          }
+        }
+      ]
+    },
+    {
+      "width": 600,
+      "height": 250,
+      "encoding": {
+        "x": {
+          "field": "Month",
+          "type": "nominal",
+          "sort": {"field": "Month Number"}
+        },
+        "y": {
+          "axis": {
+            "format": ".2s",
+            "labelExpr": "replace(datum.label, 'G', 'B')",
+            "gridColor": "#D2CAC1",
+            "gridOpacity": 0.5,
+            "labelColor": {"expr": "datum.value == 0 ? '' : '#605E5C'"}
+          }
+        },
+        "color": {
+          "datum": "Forecast",
+          "scale": {
+            "domain": ["Forecast", "Actual", "Pos Variance", "Neg Variance"],
+            "range": ["#D2CAC1", "#1E4E88", "#2B86C3", "#DB6A8B"]
+          }
+        }
+      },
+      "layer": [
+        {
+          "mark": {"type": "bar", "width": 30},
+          "encoding": {
+            "y": {"field": "Forecast", "type": "quantitative"},
+            "tooltip": [
+              {"field": "Month"},
+              {"field": "ForecastTooltip", "title": "Forecast"}
+            ]
+          }
+        },
+        {
+          "mark": {
+            "type": "bar",
+            "width": 15,
+            "stroke": "white",
+            "strokeOpacity": 0.7
+          },
+          "encoding": {
+            "y": {"field": "Actual", "type": "quantitative"},
+            "color": {"datum": "Actual"},
+            "tooltip": [
+              {"field": "Month"},
+              {"field": "ActualTooltip", "title": "Actual"}
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "config": {
+    "background": "#FEEEE0",
+    "view": {"stroke": "transparent"},
+    "font": "Segoe UI",
+    "axis": {"labelFontSize": 11, "title": null},
+    "axisX": {
+      "domainColor": "#D2CAC1",
+      "grid": false,
+      "tickColor": "#D2CAC1",
+      "labelAngle": 0,
+      "labelPadding": 5,
+      "labelColor": "#605E5C"
+    },
+    "axisTop": {"offset": 25},
+    "axisBottom": {"tickBand": "extent", "tickSize": 10},
+    "axisY": {
+      "orient": "right",
+      "domain": false,
+      "ticks": false,
+      "tickCount": 5,
+      "labelPadding": 10
+    },
+    "legend": {
+      "orient": "none",
+      "direction": "horizontal",
+      "legendX": 190,
+      "legendY": 200,
+      "symbolType": "square",
+      "symbolSize": 120,
+      "symbolStrokeColor": "transparent",
+      "labelFontSize": 11,
+      "labelColor": "#433828"
+    },
+    "bar": {"tooltip": true},
+    "rect": {
+      "width": 35,
+      "height": 17,
+      "cornerRadius": 4,
+      "stroke": "#605E5C",
+      "strokeWidth": 0.3,
+      "color": ""
+    },
+    "text": {"color": "#433828", "fontSize": 11},
+    "concat": {"spacing": 40}
+  }
+}
