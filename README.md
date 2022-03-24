@@ -9,7 +9,8 @@ The Vega-Lite [ecosystem](https://vega.github.io/vega-lite/ecosystem.html) is hu
 I’ll try to add 3 JSON files (if possible) for each visual: one for just copying the code in the online editor (```filename-online-editor.json```), another one to import it as a Deneb template (```filename-deneb.json```), and the last one for working with VS Code locally (```filename.vl.json```).
 
 #### Note
-I'm currently not configuring visualizations' themes *separately* in the [Config](https://vega.github.io/vega-lite/docs/config.html) object. I'll revisit the code to do that.
+~~I'm currently not configuring visualizations' themes *separately* in the [Config](https://vega.github.io/vega-lite/docs/config.html) object. I'll revisit the code to do that.~~
+I updated all the files to separate theme customizations in the Config object. I added copies of Deneb templates to a separate directory for quick access.
 
 <br />
 <br />
@@ -68,3 +69,47 @@ Since I started exploring Vega-Lite, I quickly realized that recreating visuals 
 <br />
 <br />
 <br />
+
+## Monthly Variance Analysis
+The following graphic shows monthly actuals and forecasts in a lipstick column chart along with the variance in a column chart. The code is optimized to show millions/billions in the Y-axis as well as in the tooltip. Cross-filtering is also enabled.
+<br />
+<br />
+<p align="center">
+  <img src="https://github.com/shadfrigui/vega-lite/blob/0f799574ec0d86ac9a16887fea5685e25caa1ee4/monthly-variance-analysis/monthly-variance-analysis.png" />
+</p>
+<br />
+<br />
+
+I added different versions of the code to work in the online editor, VS Code, or in Power BI. [Auto-size is not supported for composed views](https://vega.github.io/vega-lite/docs/size.html#limitations). Be aware of that if you're importing the composed graphic above (```monthly-variance-analysis-deneb.json``` Deneb template). You have to resize the visual manually by changing the ```width``` and ```height``` properties in the Config tab. 
+
+If you just want a visual that auto-resize without looking at the code, I got you covered. I created separate templates for the following graphics with autosize enabled:
+
+- Actuals vs Forecasts Lipstick Column Chart
+<br />
+<br />
+<p align="center">
+  <img src="https://github.com/shadfrigui/vega-lite/blob/0f799574ec0d86ac9a16887fea5685e25caa1ee4/monthly-variance-analysis/actuals-vs-forecasts-lipstick-column-chart.png" />
+</p>
+<br />
+<br />
+
+- Actuals vs Forecasts Bullet-like Chart
+<br />
+<br />
+<p align="center">
+  <img src="https://github.com/shadfrigui/vega-lite/blob/0f799574ec0d86ac9a16887fea5685e25caa1ee4/monthly-variance-analysis/actuals-vs-forecasts-bullet-like-chart.png" />
+</p>
+<br />
+<br />
+
+- Variance Column Chart
+<br />
+<br />
+<p align="center">
+  <img src="https://github.com/shadfrigui/vega-lite/blob/0f799574ec0d86ac9a16887fea5685e25caa1ee4/monthly-variance-analysis/variance-column-chart.png" />
+</p>
+<br />
+<br />
+
+#### Note
+If your data is spanning multiple years, add a **single select** Year slicer to show the correct results for each year.
