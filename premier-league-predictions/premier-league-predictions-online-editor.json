@@ -2,9 +2,6 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 700,
   "height": 700,
-  "padding": {"top": 50, "bottom": 50, "left": 20, "right": 20},
-  "background": "white",
-  "view": {"stroke": "transparent"},
   "data": {
     "values": [
       {"Team": "Man City", "Current": 1, "Prediction": 1},
@@ -30,41 +27,19 @@
     ]
   },
   "encoding": {
-    "x": {
-      "field": "Team",
-      "type": "nominal",
-      "sort": {"field": "Current"},
-      "axis": {
-        "orient": "top",
-        "grid": true,
-        "gridOpacity": 1,
-        "domain": false,
-        "ticks": false,
-        "labelPadding": 20,
-        "labelFont": "segoe ui",
-        "labelFontSize": 13,
-        "title": null
-      }
-    }
+    "x": {"field": "Team", "type": "nominal", "sort": {"field": "Current"}}
   },
   "layer": [
     {
-      "mark": {"type": "bar", "width": 15},
-      "encoding": {
-        "y": {
-          "field": "Current",
-          "type": "quantitative",
-          "sort": "descending",
-          "axis": null
-        },
-        "y2": {"field": "Prediction"},
+      "mark": {
+        "type": "bar",
         "color": {
-          "condition": {
-            "test": "datum.Current < datum.Prediction",
-            "value": "#F34146"
-          },
-          "value": "#81C14F"
+          "expr": "datum['Current'] < datum['Prediction'] ? '#F34146' : '#81C14F'"
         }
+      },
+      "encoding": {
+        "y": {"field": "Current", "type": "quantitative", "sort": "descending"},
+        "y2": {"field": "Prediction"}
       }
     },
     {
@@ -72,24 +47,22 @@
         "type": "circle",
         "size": 500,
         "color": {
-          "expr": "datum.Current < datum.Prediction ? '#F34146' : '#81C14F'"
-        },
-        "opacity": 1
+          "expr": "datum['Current'] < datum['Prediction'] ? '#F34146' : '#81C14F'"
+        }
       },
       "encoding": {"y": {"field": "Prediction", "type": "quantitative"}}
     },
     {
-      "mark": {"type": "circle", "size": 600, "color": "#3D195B", "opacity": 1},
+      "mark": {"type": "circle", "size": 600, "color": "#3D195B"},
       "encoding": {"y": {"field": "Current", "type": "quantitative"}}
     },
     {
       "mark": {
         "type": "text",
-        "dy": {"expr": "datum.Current < datum.Prediction ? 1 : 0"},
-        "font": "segoe ui",
+        "yOffset": {"expr": "datum['Current'] < datum['Prediction'] ? 1 : 0"},
         "fontSize": 12,
         "color": {
-          "expr": "datum.Current < datum.Prediction ? 'white' : 'black'"
+          "expr": "datum['Current'] < datum['Prediction'] ? 'white' : 'black'"
         }
       },
       "encoding": {
@@ -98,16 +71,30 @@
       }
     },
     {
-      "mark": {
-        "type": "text",
-        "font": "segoe ui",
-        "fontSize": 13,
-        "color": "white"
-      },
+      "mark": {"type": "text", "fontSize": 13, "color": "white"},
       "encoding": {
         "y": {"field": "Current", "type": "quantitative"},
         "text": {"field": "Current"}
       }
     }
-  ]
+  ],
+  "config": {
+    "padding": {"top": 50, "bottom": 50, "left": 20, "right": 20},
+    "background": "white",
+    "view": {"stroke": "transparent"},
+    "font": "Segoe UI",
+    "axisX": {
+      "orient": "top",
+      "grid": true,
+      "gridOpacity": 1,
+      "domain": false,
+      "ticks": false,
+      "labelPadding": 20,
+      "labelFontSize": 13,
+      "title": null
+    },
+    "axisY": {"disable": true},
+    "bar": {"width": 15},
+    "circle": {"opacity": 1}
+  }
 }

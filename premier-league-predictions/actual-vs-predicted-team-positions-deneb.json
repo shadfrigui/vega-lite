@@ -15,10 +15,10 @@
     },
     "information": {
       "name": "Actual vs Predicted Team Positions",
-      "description": "A multilayer visual that shows actual vs predicted team positions. This graph can be used during the season to visualize current vs predicted end-of-season positions. It can be also used at the end of the season to visualize how the actual/final positions compare to prediction.",
+      "description": "A multilayer visual showing actual vs predicted team positions. It can be used during the season to visualize current vs predicted end-of-season positions or at the end of the season. The labelPadding property (Config tab) is set to 110 to make room for a matrix visual with team logos.",
       "author": "Shad Frigui",
-      "uuid": "672f2ba4-2010-41e8-9da2-08376071f094",
-      "generated": "2022-03-21T19:08:33.362Z"
+      "uuid": "969fcac0-cd2a-4141-acd5-7060b40e88c4",
+      "generated": "2022-03-23T00:06:41.891Z"
     },
     "dataset": [
       {
@@ -44,49 +44,48 @@
       }
     ]
   },
-  "config": {},
-  "autosize": {"type": "fit"},
-  "view": {"stroke": "transparent"},
+  "config": {
+    "autosize": {"type": "fit"},
+    "background": "white",
+    "view": {"stroke": "transparent"},
+    "font": "Segoe UI",
+    "axisX": {
+      "orient": "top",
+      "grid": true,
+      "gridOpacity": 1,
+      "domain": false,
+      "ticks": false,
+      "labelPadding": 110,
+      "labelFontSize": 13,
+      "title": null
+    },
+    "axisY": {"disable": true},
+    "bar": {"width": 15},
+    "circle": {"opacity": 1}
+  },
   "data": {"name": "dataset"},
   "encoding": {
     "x": {
       "field": "__0__",
       "type": "nominal",
-      "sort": {"field": "__1__"},
-      "axis": {
-        "orient": "top",
-        "grid": true,
-        "gridOpacity": 1,
-        "domain": false,
-        "ticks": false,
-        "labelPadding": 110,
-        "labelFont": "segoe ui",
-        "labelFontSize": 13,
-        "title": null
-      }
+      "sort": {"field": "__1__"}
     }
   },
   "layer": [
     {
       "mark": {
         "type": "bar",
-        "width": 15
+        "color": {
+          "expr": "datum['__1__'] < datum['__2__'] ? '#F34146' : '#81C14F'"
+        }
       },
       "encoding": {
         "y": {
           "field": "__1__",
           "type": "quantitative",
-          "sort": "descending",
-          "axis": null
+          "sort": "descending"
         },
-        "y2": {"field": "__2__"},
-        "color": {
-          "condition": {
-            "test": "datum['__1__'] < datum['__2__']",
-            "value": "#F34146"
-          },
-          "value": "#81C14F"
-        }
+        "y2": {"field": "__2__"}
       }
     },
     {
@@ -95,8 +94,7 @@
         "size": 500,
         "color": {
           "expr": "datum['__1__'] < datum['__2__'] ? '#F34146' : '#81C14F'"
-        },
-        "opacity": 1
+        }
       },
       "encoding": {
         "y": {
@@ -109,8 +107,7 @@
       "mark": {
         "type": "circle",
         "size": 600,
-        "color": "#3D195B",
-        "opacity": 1
+        "color": "#3D195B"
       },
       "encoding": {
         "y": {
@@ -122,10 +119,9 @@
     {
       "mark": {
         "type": "text",
-        "dy": {
+        "yOffset": {
           "expr": "datum['__1__'] < datum['__2__'] ? 1 : 0"
         },
-        "font": "segoe ui",
         "fontSize": 12,
         "color": {
           "expr": "datum['__1__'] < datum['__2__'] ? 'white' : 'black'"
@@ -142,7 +138,6 @@
     {
       "mark": {
         "type": "text",
-        "font": "segoe ui",
         "fontSize": 13,
         "color": "white"
       },
