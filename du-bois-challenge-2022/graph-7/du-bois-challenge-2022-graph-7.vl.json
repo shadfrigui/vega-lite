@@ -1,14 +1,12 @@
 ﻿{
-  "padding": {"top": 40, "left": 20, "right": 20},
-  "background": "#DBD1C2",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {"url": "du-bois-challenge-2022-graph-7-data.csv"},
   "vconcat": [
     {
-      "mark": "text",
+      "width": 750,
       "title": {
-        "dx": 375,
         "text": "Conjugal condition of American Negroes according to age periods.",
-        "font": "corgar",
+        "font": "Corgar",
         "fontSize": 22,
         "fontWeight": "lighter",
         "subtitlePadding": 25,
@@ -16,26 +14,27 @@
           "Condition conjugale des Nègres Américans au point de vue de l'âge.",
           "Done by Atlanta University."
         ],
-        "subtitleFont": "corgar",
+        "subtitleFont": "Corgar",
         "subtitleFontSize": 15,
         "subtitleFontWeight": "lighter",
         "subtitleLineHeight": 35
-      }
+      },
+      "mark": "text"
     },
     {
       "concat": [
         {
           "width": 375,
           "height": 750,
+          "title": {
+            "offset": -9,
+            "text": "MALES.",
+            "font": "Agency FB",
+            "fontSize": 19
+          },
           "layer": [
             {
               "transform": [{"filter": {"field": "Gender", "equal": "Male"}}],
-              "title": {
-                "offset": -9,
-                "text": "MALES.",
-                "font": "agency fb",
-                "fontSize": 19
-              },
               "mark": {"type": "bar"},
               "encoding": {
                 "x": {
@@ -43,48 +42,15 @@
                   "type": "quantitative",
                   "sort": "descending",
                   "axis": {
-                    "gridColor": "black",
-                    "gridOpacity": {
-                      "expr": "(datum.value % 10) == 0 ? 0.3 : 0.1"
-                    },
-                    "ticks": false,
-                    "tickCount": 50,
-                    "labelPadding": 2,
-                    "labelOffset": {"expr": "datum.value == 100 ? -6 : 0"},
-                    "labelExpr": "(datum.value % 10) == 0 ? datum.value : ''",
-                    "labelFont": "agency fb",
-                    "labelFontSize": 13,
-                    "labelFontWeight": "bolder",
-                    "labelColor": {"expr": "datum.value == 0 ? '' : 'black'"},
-                    "title": null,
-                    "zindex": 1
+                    "labelOffset": {"expr": "datum.value == 100 ? -6 : 0"}
                   }
                 },
                 "y": {
                   "field": "Age Group",
-                  "type": "nominal",
+                  "type": "ordinal",
                   "sort": "descending",
                   "scale": {"paddingInner": 0},
-                  "axis": {
-                    "grid": true,
-                    "tickBand": "extent",
-                    "gridColor": "black",
-                    "gridOpacity": 0.3,
-                    "ticks": false,
-                    "labelPadding": 10,
-                    "labelOffset": -20,
-                    "labelFont": "agency fb",
-                    "labelFontSize": 16,
-                    "labelFontWeight": "bolder",
-                    "title": "AGES.",
-                    "titleAngle": 0,
-                    "titleX": -30,
-                    "titleY": 14,
-                    "titleFont": "agency fb",
-                    "titleFontSize": 15,
-                    "titleFontWeight": "bolder",
-                    "zindex": 1
-                  }
+                  "axis": {"titleX": -30}
                 },
                 "color": {
                   "field": "MSID",
@@ -103,7 +69,7 @@
                 "type": "text",
                 "angle": 310,
                 "text": "SINGLE",
-                "font": "agency fb",
+                "font": "Agency FB",
                 "fontSize": 25,
                 "fontWeight": "bolder"
               },
@@ -115,7 +81,7 @@
                 "type": "text",
                 "angle": 310,
                 "text": "MARRIED",
-                "font": "agency fb",
+                "font": "Agency FB",
                 "fontSize": 25,
                 "fontWeight": "bolder"
               },
@@ -127,7 +93,7 @@
                 "type": "text",
                 "angle": 290,
                 "text": "WIDOWED",
-                "font": "agency fb",
+                "font": "Agency FB",
                 "fontSize": 20,
                 "fontWeight": "bolder"
               },
@@ -138,36 +104,22 @@
         {
           "width": 375,
           "height": 750,
+          "title": {
+            "offset": -9,
+            "text": "FEMALES.",
+            "font": "Agency FB",
+            "fontSize": 19
+          },
           "layer": [
             {
               "transform": [{"filter": {"field": "Gender", "equal": "Female"}}],
-              "title": {
-                "offset": -9,
-                "text": "FEMALES.",
-                "font": "agency fb",
-                "fontSize": 19
-              },
               "mark": {"type": "bar"},
               "encoding": {
                 "x": {
                   "field": "Percentage",
                   "type": "quantitative",
                   "axis": {
-                    "gridColor": "black",
-                    "gridOpacity": {
-                      "expr": "(datum.value % 10) == 0 ? 0.3 : 0.1"
-                    },
-                    "ticks": false,
-                    "tickCount": 50,
-                    "labelPadding": 2,
-                    "labelOffset": {"expr": "datum.value == 100 ? 7 : 0"},
-                    "labelExpr": "(datum.value % 10) == 0 ? datum.value : ''",
-                    "labelFont": "agency fb",
-                    "labelFontSize": 13,
-                    "labelFontWeight": "bolder",
-                    "labelColor": {"expr": "datum.value == 0 ? '' : 'black'"},
-                    "title": null,
-                    "zindex": 1
+                    "labelOffset": {"expr": "datum.value == 100 ? 7 : 0"}
                   }
                 },
                 "y": {
@@ -175,31 +127,11 @@
                   "type": "ordinal",
                   "sort": "descending",
                   "scale": {"paddingInner": 0},
-                  "axis": {
-                    "orient": "right",
-                    "grid": true,
-                    "tickBand": "extent",
-                    "gridColor": "black",
-                    "gridOpacity": 0.3,
-                    "ticks": false,
-                    "labelPadding": 10,
-                    "labelOffset": -20,
-                    "labelFont": "agency fb",
-                    "labelFontSize": 16,
-                    "labelFontWeight": "bolder",
-                    "title": "AGES.",
-                    "titleAngle": 0,
-                    "titleX": 30,
-                    "titleY": 14,
-                    "titleFont": "agency fb",
-                    "titleFontSize": 15,
-                    "titleFontWeight": "bolder",
-                    "zindex": 1
-                  }
+                  "axis": {"orient": "right", "titleX": 30}
                 },
                 "color": {
                   "field": "MSID",
-                  "type": "nominal",
+                  "type": "ordinal",
                   "scale": {
                     "domain": [1, 2, 3],
                     "range": ["#004DA6", "#C80B37", "#1F8256"]
@@ -214,7 +146,7 @@
                 "type": "text",
                 "angle": 50,
                 "text": "SINGLE",
-                "font": "agency fb",
+                "font": "Agency FB",
                 "fontSize": 25,
                 "fontWeight": "bolder"
               },
@@ -226,7 +158,7 @@
                 "type": "text",
                 "angle": 50,
                 "text": "MARRIED",
-                "font": "agency fb",
+                "font": "Agency FB",
                 "fontSize": 25,
                 "fontWeight": "bolder"
               },
@@ -238,7 +170,7 @@
                 "type": "text",
                 "angle": 70,
                 "text": "WIDOWED",
-                "font": "agency fb",
+                "font": "Agency FB",
                 "fontSize": 20,
                 "fontWeight": "bolder"
               },
@@ -246,30 +178,65 @@
             }
           ]
         }
-      ],
-      "spacing": -1
+      ]
     },
     {
-      "mark": "text",
       "title": {
-        "dx": 370,
+        "dx": 367,
         "text": "PER CENTS.",
-        "font": "agency fb",
+        "font": "Agency FB",
         "fontSize": 16
-      }
+      },
+      "mark": "text"
     },
     {
       "height": 5,
-      "mark": "text",
       "title": {
         "dx": -50,
         "anchor": "start",
         "text": ["#DuBoisChallenge2022", "Graphic: @shadfrigui"],
-        "font": "segoe ui",
+        "font": "Segoe UI",
         "fontSize": 13,
         "fontWeight": "lighter",
         "lineHeight": 20
-      }
+      },
+      "mark": "text"
     }
-  ]
+  ],
+  "config": {
+    "padding": {"top": 40, "left": 20, "right": 20},
+    "background": "#DBD1C2",
+    "axis": {
+      "gridColor": "black",
+      "ticks": false,
+      "labelFont": "Agency FB",
+      "labelFontWeight": "bolder"
+    },
+    "axisXQuantitative": {
+      "gridOpacity": {"expr": "(datum.value % 10) == 0 ? 0.3 : 0.1"},
+      "tickCount": 50,
+      "labelPadding": 2,
+      "labelExpr": "(datum.value % 10) == 0 ? datum.value : ''",
+      "labelFontSize": 13,
+      "labelColor": {"expr": "datum.value == 0 ? '' : 'black'"},
+      "title": null,
+      "zindex": 1
+    },
+    "axisYDiscrete": {
+      "grid": true,
+      "tickBand": "extent",
+      "gridOpacity": 0.3,
+      "labelPadding": 10,
+      "labelOffset": -20,
+      "labelFontSize": 16,
+      "title": "AGES.",
+      "titleAngle": 0,
+      "titleY": 14,
+      "titleFont": "Agency FB",
+      "titleFontSize": 15,
+      "titleFontWeight": "bolder",
+      "zindex": 1
+    },
+    "concat": {"spacing": -1}
+  }
 }
