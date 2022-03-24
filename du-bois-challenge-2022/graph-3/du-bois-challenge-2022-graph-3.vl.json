@@ -1,9 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "padding": {"top": 30, "bottom": 10, "left": 50, "right": 50},
-  "background": "#DECFBF",
   "vconcat": [
     {
+      "width": 650,
+      "height": 870,
       "title": {
         "text": [
           "RELATIVE NEGRO POPULATION OF THE STATES OF THE",
@@ -12,8 +12,6 @@
         "font": "monospace",
         "fontSize": 32
       },
-      "width": 650,
-      "height": 870,
       "data": {
         "url": "us-10m.json",
         "format": {"type": "topojson", "feature": "states"}
@@ -29,8 +27,7 @@
         },
         {"filter": {"not": {"field": "id", "oneOf": [2, 11, 15]}}}
       ],
-      "projection": {"type": "albersUsa"},
-      "mark": {"type": "geoshape", "stroke": "black", "strokeWidth": 0.5},
+      "mark": {"type": "geoshape"},
       "encoding": {
         "color": {
           "field": "population",
@@ -60,22 +57,6 @@
               "#E5A406",
               "#D3C3AA"
             ]
-          },
-          "legend": {
-            "orient": "none",
-            "legendX": 65,
-            "legendY": 670,
-            "columns": 2,
-            "columnPadding": 80,
-            "rowPadding": 30,
-            "symbolType": "square",
-            "symbolSize": 800,
-            "symbolStrokeWidth": 0.5,
-            "labelOffset": 10,
-            "labelFont": "courier new",
-            "labelFontSize": 15,
-            "labelLimit": 250,
-            "title": null
           }
         },
         "tooltip": [
@@ -85,17 +66,39 @@
       }
     },
     {
-      "mark": "text",
       "title": {
         "dx": -80,
         "dy": 150,
         "anchor": "start",
         "text": ["#DuBoisChallenge2022", "Graphic: @shadfrigui"],
-        "font": "segoe ui",
+        "font": "Segoe UI",
         "fontSize": 13,
         "fontWeight": "lighter",
         "lineHeight": 20
-      }
+      },
+      "mark": "text"
     }
-  ]
+  ],
+  "config": {
+    "padding": {"top": 30, "bottom": 10, "left": 50, "right": 50},
+    "background": "#DECFBF",
+    "legend": {
+      "orient": "none",
+      "legendX": 65,
+      "legendY": 670,
+      "columns": 2,
+      "columnPadding": 80,
+      "rowPadding": 30,
+      "symbolType": "square",
+      "symbolSize": 800,
+      "symbolStrokeWidth": 0.5,
+      "labelOffset": 10,
+      "labelFont": "courier new",
+      "labelFontSize": 15,
+      "labelLimit": 250,
+      "title": null
+    },
+    "geoshape": {"stroke": "black", "strokeWidth": 0.5},
+    "projection": {"type": "albersUsa"}
+  }
 }
