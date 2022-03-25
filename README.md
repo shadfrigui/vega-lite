@@ -40,7 +40,7 @@ In 2015, Shannon County, South Dakota (FIPS 46113) was renamed Oglala Lakota Cou
 <br />
 
 ## Premier League 2021-22 Current vs Predicted End-of-Seasons-Positions
-I used Deneb + Power BI. Here's the graphic that you get if you paste the [code](https://github.com/shadfrigui/vega-lite/blob/b7cb5cd2d4ccffe43612b2485d80965b7d231f31/premier-league-predictions/premier-league-predictions-online-editor.json) in the [online editor](https://vega.github.io/editor/#/custom/vega-lite):
+I used Deneb + Power BI. Here's the graphic that you get if you paste the [code](https://github.com/shadfrigui/vega-lite/blob/5ce741abe063666f2bc313ec7613db599a7ca51e/premier-league-predictions/premier-league-predictions-online-editor.json) in the [online editor](https://vega.github.io/editor/#/custom/vega-lite):
 <br />
 <br />
 <p align="center">
@@ -60,7 +60,7 @@ I increased the ```labelPadding``` property for the ```x``` axis to make room fo
 <br />
 
 ## W.E.B Du Bois Challenge 2022 - Graph 7
-Since I started exploring Vega-Lite, I quickly realized that recreating visuals is the best way to learn. So I decided to recreate W.E.B Du Bois Challenge's [N°7](https://github.com/ajstarks/dubois-data-portraits/tree/master/challenge/2022/challenge07).
+Since I started exploring Vega-Lite, I quickly realized that recreating visuals is the best way to learn. So I decided to recreate W.E.B Du Bois Challenge [N°7](https://github.com/ajstarks/dubois-data-portraits/tree/master/challenge/2022/challenge07).
 <br />
 <br />
 <p align="center">
@@ -71,7 +71,7 @@ Since I started exploring Vega-Lite, I quickly realized that recreating visuals 
 <br />
 
 ## Monthly Variance Analysis
-The following graphic shows monthly actuals and forecasts in a lipstick column chart along with the variance in a column chart. The code is optimized to show millions/billions in the Y-axis as well as in the tooltip. Cross-filtering is also enabled.
+The following graphic shows monthly actuals and forecasts in a lipstick column chart along with the variance in a column chart. The code is optimized to show millions/billions in the Y-axis as well as in the tooltip. Cross-filtering is also enabled (Power BI).
 <br />
 <br />
 <p align="center">
