@@ -38,14 +38,14 @@
       {
         "key": "__2__",
         "name": "Forecast",
-        "description": "Monthly forecast measure/value",
+        "description": "Monthly forecast measure/column",
         "type": "numeric",
         "kind": "measure"
       },
       {
         "key": "__3__",
         "name": "Actual",
-        "description": "Monthly actual measure/value",
+        "description": "Monthly actual measure/column",
         "type": "numeric",
         "kind": "measure"
       }

@@ -38,21 +38,21 @@
       {
         "key": "__2__",
         "name": "Forecast",
-        "description": "Monthly forecast measure/value",
+        "description": "Monthly forecast measure/column",
         "type": "numeric",
         "kind": "measure"
       },
       {
         "key": "__3__",
         "name": "Actual",
-        "description": "Monthly actual measure/value",
+        "description": "Monthly actual measure/column",
         "type": "numeric",
         "kind": "measure"
       },
       {
         "key": "__4__",
         "name": "Variance Percentage",
-        "description": "Monthly variance percentage measure/value",
+        "description": "Monthly variance percentage measure/column",
         "type": "numeric",
         "kind": "measure"
       }

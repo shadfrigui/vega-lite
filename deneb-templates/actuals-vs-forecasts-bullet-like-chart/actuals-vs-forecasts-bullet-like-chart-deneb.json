@@ -14,11 +14,11 @@
       "dataPointLimit": 50
     },
     "information": {
-      "name": "Actuals vs Forecasts Lipstick Column Chart",
-      "description": "A layered visual showing monthly actuals vs forecasts in a lipstick column chart. Add a single select slicer to show correct results for each year.",
+      "name": "Actuals vs Forecasts Bullet-like Chart",
+      "description": "A layered visual showing monthly actuals vs forecasts in a chart resemblant to the bullet chart. Add a single select slicer to show correct results for each year.",
       "author": "Shad Frigui",
       "uuid": "4e51c540-bc39-429a-b64b-8f5b550f2f2c",
-      "generated": "2022-03-24T12:36:55.230Z"
+      "generated": "2022-03-24T12:30:18.235Z"
     },
     "dataset": [
       {
@@ -38,14 +38,14 @@
       {
         "key": "__2__",
         "name": "Forecast",
-        "description": "Monthly forecast measure/value",
+        "description": "Monthly forecast measure/column",
         "type": "numeric",
         "kind": "measure"
       },
       {
         "key": "__3__",
         "name": "Actual",
-        "description": "Monthly actual measure/value",
+        "description": "Monthly actual measure/column",
         "type": "numeric",
         "kind": "measure"
       }
@@ -97,7 +97,12 @@
       "labelFontSize": 11,
       "labelColor": "#433828"
     },
-    "bar": {"tooltip": true}
+    "bar": {
+      "width": 15,
+      "stroke": "white",
+      "strokeOpacity": 0.7
+    },
+    "rect": {"width": 30, "height": 3}
   },
   "title": {"text": [""]},
   "data": {"name": "dataset"},
@@ -115,13 +120,16 @@
     "x": {
       "field": "__0__",
       "type": "nominal",
-      "sort": {"field": "__1__"}
+      "sort": {
+        "field": "__1__",
+        "op": "sum"
+      }
     },
     "color": {
       "datum": "__2__",
       "scale": {
         "domain": ["__2__", "__3__"],
-        "range": ["#D2CAC1", "#1E4E88"]
+        "range": ["#6BB6C8", "#1E4E88"]
       }
     },
     "opacity": {
@@ -137,31 +145,7 @@
   },
   "layer": [
     {
-      "mark": {
-        "type": "bar",
-        "width": 30
-      },
-      "encoding": {
-        "y": {
-          "field": "__2__",
-          "type": "quantitative"
-        },
-        "tooltip": [
-          {"field": "__0__"},
-          {
-            "field": "ForecastTooltip",
-            "title": "__2__"
-          }
-        ]
-      }
-    },
-    {
-      "mark": {
-        "type": "bar",
-        "width": 15,
-        "stroke": "white",
-        "strokeOpacity": 0.7
-      },
+      "mark": {"type": "bar"},
       "encoding": {
         "y": {
           "field": "__3__",
@@ -173,6 +157,22 @@
           {
             "field": "ActualTooltip",
             "title": "__3__"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {"type": "rect"},
+      "encoding": {
+        "y": {
+          "field": "__2__",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {"field": "__0__"},
+          {
+            "field": "ForecastTooltip",
+            "title": "__2__"
           }
         ]
       }

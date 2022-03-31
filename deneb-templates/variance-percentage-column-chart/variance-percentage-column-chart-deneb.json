@@ -38,7 +38,7 @@
       {
         "key": "__2__",
         "name": "Variance Percentage",
-        "description": "Monthly variance measure/value",
+        "description": "Monthly variance measure/column",
         "type": "numeric",
         "kind": "measure"
       }
