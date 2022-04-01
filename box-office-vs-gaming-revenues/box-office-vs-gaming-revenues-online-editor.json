@@ -1,0 +1,187 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "vconcat": [
+    {
+      "data": {"values": [{}]},
+      "mark": {"type": "rect"},
+      "encoding": {"x": {"value": -5}, "y": {"value": 18}}
+    },
+    {
+      "title": {
+        "offset": -1,
+        "text": "The video game industry is now far larger than the movie business",
+        "fontSize": 21,
+        "fontWeight": "normal"
+      },
+      "concat": [
+        {
+          "width": 470,
+          "height": 400,
+          "data": {
+            "values": [
+              {"Year": 2010, "Revenue": 28.446616124},
+              {"Year": 2011, "Revenue": 29.662751104},
+              {"Year": 2012, "Revenue": 32.116731783},
+              {"Year": 2013, "Revenue": 31.839694765},
+              {"Year": 2014, "Revenue": 33.496997745},
+              {"Year": 2015, "Revenue": 36.511127591},
+              {"Year": 2016, "Revenue": 36.241897178},
+              {"Year": 2017, "Revenue": 38.170427027},
+              {"Year": 2018, "Revenue": 38.304647928},
+              {"Year": 2019, "Revenue": 38.802517863},
+              {"Year": 2020, "Revenue": 7.934742678},
+              {"Year": 2021, "Revenue": 18.668370715}
+            ]
+          },
+          "encoding": {
+            "x": {
+              "field": "Year",
+              "type": "nominal",
+              "scale": {"paddingInner": 0.35},
+              "axis": {
+                "labelExpr": "datum.value == 2010 ? datum.value  : truncate(datum.value, 2,'left', '')",
+                "labelOffset": 10,
+                "labelFont": "Miriam",
+                "labelFontSize": 15.5
+              }
+            },
+            "y": {
+              "field": "Revenue",
+              "type": "quantitative",
+              "scale": {"domain": [0, 110]},
+              "axis": {
+                "domain": false,
+                "title": "Global box office revenues ($bn)",
+                "titleX": -30,
+                "titleY": 35
+              }
+            }
+          },
+          "layer": [
+            {"mark": {"type": "bar", "xOffset": 10, "color": "#1D558B"}},
+            {
+              "mark": {
+                "type": "text",
+                "color": {"expr": "datum['Revenue'] > 38.5 ? 'white' : ''"},
+                "xOffset": 10,
+                "yOffset": 10,
+                "font": "Miriam",
+                "fontSize": 15
+              },
+              "encoding": {"text": {"field": "Revenue", "format": ".2"}}
+            },
+            {
+              "data": {"values": [{}]},
+              "mark": {
+                "type": "text",
+                "text": "Source: Box Office Mojo; Newzoo",
+                "fontSize": 12,
+                "color": "#605E5C"
+              },
+              "encoding": {"x": {"value": 60}, "y": {"value": 440}}
+            }
+          ]
+        },
+        {
+          "width": 120,
+          "height": 400,
+          "data": {
+            "values": [
+              {"Segment": "Console", "Revenue": 50.4},
+              {"Segment": "Mobile", "Revenue": 93.2},
+              {"Segment": "PC", "Revenue": 36.7}
+            ]
+          },
+          "encoding": {
+            "x": {
+              "field": "Segment",
+              "type": "nominal",
+              "sort": {"field": "Revenue", "order": "descending", "op": "mean"},
+              "scale": {"paddingInner": 0.35},
+              "axis": {
+                "labelPadding": {"expr": "datum.value == 'Console' ? 20 : 5"},
+                "labelOffset": {"expr": "datum.value == 'Console' ? 25 : 15"},
+                "labelFontSize": 12.5
+              }
+            },
+            "y": {
+              "field": "Revenue",
+              "type": "quantitative",
+              "scale": {"domain": [0, 110]},
+              "axis": {
+                "domainDash": [3, 2],
+                "domainWidth": 1.5,
+                "labels": false,
+                "title": ["Gaming revenues", "2021 ($bn)"],
+                "titleLineHeight": 23,
+                "titleX": 7,
+                "titleY": 35
+              }
+            }
+          },
+          "layer": [
+            {
+              "mark": {"type": "bar", "xOffset": 15},
+              "encoding": {
+                "color": {
+                  "field": "Segment",
+                  "scale": {
+                    "domain": ["Console", "Mobile", "PC"],
+                    "range": ["#1E8FCB", "#94D2E6", "#B3325D"]
+                  },
+                  "legend": null
+                }
+              }
+            },
+            {
+              "mark": {
+                "type": "text",
+                "color": "white",
+                "xOffset": 15,
+                "yOffset": 10,
+                "font": "Miriam",
+                "fontSize": 15
+              },
+              "encoding": {"text": {"field": "Revenue", "format": ".2"}}
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "config": {
+    "background": "#FEF1E5",
+    "padding": {"left": 15, "right": 50, "bottom": 20},
+    "view": {"stroke": null},
+    "font": "Tahoma",
+    "axisX": {
+      "domain": false,
+      "ticks": false,
+      "labelAngle": 0,
+      "labelPadding": 5,
+      "labelColor": "#605E5C",
+      "title": null
+    },
+    "axisY": {
+      "gridColor": {"expr": "datum.value <= 90 ? '#D2CAC1' : ''"},
+      "gridOpacity": 0.5,
+      "ticks": false,
+      "labelPadding": 10,
+      "labelFont": "Miriam",
+      "labelFontSize": 15.5,
+      "labelColor": {"expr": "datum.value <= 90 ? '#605E5C' : ''"},
+      "titleAngle": 0,
+      "titleAlign": "left",
+      "titleFontSize": 15,
+      "titleFontWeight": "normal",
+      "titleColor": "#605E5C"
+    },
+    "rect": {
+      "orient": "horizontal",
+      "width": 60,
+      "height": 4.5,
+      "color": "black"
+    },
+    "concat": {"spacing": 20}
+  }
+}
