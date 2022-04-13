@@ -1,0 +1,1771 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "values": [
+      {
+        "Gender": "Male",
+        "Age ID": 1,
+        "Age": "0",
+        "Population 2020": 360102,
+        "Projection 2030": 333137
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 2,
+        "Age": "1",
+        "Population 2020": 375332,
+        "Projection 2030": 336240
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 3,
+        "Age": "2",
+        "Population 2020": 389465,
+        "Projection 2030": 340332
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 4,
+        "Age": "3",
+        "Population 2020": 401864,
+        "Projection 2030": 344318
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 5,
+        "Age": "4",
+        "Population 2020": 414627,
+        "Projection 2030": 348121
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 6,
+        "Age": "5",
+        "Population 2020": 413937,
+        "Projection 2030": 351670
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 7,
+        "Age": "6",
+        "Population 2020": 416815,
+        "Projection 2030": 353491
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 8,
+        "Age": "7",
+        "Population 2020": 425759,
+        "Projection 2030": 353641
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 9,
+        "Age": "8",
+        "Population 2020": 438005,
+        "Projection 2030": 357511
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 10,
+        "Age": "9",
+        "Population 2020": 431442,
+        "Projection 2030": 363459
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 11,
+        "Age": "10",
+        "Population 2020": 422811,
+        "Projection 2030": 381754
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 12,
+        "Age": "11",
+        "Population 2020": 418939,
+        "Projection 2030": 396460
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 13,
+        "Age": "12",
+        "Population 2020": 422335,
+        "Projection 2030": 409174
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 14,
+        "Age": "13",
+        "Population 2020": 409154,
+        "Projection 2030": 420386
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 15,
+        "Age": "14",
+        "Population 2020": 400276,
+        "Projection 2030": 432373
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 16,
+        "Age": "15",
+        "Population 2020": 386104,
+        "Projection 2030": 431647
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 17,
+        "Age": "16",
+        "Population 2020": 380328,
+        "Projection 2030": 435032
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 18,
+        "Age": "17",
+        "Population 2020": 371935,
+        "Projection 2030": 445151
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 19,
+        "Age": "18",
+        "Population 2020": 369604,
+        "Projection 2030": 459438
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 20,
+        "Age": "19",
+        "Population 2020": 385297,
+        "Projection 2030": 456700
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 21,
+        "Age": "20",
+        "Population 2020": 402791,
+        "Projection 2030": 453413
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 22,
+        "Age": "21",
+        "Population 2020": 418297,
+        "Projection 2030": 454426
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 23,
+        "Age": "22",
+        "Population 2020": 426847,
+        "Projection 2030": 462049
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 24,
+        "Age": "23",
+        "Population 2020": 440601,
+        "Projection 2030": 452869
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 25,
+        "Age": "24",
+        "Population 2020": 443496,
+        "Projection 2030": 446695
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 26,
+        "Age": "25",
+        "Population 2020": 440565,
+        "Projection 2030": 433766
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 27,
+        "Age": "26",
+        "Population 2020": 453265,
+        "Projection 2030": 428444
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 28,
+        "Age": "27",
+        "Population 2020": 451917,
+        "Projection 2030": 419508
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 29,
+        "Age": "28",
+        "Population 2020": 461555,
+        "Projection 2030": 415344
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 30,
+        "Age": "29",
+        "Population 2020": 473507,
+        "Projection 2030": 426907
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 31,
+        "Age": "30",
+        "Population 2020": 464389,
+        "Projection 2030": 438099
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 32,
+        "Age": "31",
+        "Population 2020": 455238,
+        "Projection 2030": 447240
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 33,
+        "Age": "32",
+        "Population 2020": 455725,
+        "Projection 2030": 450030
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 34,
+        "Age": "33",
+        "Population 2020": 440355,
+        "Projection 2030": 458037
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 35,
+        "Age": "34",
+        "Population 2020": 447804,
+        "Projection 2030": 456232
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 36,
+        "Age": "35",
+        "Population 2020": 445191,
+        "Projection 2030": 449652
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 37,
+        "Age": "36",
+        "Population 2020": 431932,
+        "Projection 2030": 459331
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 38,
+        "Age": "37",
+        "Population 2020": 433967,
+        "Projection 2030": 455763
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 39,
+        "Age": "38",
+        "Population 2020": 432031,
+        "Projection 2030": 463379
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 40,
+        "Age": "39",
+        "Population 2020": 436414,
+        "Projection 2030": 473434
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 41,
+        "Age": "40",
+        "Population 2020": 436763,
+        "Projection 2030": 462910
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 42,
+        "Age": "41",
+        "Population 2020": 421051,
+        "Projection 2030": 452768
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 43,
+        "Age": "42",
+        "Population 2020": 393122,
+        "Projection 2030": 452334
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 44,
+        "Age": "43",
+        "Population 2020": 387559,
+        "Projection 2030": 436667
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 45,
+        "Age": "44",
+        "Population 2020": 393576,
+        "Projection 2030": 444066
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 46,
+        "Age": "45",
+        "Population 2020": 400353,
+        "Projection 2030": 441785
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 47,
+        "Age": "46",
+        "Population 2020": 406465,
+        "Projection 2030": 428776
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 48,
+        "Age": "47",
+        "Population 2020": 424229,
+        "Projection 2030": 430679
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 49,
+        "Age": "48",
+        "Population 2020": 442244,
+        "Projection 2030": 428692
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 50,
+        "Age": "49",
+        "Population 2020": 453106,
+        "Projection 2030": 432889
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 51,
+        "Age": "50",
+        "Population 2020": 442966,
+        "Projection 2030": 433135
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 52,
+        "Age": "51",
+        "Population 2020": 453623,
+        "Projection 2030": 417607
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 53,
+        "Age": "52",
+        "Population 2020": 453832,
+        "Projection 2030": 389969
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 54,
+        "Age": "53",
+        "Population 2020": 461589,
+        "Projection 2030": 383991
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 55,
+        "Age": "54",
+        "Population 2020": 457887,
+        "Projection 2030": 389045
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 56,
+        "Age": "55",
+        "Population 2020": 461041,
+        "Projection 2030": 394641
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 57,
+        "Age": "56",
+        "Population 2020": 455856,
+        "Projection 2030": 399473
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 58,
+        "Age": "57",
+        "Population 2020": 445519,
+        "Projection 2030": 415361
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 59,
+        "Age": "58",
+        "Population 2020": 435256,
+        "Projection 2030": 431145
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 60,
+        "Age": "59",
+        "Population 2020": 418945,
+        "Projection 2030": 439625
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 61,
+        "Age": "60",
+        "Population 2020": 400251,
+        "Projection 2030": 427767
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 62,
+        "Age": "61",
+        "Population 2020": 390218,
+        "Projection 2030": 435606
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 63,
+        "Age": "62",
+        "Population 2020": 381138,
+        "Projection 2030": 433285
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 64,
+        "Age": "63",
+        "Population 2020": 365735,
+        "Projection 2030": 437829
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 65,
+        "Age": "64",
+        "Population 2020": 351184,
+        "Projection 2030": 431421
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 66,
+        "Age": "65",
+        "Population 2020": 335745,
+        "Projection 2030": 431129
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 67,
+        "Age": "66",
+        "Population 2020": 333320,
+        "Projection 2030": 423001
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 68,
+        "Age": "67",
+        "Population 2020": 327189,
+        "Projection 2030": 410033
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 69,
+        "Age": "68",
+        "Population 2020": 314252,
+        "Projection 2030": 397217
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 70,
+        "Age": "69",
+        "Population 2020": 313913,
+        "Projection 2030": 379068
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 71,
+        "Age": "70",
+        "Population 2020": 316491,
+        "Projection 2030": 358671
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 72,
+        "Age": "71",
+        "Population 2020": 322715,
+        "Projection 2030": 345804
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 73,
+        "Age": "72",
+        "Population 2020": 335663,
+        "Projection 2030": 333582
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 74,
+        "Age": "73",
+        "Population 2020": 359481,
+        "Projection 2030": 315571
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 75,
+        "Age": "74",
+        "Population 2020": 272514,
+        "Projection 2030": 298202
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 76,
+        "Age": "75",
+        "Population 2020": 258938,
+        "Projection 2030": 280217
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 77,
+        "Age": "76",
+        "Population 2020": 253710,
+        "Projection 2030": 272834
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 78,
+        "Age": "77",
+        "Population 2020": 229301,
+        "Projection 2030": 262031
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 79,
+        "Age": "78",
+        "Population 2020": 199267,
+        "Projection 2030": 245544
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 80,
+        "Age": "79",
+        "Population 2020": 173272,
+        "Projection 2030": 238426
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 81,
+        "Age": "80",
+        "Population 2020": 174151,
+        "Projection 2030": 232781
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 82,
+        "Age": "81",
+        "Population 2020": 166329,
+        "Projection 2030": 228828
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 83,
+        "Age": "82",
+        "Population 2020": 154727,
+        "Projection 2030": 228227
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 84,
+        "Age": "83",
+        "Population 2020": 139400,
+        "Projection 2030": 232918
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 85,
+        "Age": "84",
+        "Population 2020": 124576,
+        "Projection 2030": 167389
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 86,
+        "Age": "85",
+        "Population 2020": 110941,
+        "Projection 2030": 149405
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 87,
+        "Age": "86",
+        "Population 2020": 94592,
+        "Projection 2030": 136275
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 88,
+        "Age": "87",
+        "Population 2020": 82400,
+        "Projection 2030": 113682
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 89,
+        "Age": "88",
+        "Population 2020": 71568,
+        "Projection 2030": 90324
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 90,
+        "Age": "89",
+        "Population 2020": 60511,
+        "Projection 2030": 71044
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 91,
+        "Age": "90",
+        "Population 2020": 51190,
+        "Projection 2030": 63857
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 92,
+        "Age": "91",
+        "Population 2020": 39680,
+        "Projection 2030": 53876
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 93,
+        "Age": "92",
+        "Population 2020": 30380,
+        "Projection 2030": 43665
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 94,
+        "Age": "93",
+        "Population 2020": 23480,
+        "Projection 2030": 33784
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 95,
+        "Age": "94",
+        "Population 2020": 17380,
+        "Projection 2030": 25493
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 96,
+        "Age": "95",
+        "Population 2020": 12290,
+        "Projection 2030": 18827
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 97,
+        "Age": "96",
+        "Population 2020": 8390,
+        "Projection 2030": 13058
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 98,
+        "Age": "97",
+        "Population 2020": 5600,
+        "Projection 2030": 9059
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 99,
+        "Age": "98",
+        "Population 2020": 3750,
+        "Projection 2030": 6129
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 100,
+        "Age": "99",
+        "Population 2020": 2390,
+        "Projection 2030": 3936
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 101,
+        "Age": "100",
+        "Population 2020": 1480,
+        "Projection 2030": 2462
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 102,
+        "Age": "101",
+        "Population 2020": 550,
+        "Projection 2030": 1372
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 103,
+        "Age": "102",
+        "Population 2020": 300,
+        "Projection 2030": 733
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 104,
+        "Age": "103",
+        "Population 2020": 170,
+        "Projection 2030": 383
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 105,
+        "Age": "104",
+        "Population 2020": 90,
+        "Projection 2030": 186
+      },
+      {
+        "Gender": "Male",
+        "Age ID": 106,
+        "Age": "105+",
+        "Population 2020": 100,
+        "Projection 2030": 136
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 1,
+        "Age": "0",
+        "Population 2020": 341795,
+        "Projection 2030": 317318
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 2,
+        "Age": "1",
+        "Population 2020": 354887,
+        "Projection 2030": 320214
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 3,
+        "Age": "2",
+        "Population 2020": 369889,
+        "Projection 2030": 324147
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 4,
+        "Age": "3",
+        "Population 2020": 381457,
+        "Projection 2030": 327944
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 5,
+        "Age": "4",
+        "Population 2020": 392912,
+        "Projection 2030": 331523
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 6,
+        "Age": "5",
+        "Population 2020": 392808,
+        "Projection 2030": 334892
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 7,
+        "Age": "6",
+        "Population 2020": 396258,
+        "Projection 2030": 336646
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 8,
+        "Age": "7",
+        "Population 2020": 404941,
+        "Projection 2030": 336784
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 9,
+        "Age": "8",
+        "Population 2020": 416995,
+        "Projection 2030": 340308
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 10,
+        "Age": "9",
+        "Population 2020": 410453,
+        "Projection 2030": 345674
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 11,
+        "Age": "10",
+        "Population 2020": 403269,
+        "Projection 2030": 361571
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 12,
+        "Age": "11",
+        "Population 2020": 398348,
+        "Projection 2030": 373927
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 13,
+        "Age": "12",
+        "Population 2020": 401397,
+        "Projection 2030": 387294
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 14,
+        "Age": "13",
+        "Population 2020": 387546,
+        "Projection 2030": 397639
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 15,
+        "Age": "14",
+        "Population 2020": 381039,
+        "Projection 2030": 408159
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 16,
+        "Age": "15",
+        "Population 2020": 366608,
+        "Projection 2030": 407470
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 17,
+        "Age": "16",
+        "Population 2020": 360365,
+        "Projection 2030": 410691
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 18,
+        "Age": "17",
+        "Population 2020": 350993,
+        "Projection 2030": 419719
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 19,
+        "Age": "18",
+        "Population 2020": 347648,
+        "Projection 2030": 433184
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 20,
+        "Age": "19",
+        "Population 2020": 364798,
+        "Projection 2030": 430170
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 21,
+        "Age": "20",
+        "Population 2020": 376139,
+        "Projection 2030": 427866
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 22,
+        "Age": "21",
+        "Population 2020": 392006,
+        "Projection 2030": 426527
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 23,
+        "Age": "22",
+        "Population 2020": 400414,
+        "Projection 2030": 432738
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 24,
+        "Age": "23",
+        "Population 2020": 416001,
+        "Projection 2030": 422732
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 25,
+        "Age": "24",
+        "Population 2020": 416566,
+        "Projection 2030": 419134
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 26,
+        "Age": "25",
+        "Population 2020": 418173,
+        "Projection 2030": 406262
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 27,
+        "Age": "26",
+        "Population 2020": 431224,
+        "Projection 2030": 401065
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 28,
+        "Age": "27",
+        "Population 2020": 435214,
+        "Projection 2030": 392184
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 29,
+        "Age": "28",
+        "Population 2020": 453049,
+        "Projection 2030": 388075
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 30,
+        "Age": "29",
+        "Population 2020": 458161,
+        "Projection 2030": 401943
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 31,
+        "Age": "30",
+        "Population 2020": 449797,
+        "Projection 2030": 408013
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 32,
+        "Age": "31",
+        "Population 2020": 450682,
+        "Projection 2030": 419684
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 33,
+        "Age": "32",
+        "Population 2020": 457966,
+        "Projection 2030": 424180
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 34,
+        "Age": "33",
+        "Population 2020": 450660,
+        "Projection 2030": 434984
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 35,
+        "Age": "34",
+        "Population 2020": 449359,
+        "Projection 2030": 431844
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 36,
+        "Age": "35",
+        "Population 2020": 449233,
+        "Projection 2030": 431149
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 37,
+        "Age": "36",
+        "Population 2020": 440534,
+        "Projection 2030": 442413
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 38,
+        "Age": "37",
+        "Population 2020": 444238,
+        "Projection 2030": 444825
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 39,
+        "Age": "38",
+        "Population 2020": 444389,
+        "Projection 2030": 461111
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 40,
+        "Age": "39",
+        "Population 2020": 446171,
+        "Projection 2030": 464853
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 41,
+        "Age": "40",
+        "Population 2020": 445589,
+        "Projection 2030": 455613
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 42,
+        "Age": "41",
+        "Population 2020": 425925,
+        "Projection 2030": 455730
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 43,
+        "Age": "42",
+        "Population 2020": 397446,
+        "Projection 2030": 462239
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 44,
+        "Age": "43",
+        "Population 2020": 390727,
+        "Projection 2030": 454243
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 45,
+        "Age": "44",
+        "Population 2020": 399785,
+        "Projection 2030": 452105
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 46,
+        "Age": "45",
+        "Population 2020": 407424,
+        "Projection 2030": 451349
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 47,
+        "Age": "46",
+        "Population 2020": 415156,
+        "Projection 2030": 442256
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 48,
+        "Age": "47",
+        "Population 2020": 433025,
+        "Projection 2030": 445467
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 49,
+        "Age": "48",
+        "Population 2020": 451915,
+        "Projection 2030": 445398
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 50,
+        "Age": "49",
+        "Population 2020": 470050,
+        "Projection 2030": 447062
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 51,
+        "Age": "50",
+        "Population 2020": 458714,
+        "Projection 2030": 446181
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 52,
+        "Age": "51",
+        "Population 2020": 470032,
+        "Projection 2030": 426512
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 53,
+        "Age": "52",
+        "Population 2020": 469525,
+        "Projection 2030": 398023
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 54,
+        "Age": "53",
+        "Population 2020": 473125,
+        "Projection 2030": 390729
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 55,
+        "Age": "54",
+        "Population 2020": 474724,
+        "Projection 2030": 399116
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 56,
+        "Age": "55",
+        "Population 2020": 477697,
+        "Projection 2030": 405963
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 57,
+        "Age": "56",
+        "Population 2020": 472307,
+        "Projection 2030": 412654
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 58,
+        "Age": "57",
+        "Population 2020": 461124,
+        "Projection 2030": 429222
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 59,
+        "Age": "58",
+        "Population 2020": 449311,
+        "Projection 2030": 446648
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 60,
+        "Age": "59",
+        "Population 2020": 433795,
+        "Projection 2030": 463047
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 61,
+        "Age": "60",
+        "Population 2020": 415958,
+        "Projection 2030": 450674
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 62,
+        "Age": "61",
+        "Population 2020": 406314,
+        "Projection 2030": 460071
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 63,
+        "Age": "62",
+        "Population 2020": 396633,
+        "Projection 2030": 457937
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 64,
+        "Age": "63",
+        "Population 2020": 381506,
+        "Projection 2030": 459762
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 65,
+        "Age": "64",
+        "Population 2020": 366881,
+        "Projection 2030": 459529
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 66,
+        "Age": "65",
+        "Population 2020": 353453,
+        "Projection 2030": 460319
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 67,
+        "Age": "66",
+        "Population 2020": 354014,
+        "Projection 2030": 452831
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 68,
+        "Age": "67",
+        "Population 2020": 347575,
+        "Projection 2030": 439722
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 69,
+        "Age": "68",
+        "Population 2020": 337435,
+        "Projection 2030": 425956
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 70,
+        "Age": "69",
+        "Population 2020": 338485,
+        "Projection 2030": 408580
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 71,
+        "Age": "70",
+        "Population 2020": 344326,
+        "Projection 2030": 389001
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 72,
+        "Age": "71",
+        "Population 2020": 349927,
+        "Projection 2030": 376956
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 73,
+        "Age": "72",
+        "Population 2020": 366752,
+        "Projection 2030": 364703
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 74,
+        "Age": "73",
+        "Population 2020": 393528,
+        "Projection 2030": 347346
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 75,
+        "Age": "74",
+        "Population 2020": 302509,
+        "Projection 2030": 330281
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 76,
+        "Age": "75",
+        "Population 2020": 291001,
+        "Projection 2030": 314194
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 77,
+        "Age": "76",
+        "Population 2020": 286767,
+        "Projection 2030": 310252
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 78,
+        "Age": "77",
+        "Population 2020": 265624,
+        "Projection 2030": 299699
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 79,
+        "Age": "78",
+        "Population 2020": 235783,
+        "Projection 2030": 285608
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 80,
+        "Age": "79",
+        "Population 2020": 210096,
+        "Projection 2030": 280493
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 81,
+        "Age": "80",
+        "Population 2020": 212739,
+        "Projection 2030": 278552
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 82,
+        "Age": "81",
+        "Population 2020": 206959,
+        "Projection 2030": 275358
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 83,
+        "Age": "82",
+        "Population 2020": 196217,
+        "Projection 2030": 279567
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 84,
+        "Age": "83",
+        "Population 2020": 182702,
+        "Projection 2030": 289066
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 85,
+        "Age": "84",
+        "Population 2020": 168423,
+        "Projection 2030": 213247
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 86,
+        "Age": "85",
+        "Population 2020": 154056,
+        "Projection 2030": 195390
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 87,
+        "Age": "86",
+        "Population 2020": 137230,
+        "Projection 2030": 182026
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 88,
+        "Age": "87",
+        "Population 2020": 124028,
+        "Projection 2030": 158119
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 89,
+        "Age": "88",
+        "Population 2020": 113621,
+        "Projection 2030": 130484
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 90,
+        "Age": "89",
+        "Population 2020": 100919,
+        "Projection 2030": 106985
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 91,
+        "Age": "90",
+        "Population 2020": 88200,
+        "Projection 2030": 98533
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 92,
+        "Age": "91",
+        "Population 2020": 72970,
+        "Projection 2030": 86098
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 93,
+        "Age": "92",
+        "Population 2020": 59660,
+        "Projection 2030": 72304
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 94,
+        "Age": "93",
+        "Population 2020": 48790,
+        "Projection 2030": 58730
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 95,
+        "Age": "94",
+        "Population 2020": 38960,
+        "Projection 2030": 46469
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 96,
+        "Age": "95",
+        "Population 2020": 30230,
+        "Projection 2030": 35871
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 97,
+        "Age": "96",
+        "Population 2020": 22930,
+        "Projection 2030": 26464
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 98,
+        "Age": "97",
+        "Population 2020": 16960,
+        "Projection 2030": 19418
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 99,
+        "Age": "98",
+        "Population 2020": 12340,
+        "Projection 2030": 14105
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 100,
+        "Age": "99",
+        "Population 2020": 8840,
+        "Projection 2030": 9699
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 101,
+        "Age": "100",
+        "Population 2020": 6120,
+        "Projection 2030": 6392
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 102,
+        "Age": "101",
+        "Population 2020": 2560,
+        "Projection 2030": 3878
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 103,
+        "Age": "102",
+        "Population 2020": 1490,
+        "Projection 2030": 2259
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 104,
+        "Age": "103",
+        "Population 2020": 970,
+        "Projection 2030": 1275
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 105,
+        "Age": "104",
+        "Population 2020": 600,
+        "Projection 2030": 681
+      },
+      {
+        "Gender": "Female",
+        "Age ID": 106,
+        "Age": "105+",
+        "Population 2020": 680,
+        "Projection 2030": 622
+      }
+    ]
+  },
+  "vconcat": [
+    {
+      "layer": [
+        {
+          "mark": {
+            "type": "rect",
+            "width": 500,
+            "height": 2,
+            "xOffset": 216,
+            "yOffset": 10,
+            "color": "#EB111A"
+          }
+        },
+        {
+          "mark": {
+            "type": "rect",
+            "width": 35,
+            "height": 10,
+            "xOffset": -16,
+            "yOffset": 15,
+            "color": "#EB111A"
+          }
+        },
+        {
+          "title": {
+            "text": "Boomer bust",
+            "anchor": "start",
+            "dy": 85,
+            "font": "Segoe UI",
+            "fontSize": 25,
+            "subtitlePadding": 10,
+            "subtitle": "UK, demographics",
+            "subtitleFontSize": 19,
+            "subtitleFontWeight": "bolder"
+          },
+          "mark": "text"
+        },
+        {
+          "mark": {
+            "type": "rect",
+            "width": 25,
+            "height": 1,
+            "xOffset": -21,
+            "yOffset": 120,
+            "color": "black"
+          }
+        }
+      ]
+    },
+    {
+      "height": 50,
+      "title": {
+        "text": "Population age structure, '000",
+        "anchor": "start",
+        "dx": -14,
+        "dy": 27,
+        "fontSize": 19
+      },
+      "mark": "text"
+    },
+    {
+      "concat": [
+        {
+          "width": 200,
+          "height": 450,
+          "transform": [{"filter": {"field": "Gender", "equal": "Male"}}],
+          "layer": [
+            {
+              "mark": {"type": "bar", "color": "#31C0D0"},
+              "encoding": {
+                "x": {
+                  "field": "Population 2020",
+                  "type": "quantitative",
+                  "sort": "descending"
+                },
+                "y": {
+                  "field": "Age",
+                  "type": "ordinal",
+                  "sort": {"field": "Age ID", "order": "descending"},
+                  "scale": {"paddingInner": 0.35},
+                  "axis": {"orient": "right"}
+                }
+              }
+            },
+            {
+              "mark": {
+                "type": "line",
+                "interpolate": "step-before",
+                "strokeWidth": 3,
+                "color": "#006CA2"
+              },
+              "encoding": {
+                "x": {
+                  "field": "Projection 2030",
+                  "type": "quantitative",
+                  "sort": "descending"
+                },
+                "y": {
+                  "field": "Age",
+                  "type": "ordinal",
+                  "sort": {"field": "Age ID", "order": "descending"},
+                  "axis": null
+                }
+              }
+            },
+            {
+              "mark": {
+                "type": "rect",
+                "width": 85,
+                "height": 25,
+                "color": "#31C0D0"
+              },
+              "encoding": {"x": {"value": 120}, "y": {"value": 253}}
+            },
+            {
+              "data": {"values": [{}]},
+              "mark": {
+                "type": "text",
+                "text": "2020 male",
+                "color": "white",
+                "fontSize": 19,
+                "fontWeight": "bolder"
+              },
+              "encoding": {"x": {"value": 120}, "y": {"value": 253}}
+            },
+            {
+              "mark": {
+                "type": "rect",
+                "width": 95,
+                "height": 45,
+                "color": "white"
+              },
+              "encoding": {"x": {"value": 60}, "y": {"value": 55}}
+            },
+            {
+              "data": {"values": [{}]},
+              "mark": {
+                "type": "text",
+                "text": ["2030 male", "projection"],
+                "color": "#006CA2",
+                "fontSize": 19,
+                "fontWeight": "bolder"
+              },
+              "encoding": {"x": {"value": 60}, "y": {"value": 45}}
+            }
+          ],
+          "resolve": {"scale": {"y": "independent"}}
+        },
+        {
+          "width": 200,
+          "height": 450,
+          "title": "",
+          "transform": [{"filter": {"field": "Gender", "equal": "Female"}}],
+          "layer": [
+            {
+              "mark": {"type": "bar", "color": "#77CCC4"},
+              "encoding": {
+                "x": {"field": "Population 2020", "type": "quantitative"},
+                "y": {
+                  "field": "Age",
+                  "type": "ordinal",
+                  "sort": {"field": "Age ID", "order": "descending"},
+                  "scale": {"paddingInner": 0.35},
+                  "axis": {"labels": false}
+                }
+              }
+            },
+            {
+              "mark": {
+                "type": "line",
+                "interpolate": "step-before",
+                "strokeWidth": 3,
+                "color": "#00949A"
+              },
+              "encoding": {
+                "x": {"field": "Projection 2030", "type": "quantitative"},
+                "y": {
+                  "field": "Age",
+                  "type": "ordinal",
+                  "sort": {"field": "Age ID", "order": "descending"},
+                  "axis": null
+                }
+              }
+            },
+            {
+              "mark": {
+                "type": "rect",
+                "width": 100,
+                "height": 25,
+                "color": "#77CCC4"
+              },
+              "encoding": {"x": {"value": 80}, "y": {"value": 253}}
+            },
+            {
+              "data": {"values": [{}]},
+              "mark": {
+                "type": "text",
+                "text": "2020 female",
+                "color": "white",
+                "fontSize": 19,
+                "fontWeight": "bolder"
+              },
+              "encoding": {"x": {"value": 80}, "y": {"value": 253}}
+            },
+            {
+              "mark": {
+                "type": "rect",
+                "width": 95,
+                "height": 45,
+                "color": "white"
+              },
+              "encoding": {"x": {"value": 140}, "y": {"value": 55}}
+            },
+            {
+              "data": {"values": [{}]},
+              "mark": {
+                "type": "text",
+                "text": ["2030 female", "projection"],
+                "color": "#00949A",
+                "fontSize": 19,
+                "fontWeight": "bolder"
+              },
+              "encoding": {"x": {"value": 140}, "y": {"value": 45}}
+            }
+          ],
+          "resolve": {"scale": {"y": "independent"}}
+        }
+      ]
+    },
+    {
+      "title": {
+        "anchor": "start",
+        "dy": 80,
+        "text": [
+          "Source: Office for National Statistics",
+          " #30DayChartChallenge2022",
+          "Graphic: @shadfrigui"
+        ],
+        "font": "Segoe UI",
+        "fontSize": 13,
+        "fontWeight": "lighter",
+        "lineHeight": 20
+      },
+      "mark": "text"
+    }
+  ],
+  "config": {
+    "padding": {"top": 10, "left": 20, "right": 10},
+    "view": {"stroke": null},
+    "font": "Segoe UI Light",
+    "axis": {
+      "domainColor": "#595959",
+      "labelFont": "Segoe UI",
+      "labelFontSize": 18,
+      "title": null,
+      "labelColor": "#333333"
+    },
+    "axisXQuantitative": {
+      "orient": "top",
+      "domain": false,
+      "gridColor": {"expr": "(datum.value % 100000) == 0 ? '#D5DDE0' : ''"},
+      "ticks": false,
+      "tickCount": 4,
+      "labelPadding": 5,
+      "labelFlush": false,
+      "labelExpr": "datum.value == 0 ? datum.value  : truncate(datum.value, 3  ,'right', '')"
+    },
+    "axisYDiscrete": {
+      "tickSize": 4,
+      "tickColor": {"expr": "(datum.value % 10) == 0 ? '#595959' : ''"},
+      "labelPadding": {
+        "expr": "datum.value == 100 ? 2 : datum.value == 0 ? 12 : 7"
+      },
+      "labelOffset": -2,
+      "labelFontSize": {"expr": "datum.value == '105+' ? 5 : 18"},
+      "labelColor": {"expr": "(datum.value % 10) == 0 ? '#333333' : ''"},
+      "zindex": 1
+    },
+    "concat": {"spacing": -5}
+  }
+}
