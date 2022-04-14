@@ -1,15 +1,17 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "data": {"url": "uk-population-2020-data.json"},
+  "data": {
+    "url": "https://raw.githubusercontent.com/shadfrigui/vega-lite/main/uk-population-2020/uk-population-2020-data.json"
+  },
   "vconcat": [
     {
       "layer": [
         {
           "mark": {
             "type": "rect",
-            "width": 500,
+            "width": 470,
             "height": 2,
-            "xOffset": 216,
+            "xOffset": 201,
             "yOffset": 10,
             "color": "#EB111A"
           }
@@ -201,21 +203,17 @@
     },
     {
       "title": {
-        "text": [
-          "Source: Office for National Statistics",
-          " #30DayChartChallenge2022",
-          "Graphic: @shadfrigui"
-        ],
+        "text": "Source: Office for National Statistics",
         "fontSize": 13,
         "fontWeight": "lighter",
         "lineHeight": 20,
-        "dy": 80
+        "dy": 50
       },
       "mark": "text"
     }
   ],
   "config": {
-    "padding": {"top": 10, "left": 20, "right": 10},
+    "padding": {"top": 10, "bottom": 10, "left": 20, "right": 20},
     "view": {"stroke": null},
     "font": "Segoe UI Light",
     "axis": {
