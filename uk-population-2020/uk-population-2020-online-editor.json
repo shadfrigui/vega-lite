@@ -1514,14 +1514,10 @@
         {
           "title": {
             "text": "Boomer bust",
-            "anchor": "start",
-            "dy": 85,
             "font": "Segoe UI",
             "fontSize": 25,
-            "subtitlePadding": 10,
             "subtitle": "UK, demographics",
-            "subtitleFontSize": 19,
-            "subtitleFontWeight": "bolder"
+            "dy": 85
           },
           "mark": "text"
         },
@@ -1541,10 +1537,9 @@
       "height": 50,
       "title": {
         "text": "Population age structure, '000",
-        "anchor": "start",
+        "fontSize": 19,
         "dx": -14,
-        "dy": 27,
-        "fontSize": 19
+        "dy": 27
       },
       "mark": "text"
     },
@@ -1573,12 +1568,7 @@
               }
             },
             {
-              "mark": {
-                "type": "line",
-                "interpolate": "step-before",
-                "strokeWidth": 3,
-                "color": "#006CA2"
-              },
+              "mark": {"type": "line", "color": "#006CA2"},
               "encoding": {
                 "x": {
                   "field": "Projection 2030",
@@ -1604,13 +1594,7 @@
             },
             {
               "data": {"values": [{}]},
-              "mark": {
-                "type": "text",
-                "text": "2020 male",
-                "color": "white",
-                "fontSize": 19,
-                "fontWeight": "bolder"
-              },
+              "mark": {"type": "text", "text": "2020 male", "color": "white"},
               "encoding": {"x": {"value": 120}, "y": {"value": 253}}
             },
             {
@@ -1627,9 +1611,7 @@
               "mark": {
                 "type": "text",
                 "text": ["2030 male", "projection"],
-                "color": "#006CA2",
-                "fontSize": 19,
-                "fontWeight": "bolder"
+                "color": "#006CA2"
               },
               "encoding": {"x": {"value": 60}, "y": {"value": 45}}
             }
@@ -1656,12 +1638,7 @@
               }
             },
             {
-              "mark": {
-                "type": "line",
-                "interpolate": "step-before",
-                "strokeWidth": 3,
-                "color": "#00949A"
-              },
+              "mark": {"type": "line", "color": "#00949A"},
               "encoding": {
                 "x": {"field": "Projection 2030", "type": "quantitative"},
                 "y": {
@@ -1683,13 +1660,7 @@
             },
             {
               "data": {"values": [{}]},
-              "mark": {
-                "type": "text",
-                "text": "2020 female",
-                "color": "white",
-                "fontSize": 19,
-                "fontWeight": "bolder"
-              },
+              "mark": {"type": "text", "text": "2020 female", "color": "white"},
               "encoding": {"x": {"value": 80}, "y": {"value": 253}}
             },
             {
@@ -1706,9 +1677,7 @@
               "mark": {
                 "type": "text",
                 "text": ["2030 female", "projection"],
-                "color": "#00949A",
-                "fontSize": 19,
-                "fontWeight": "bolder"
+                "color": "#00949A"
               },
               "encoding": {"x": {"value": 140}, "y": {"value": 45}}
             }
@@ -1719,17 +1688,15 @@
     },
     {
       "title": {
-        "anchor": "start",
-        "dy": 80,
         "text": [
           "Source: Office for National Statistics",
           " #30DayChartChallenge2022",
           "Graphic: @shadfrigui"
         ],
-        "font": "Segoe UI",
         "fontSize": 13,
         "fontWeight": "lighter",
-        "lineHeight": 20
+        "lineHeight": 20,
+        "dy": 80
       },
       "mark": "text"
     }
@@ -1742,18 +1709,18 @@
       "domainColor": "#595959",
       "labelFont": "Segoe UI",
       "labelFontSize": 18,
-      "title": null,
-      "labelColor": "#333333"
+      "labelColor": "#333333",
+      "title": null
     },
     "axisXQuantitative": {
       "orient": "top",
       "domain": false,
       "gridColor": {"expr": "(datum.value % 100000) == 0 ? '#D5DDE0' : ''"},
-      "ticks": false,
       "tickCount": 4,
+      "ticks": false,
       "labelPadding": 5,
       "labelFlush": false,
-      "labelExpr": "datum.value == 0 ? datum.value  : truncate(datum.value, 3  ,'right', '')"
+      "labelExpr": "datum.value == 0 ? datum.value : truncate(datum.value, 3  ,'right', '')"
     },
     "axisYDiscrete": {
       "tickSize": 4,
@@ -1765,6 +1732,14 @@
       "labelFontSize": {"expr": "datum.value == '105+' ? 5 : 18"},
       "labelColor": {"expr": "(datum.value % 10) == 0 ? '#333333' : ''"},
       "zindex": 1
+    },
+    "line": {"interpolate": "step-before", "strokeWidth": 3},
+    "text": {"fontSize": 19, "fontWeight": "bolder"},
+    "title": {
+      "anchor": "start",
+      "subtitlePadding": 10,
+      "subtitleFontSize": 19,
+      "subtitleFontWeight": "bolder"
     },
     "concat": {"spacing": -5}
   }
