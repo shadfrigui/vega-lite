@@ -1,62 +1,67 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "data": {"url": "uk-population-2020-data.json"},
+  "data": {
+    "url": "uk-population-2020-data.json"
+  },
+  "spacing": 20,
   "vconcat": [
     {
       "layer": [
         {
           "mark": {
             "type": "rect",
-            "width": 500,
+            "align": "left",
+            "width": 470,
             "height": 2,
-            "xOffset": 216,
-            "yOffset": 10,
+            "xOffset": -35,
             "color": "#EB111A"
           }
         },
         {
           "mark": {
             "type": "rect",
-            "width": 35,
+            "align": "left",
+            "width": 45,
             "height": 10,
-            "xOffset": -16,
-            "yOffset": 15,
+            "xOffset": -35,
+            "yOffset": 6,
             "color": "#EB111A"
           }
         },
         {
           "title": {
             "text": "Boomer bust",
-            "font": "Segoe UI",
-            "fontSize": 25,
             "subtitle": "UK, demographics",
-            "dy": 85
+            "dy": 75
           },
           "mark": "text"
         },
         {
           "mark": {
             "type": "rect",
+            "align": "left",
             "width": 25,
             "height": 1,
-            "xOffset": -21,
-            "yOffset": 120,
+            "xOffset": -35,
+            "yOffset": 110,
+            "color": "black"
+          }
+        },
+        {
+          "data": {"values": [{}]},
+          "mark": {
+            "type": "text",
+            "text": "Population age structure, '000",
+            "align": "left",
+            "xOffset": -25,
+            "yOffset": 115,
             "color": "black"
           }
         }
       ]
     },
     {
-      "height": 50,
-      "title": {
-        "text": "Population age structure, '000",
-        "fontSize": 19,
-        "dx": -14,
-        "dy": 27
-      },
-      "mark": "text"
-    },
-    {
+      "spacing": -5,
       "concat": [
         {
           "width": 200,
@@ -201,25 +206,19 @@
     },
     {
       "title": {
-        "text": [
-          "Source: Office for National Statistics",
-          " #30DayChartChallenge2022",
-          "Graphic: @shadfrigui"
-        ],
+        "text": "Source: Office for National Statistics",
         "fontSize": 13,
-        "fontWeight": "lighter",
-        "lineHeight": 20,
-        "dy": 80
+        "fontWeight":"lighter",
+        "color": "#62605F"
       },
       "mark": "text"
     }
   ],
   "config": {
-    "padding": {"top": 10, "left": 20, "right": 10},
+    "padding": {"top": 15, "bottom": -10, "left": 20, "right": 20},
     "view": {"stroke": null},
     "font": "Segoe UI Light",
     "axis": {
-      "domainColor": "#595959",
       "labelFont": "Segoe UI",
       "labelFontSize": 18,
       "labelColor": "#333333",
@@ -236,6 +235,7 @@
       "labelExpr": "datum.value == 0 ? datum.value : truncate(datum.value, 3  ,'right', '')"
     },
     "axisYDiscrete": {
+      "domainColor": "#595959",
       "tickSize": 4,
       "tickColor": {"expr": "(datum.value % 10) == 0 ? '#595959' : ''"},
       "labelPadding": {
@@ -250,10 +250,11 @@
     "text": {"fontSize": 19, "fontWeight": "bolder"},
     "title": {
       "anchor": "start",
+      "font": "Segoe UI",
+      "fontSize": 25,
       "subtitlePadding": 10,
       "subtitleFontSize": 19,
       "subtitleFontWeight": "bolder"
-    },
-    "concat": {"spacing": -5}
+    }
   }
 }
