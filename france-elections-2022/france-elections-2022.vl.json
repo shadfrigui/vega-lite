@@ -1,0 +1,258 @@
+﻿{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "vconcat": [
+    {
+      "layer": [
+        {"data": {"values": [{}]}, "mark": {"type": "rect", "xOffset": -18.5}},
+        {
+          "title": {
+            "text": "France re-elected Emmanuel Macron as president",
+            "fontSize": 40,
+            "color": "#E8EAE5",
+            "subtitle": "Most votes by commune",
+            "subtitleFontSize": 30,
+            "subtitlePadding": 10,
+            "subtitleColor": "#908F95",
+            "dy": 100
+          },
+          "mark": "text"
+        }
+      ]
+    },
+    {
+      "concat": [
+        {
+          "width": 200,
+          "height": 300,
+          "data": {
+            "values": [
+              {"candidate": "Macron", "percentage": 58.55},
+              {"candidate": "Le Pen", "percentage": 41.45}
+            ]
+          },
+          "encoding": {
+            "x": {"field": "candidate", "type": "nominal", "sort": "descending"}
+          },
+          "layer": [
+            {
+              "mark": {"type": "bar", "yOffset": 300},
+              "encoding": {
+                "y": {
+                  "field": "percentage",
+                  "type": "quantitative",
+                  "axis": {"title": "Vote Share (%)"}
+                },
+                "color": {
+                  "field": "candidate",
+                  "type": "nominal",
+                  "scale": {
+                    "domain": ["Macron", "Le Pen"],
+                    "range": ["#E0A000", "#2C63B5"]
+                  },
+                  "legend": null
+                }
+              }
+            },
+            {
+              "mark": {
+                "type": "text",
+                "font": "Test Metric Medium",
+                "fontSize": 32,
+                "color": "white",
+                "yOffset": 320
+              },
+              "encoding": {
+                "y": {"field": "percentage", "type": "quantitative"},
+                "text": {"field": "percentage", "format": ".1f"}
+              }
+            },
+            {
+              "title": {
+                "text": "2022",
+                "align": "left",
+                "font": "Test Metric Semibold",
+                "fontSize": 85,
+                "color": "#908F95",
+                "dy": 100
+              },
+              "mark": "text"
+            }
+          ]
+        },
+        {
+          "width": 650,
+          "height": 600,
+          "layer": [
+            {
+              "data": {
+                "url": "france.json",
+                "format": {"type": "topojson", "feature": "a_com2022"}
+              },
+              "transform": [
+                {
+                  "lookup": "properties.codgeo",
+                  "from": {
+                    "data": {"url": "france-elections-2022-com-data.json"},
+                    "key": "codgeo",
+                    "fields": ["macron%", "lepen%", "winner"]
+                  }
+                },
+                {
+                  "filter": {
+                    "not": {
+                      "field": "properties.dep",
+                      "oneOf": ["971", "972", "973", "974", "976"]
+                    }
+                  }
+                }
+              ],
+              "mark": {"type": "geoshape", "stroke": null},
+              "encoding": {
+                "color": {
+                  "field": "winner",
+                  "type": "nominal",
+                  "scale": {
+                    "domain": ["Macron", "Le Pen", "Tie"],
+                    "range": ["#E0A000", "#2C63B5", "white"]
+                  },
+                  "legend": null
+                }
+              }
+            },
+            {
+              "data": {
+                "url": "france.json",
+                "format": {"type": "topojson", "feature": "a_dep2022"}
+              },
+              "transform": [
+                {
+                  "lookup": "properties.dep",
+                  "from": {
+                    "data": {"url": "france-elections-2022-dep-data.json"},
+                    "key": "dep",
+                    "fields": ["libdep", "macron%", "lepen%"]
+                  }
+                },
+                {
+                  "filter": {
+                    "not": {
+                      "field": "properties.dep",
+                      "oneOf": ["971", "972", "973", "974", "976"]
+                    }
+                  }
+                }
+              ],
+              "mark": {
+                "type": "geoshape",
+                "fill": "transparent",
+                "stroke": "black",
+                "strokeWidth": 0.3
+              },
+              "encoding": {
+                "tooltip": [
+                  {"field": "libdep", "type": "nominal", "title": "Department"},
+                  {
+                    "field": "macron%",
+                    "type": "quantitative",
+                    "format": ".1%",
+                    "title": "Macron"
+                  },
+                  {
+                    "field": "lepen%",
+                    "type": "quantitative",
+                    "format": ".1%",
+                    "title": "Le Pen"
+                  }
+                ]
+              }
+            },
+            {
+              "data": {
+                "values": [
+                  {"city": "Marseille", "lat": 43.296482, "lon": 5.36978},
+                  {"city": "Lyon", "lat": 45.764043, "lon": 4.835659},
+                  {"city": "Paris", "lat": 48.856614, "lon": 2.3522219},
+                  {"city": "Toulouse", "lat": 43.604652, "lon": 1.444209}
+                ]
+              },
+              "encoding": {
+                "longitude": {"field": "lon", "type": "quantitative"},
+                "latitude": {"field": "lat", "type": "quantitative"}
+              },
+              "layer": [
+                {"mark": {"type": "circle"}},
+                {
+                  "mark": {
+                    "type": "text",
+                    "fontSize": {"expr": "datum.city === 'Paris' ? 30 : 28"},
+                    "fontStyle": {
+                      "expr": "datum.city === 'Paris' ? 'bold' : 'normal'"
+                    },
+                    "color": "white",
+                    "dx": {
+                      "expr": "datum.city === 'Toulouse' ? -53 : datum.city === 'Marseille' ? 55 : 33"
+                    },
+                    "dy": -12
+                  },
+                  "encoding": {"text": {"field": "city"}}
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "resolve": {"scale": {"color": "independent"}},
+      "spacing": -5
+    },
+    {
+      "title": {
+        "text": [
+          "Communes with same number of votes are in white",
+          "Source: data.gouv.fr • Graphic: @shadfrigui"
+        ],
+        "font": "Outfit",
+        "fontSize": 16,
+        "lineHeight": 20,
+        "color": "#908F95",
+        "dy": 10
+      },
+      "mark": "text"
+    }
+  ],
+  "config": {
+    "padding": {"top": 40, "left": 40, "right": 20},
+    "background": "#262A33",
+    "view": {"stroke": null},
+    "font": "Test Metric Regular",
+    "axis": {"domain": false, "ticks": false},
+    "axisX": {
+      "labelAngle": 0,
+      "labelPadding": 305,
+      "labelFontSize": 25,
+      "labelColor": "#908F95",
+      "title": null
+    },
+    "axisY": {
+      "grid": false,
+      "labels": false,
+      "titleAngle": 0,
+      "titleAlign": "left",
+      "titleFont": "Outfit",
+      "titleFontWeight": "normal",
+      "titleFontSize": 25,
+      "titleColor": "#908F95",
+      "titleX": 5,
+      "titleY": 260
+    },
+    "rect": {"align": "left", "width": 89, "height": 5, "color": "#E8EAE5"},
+    "bar": {"width": 90},
+    "circle": {
+      "size": 70,
+      "color": "black",
+      "opacity": 1,
+      "stroke": "white",
+      "strokeWidth": 0.7
+    },
+    "title": {"anchor": "start", "fontWeight": "normal"}
+  }
+}

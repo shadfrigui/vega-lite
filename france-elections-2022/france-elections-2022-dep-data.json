@@ -1,0 +1,578 @@
+[
+ {
+   "dep": "01",
+   "libdep": "Ain",
+   "macron%": 0.5499,
+   "lepen%": 0.4501
+ },
+ {
+   "dep": "02",
+   "libdep": "Aisne",
+   "macron%": 0.4009,
+   "lepen%": 0.5991
+ },
+ {
+   "dep": "03",
+   "libdep": "Allier",
+   "macron%": 0.5235,
+   "lepen%": 0.4765
+ },
+ {
+   "dep": "04",
+   "libdep": "Alpes-de-Haute-Provence",
+   "macron%": 0.4855,
+   "lepen%": 0.5145
+ },
+ {
+   "dep": "05",
+   "libdep": "Hautes-Alpes",
+   "macron%": 0.5507,
+   "lepen%": 0.4493
+ },
+ {
+   "dep": "06",
+   "libdep": "Alpes-Maritimes",
+   "macron%": 0.5013,
+   "lepen%": 0.4987
+ },
+ {
+   "dep": "07",
+   "libdep": "Ardèche",
+   "macron%": 0.5243,
+   "lepen%": 0.4757
+ },
+ {
+   "dep": "08",
+   "libdep": "Ardennes",
+   "macron%": 0.4333,
+   "lepen%": 0.5667
+ },
+ {
+   "dep": "09",
+   "libdep": "Ariège",
+   "macron%": 0.5109,
+   "lepen%": 0.4891
+ },
+ {
+   "dep": "10",
+   "libdep": "Aube",
+   "macron%": 0.4832,
+   "lepen%": 0.5168
+ },
+ {
+   "dep": "11",
+   "libdep": "Aude",
+   "macron%": 0.451,
+   "lepen%": 0.549
+ },
+ {
+   "dep": "12",
+   "libdep": "Aveyron",
+   "macron%": 0.6007,
+   "lepen%": 0.3993
+ },
+ {
+   "dep": "13",
+   "libdep": "Bouches-du-Rhône",
+   "macron%": 0.5208,
+   "lepen%": 0.4792
+ },
+ {
+   "dep": "14",
+   "libdep": "Calvados",
+   "macron%": 0.6029,
+   "lepen%": 0.3971
+ },
+ {
+   "dep": "15",
+   "libdep": "Cantal",
+   "macron%": 0.5608,
+   "lepen%": 0.4392
+ },
+ {
+   "dep": "16",
+   "libdep": "Charente",
+   "macron%": 0.5506,
+   "lepen%": 0.4494
+ },
+ {
+   "dep": "17",
+   "libdep": "Charente-Maritime",
+   "macron%": 0.5632,
+   "lepen%": 0.4368
+ },
+ {
+   "dep": "18",
+   "libdep": "Cher",
+   "macron%": 0.5256,
+   "lepen%": 0.4744
+ },
+ {
+   "dep": "19",
+   "libdep": "Corrèze",
+   "macron%": 0.5578,
+   "lepen%": 0.4422
+ },
+ {
+   "dep": "2A",
+   "libdep": "Corse-du-Sud",
+   "macron%": 0.4168,
+   "lepen%": 0.5832
+ },
+ {
+   "dep": "2B",
+   "libdep": "Haute-Corse",
+   "macron%": 0.4213,
+   "lepen%": 0.5787
+ },
+ {
+   "dep": "21",
+   "libdep": "Côte-d'Or",
+   "macron%": 0.5727,
+   "lepen%": 0.4273
+ },
+ {
+   "dep": "22",
+   "libdep": "Côtes-d'Armor",
+   "macron%": 0.629,
+   "lepen%": 0.371
+ },
+ {
+   "dep": "23",
+   "libdep": "Creuse",
+   "macron%": 0.5204,
+   "lepen%": 0.4796
+ },
+ {
+   "dep": "24",
+   "libdep": "Dordogne",
+   "macron%": 0.515,
+   "lepen%": 0.485
+ },
+ {
+   "dep": "25",
+   "libdep": "Doubs",
+   "macron%": 0.5716,
+   "lepen%": 0.4284
+ },
+ {
+   "dep": "26",
+   "libdep": "Drôme",
+   "macron%": 0.5572,
+   "lepen%": 0.4428
+ },
+ {
+   "dep": "27",
+   "libdep": "Eure",
+   "macron%": 0.4862,
+   "lepen%": 0.5138
+ },
+ {
+   "dep": "28",
+   "libdep": "Eure-et-Loir",
+   "macron%": 0.5329,
+   "lepen%": 0.4671
+ },
+ {
+   "dep": "29",
+   "libdep": "Finistère",
+   "macron%": 0.675,
+   "lepen%": 0.325
+ },
+ {
+   "dep": "30",
+   "libdep": "Gard",
+   "macron%": 0.4785,
+   "lepen%": 0.5215
+ },
+ {
+   "dep": "31",
+   "libdep": "Haute-Garonne",
+   "macron%": 0.6442,
+   "lepen%": 0.3558
+ },
+ {
+   "dep": "32",
+   "libdep": "Gers",
+   "macron%": 0.557,
+   "lepen%": 0.443
+ },
+ {
+   "dep": "33",
+   "libdep": "Gironde",
+   "macron%": 0.6137,
+   "lepen%": 0.3863
+ },
+ {
+   "dep": "34",
+   "libdep": "Hérault",
+   "macron%": 0.5258,
+   "lepen%": 0.4742
+ },
+ {
+   "dep": "35",
+   "libdep": "Ille-et-Vilaine",
+   "macron%": 0.7094,
+   "lepen%": 0.2906
+ },
+ {
+   "dep": "36",
+   "libdep": "Indre",
+   "macron%": 0.514,
+   "lepen%": 0.486
+ },
+ {
+   "dep": "37",
+   "libdep": "Indre-et-Loire",
+   "macron%": 0.6272,
+   "lepen%": 0.3728
+ },
+ {
+   "dep": "38",
+   "libdep": "Isère",
+   "macron%": 0.5982,
+   "lepen%": 0.4018
+ },
+ {
+   "dep": "39",
+   "libdep": "Jura",
+   "macron%": 0.5307,
+   "lepen%": 0.4693
+ },
+ {
+   "dep": "40",
+   "libdep": "Landes",
+   "macron%": 0.5654,
+   "lepen%": 0.4346
+ },
+ {
+   "dep": "41",
+   "libdep": "Loir-et-Cher",
+   "macron%": 0.5381,
+   "lepen%": 0.4619
+ },
+ {
+   "dep": "42",
+   "libdep": "Loire",
+   "macron%": 0.5664,
+   "lepen%": 0.4336
+ },
+ {
+   "dep": "43",
+   "libdep": "Haute-Loire",
+   "macron%": 0.5016,
+   "lepen%": 0.4984
+ },
+ {
+   "dep": "44",
+   "libdep": "Loire-Atlantique",
+   "macron%": 0.6948,
+   "lepen%": 0.3052
+ },
+ {
+   "dep": "45",
+   "libdep": "Loiret",
+   "macron%": 0.5757,
+   "lepen%": 0.4243
+ },
+ {
+   "dep": "46",
+   "libdep": "Lot",
+   "macron%": 0.5918,
+   "lepen%": 0.4082
+ },
+ {
+   "dep": "47",
+   "libdep": "Lot-et-Garonne",
+   "macron%": 0.4951,
+   "lepen%": 0.5049
+ },
+ {
+   "dep": "48",
+   "libdep": "Lozère",
+   "macron%": 0.542,
+   "lepen%": 0.458
+ },
+ {
+   "dep": "49",
+   "libdep": "Maine-et-Loire",
+   "macron%": 0.6653,
+   "lepen%": 0.3347
+ },
+ {
+   "dep": "50",
+   "libdep": "Manche",
+   "macron%": 0.5961,
+   "lepen%": 0.4039
+ },
+ {
+   "dep": "51",
+   "libdep": "Marne",
+   "macron%": 0.521,
+   "lepen%": 0.479
+ },
+ {
+   "dep": "52",
+   "libdep": "Haute-Marne",
+   "macron%": 0.4304,
+   "lepen%": 0.5696
+ },
+ {
+   "dep": "53",
+   "libdep": "Mayenne",
+   "macron%": 0.6421,
+   "lepen%": 0.3579
+ },
+ {
+   "dep": "54",
+   "libdep": "Meurthe-et-Moselle",
+   "macron%": 0.5441,
+   "lepen%": 0.4559
+ },
+ {
+   "dep": "55",
+   "libdep": "Meuse",
+   "macron%": 0.444,
+   "lepen%": 0.556
+ },
+ {
+   "dep": "56",
+   "libdep": "Morbihan",
+   "macron%": 0.6281,
+   "lepen%": 0.3719
+ },
+ {
+   "dep": "57",
+   "libdep": "Moselle",
+   "macron%": 0.5046,
+   "lepen%": 0.4954
+ },
+ {
+   "dep": "58",
+   "libdep": "Nièvre",
+   "macron%": 0.4989,
+   "lepen%": 0.5011
+ },
+ {
+   "dep": "59",
+   "libdep": "Nord",
+   "macron%": 0.5283,
+   "lepen%": 0.4717
+ },
+ {
+   "dep": "60",
+   "libdep": "Oise",
+   "macron%": 0.4727,
+   "lepen%": 0.5273
+ },
+ {
+   "dep": "61",
+   "libdep": "Orne",
+   "macron%": 0.5512,
+   "lepen%": 0.4488
+ },
+ {
+   "dep": "62",
+   "libdep": "Pas-de-Calais",
+   "macron%": 0.425,
+   "lepen%": 0.575
+ },
+ {
+   "dep": "63",
+   "libdep": "Puy-de-Dôme",
+   "macron%": 0.6016,
+   "lepen%": 0.3984
+ },
+ {
+   "dep": "64",
+   "libdep": "Pyrénées-Atlantiques",
+   "macron%": 0.6305,
+   "lepen%": 0.3695
+ },
+ {
+   "dep": "65",
+   "libdep": "Hautes-Pyrénées",
+   "macron%": 0.555,
+   "lepen%": 0.445
+ },
+ {
+   "dep": "66",
+   "libdep": "Pyrénées-Orientales",
+   "macron%": 0.4367,
+   "lepen%": 0.5633
+ },
+ {
+   "dep": "67",
+   "libdep": "Bas-Rhin",
+   "macron%": 0.59,
+   "lepen%": 0.41
+ },
+ {
+   "dep": "68",
+   "libdep": "Haut-Rhin",
+   "macron%": 0.529,
+   "lepen%": 0.471
+ },
+ {
+   "dep": "69",
+   "libdep": "Rhône",
+   "macron%": 0.6865,
+   "lepen%": 0.3135
+ },
+ {
+   "dep": "70",
+   "libdep": "Haute-Saône",
+   "macron%": 0.4312,
+   "lepen%": 0.5688
+ },
+ {
+   "dep": "71",
+   "libdep": "Saône-et-Loire",
+   "macron%": 0.5333,
+   "lepen%": 0.4667
+ },
+ {
+   "dep": "72",
+   "libdep": "Sarthe",
+   "macron%": 0.5541,
+   "lepen%": 0.4459
+ },
+ {
+   "dep": "73",
+   "libdep": "Savoie",
+   "macron%": 0.5765,
+   "lepen%": 0.4235
+ },
+ {
+   "dep": "74",
+   "libdep": "Haute-Savoie",
+   "macron%": 0.6169,
+   "lepen%": 0.3831
+ },
+ {
+   "dep": "75",
+   "libdep": "Paris",
+   "macron%": 0.8511,
+   "lepen%": 0.1489
+ },
+ {
+   "dep": "76",
+   "libdep": "Seine-Maritime",
+   "macron%": 0.5528,
+   "lepen%": 0.4472
+ },
+ {
+   "dep": "77",
+   "libdep": "Seine-et-Marne",
+   "macron%": 0.5697,
+   "lepen%": 0.4303
+ },
+ {
+   "dep": "78",
+   "libdep": "Yvelines",
+   "macron%": 0.7105,
+   "lepen%": 0.2895
+ },
+ {
+   "dep": "79",
+   "libdep": "Deux-Sèvres",
+   "macron%": 0.6213,
+   "lepen%": 0.3787
+ },
+ {
+   "dep": "80",
+   "libdep": "Somme",
+   "macron%": 0.49,
+   "lepen%": 0.51
+ },
+ {
+   "dep": "81",
+   "libdep": "Tarn",
+   "macron%": 0.5306,
+   "lepen%": 0.4694
+ },
+ {
+   "dep": "82",
+   "libdep": "Tarn-et-Garonne",
+   "macron%": 0.4798,
+   "lepen%": 0.5202
+ },
+ {
+   "dep": "83",
+   "libdep": "Var",
+   "macron%": 0.449,
+   "lepen%": 0.551
+ },
+ {
+   "dep": "84",
+   "libdep": "Vaucluse",
+   "macron%": 0.48,
+   "lepen%": 0.52
+ },
+ {
+   "dep": "85",
+   "libdep": "Vendée",
+   "macron%": 0.6186,
+   "lepen%": 0.3814
+ },
+ {
+   "dep": "86",
+   "libdep": "Vienne",
+   "macron%": 0.6012,
+   "lepen%": 0.3988
+ },
+ {
+   "dep": "87",
+   "libdep": "Haute-Vienne",
+   "macron%": 0.5918,
+   "lepen%": 0.4082
+ },
+ {
+   "dep": "88",
+   "libdep": "Vosges",
+   "macron%": 0.4758,
+   "lepen%": 0.5242
+ },
+ {
+   "dep": "89",
+   "libdep": "Yonne",
+   "macron%": 0.4841,
+   "lepen%": 0.5159
+ },
+ {
+   "dep": "90",
+   "libdep": "Territoire de Belfort",
+   "macron%": 0.5144,
+   "lepen%": 0.4856
+ },
+ {
+   "dep": "91",
+   "libdep": "Essonne",
+   "macron%": 0.6543,
+   "lepen%": 0.3457
+ },
+ {
+   "dep": "92",
+   "libdep": "Hauts-de-Seine",
+   "macron%": 0.8039,
+   "lepen%": 0.1961
+ },
+ {
+   "dep": "93",
+   "libdep": "Seine-Saint-Denis",
+   "macron%": 0.7372,
+   "lepen%": 0.2628
+ },
+ {
+   "dep": "94",
+   "libdep": "Val-de-Marne",
+   "macron%": 0.7448,
+   "lepen%": 0.2552
+ },
+ {
+   "dep": "95",
+   "libdep": "Val-d'Oise",
+   "macron%": 0.6615,
+   "lepen%": 0.3385
+ }
+]
