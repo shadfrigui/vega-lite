@@ -1,0 +1,107 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 500,
+  "title": {"text": "Sales by State"},
+  "data": {
+    "url": "us-10m.json",
+    "format": {"type": "topojson", "feature": "states"}
+  },
+  "transform": [
+    {"filter": {"not": {"field": "id", "oneOf": [2, 15]}}},
+    {
+      "lookup": "id",
+      "from": {
+        "data": {"url": "sales-spike-map-data.json"},
+        "key": "id",
+        "fields": ["State", "Sales", "Latitude", "Longitude"]
+      }
+    }
+  ],
+  "layer": [
+    {
+      "mark": {"type": "geoshape", "stroke": "#696464"},
+      "encoding": {
+        "fill": {
+          "field": "Sales",
+          "type": "quantitative",
+          "bin": true,
+          "scale": {
+            "range": [
+              "#F6F5F6",
+              "#DBEFF0",
+              "#B5E2E9",
+              "#8DD4E2",
+              "#65C7D8",
+              "#44B7CF"
+            ]
+          },
+          "legend": {"format": ".2s"}
+        },
+        "tooltip": {"field": "Sales", "format": ".2s"}
+      }
+    },
+    {
+      "mark": {"type": "point", "shape": "M-1 0 L0 -15 L1 0"},
+      "encoding": {
+        "longitude": {"field": "Longitude", "type": "quantitative"},
+        "latitude": {"field": "Latitude", "type": "quantitative"},
+        "size": {"field": "Sales", "type": "quantitative", "legend": null},
+        "fill": {
+          "field": "Sales",
+          "type": "quantitative",
+          "bin": true,
+          "scale": {
+            "range": [
+              "#F6F5F6",
+              "#DBEFF0",
+              "#B5E2E9",
+              "#8DD4E2",
+              "#65C7D8",
+              "#44B7CF"
+            ]
+          },
+          "legend": null
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "color": {"expr": "datum['Sales'] > 1000000 ? '#333333' : ''"},
+        "dy": 12
+      },
+      "encoding": {
+        "longitude": {"field": "Longitude", "type": "quantitative"},
+        "latitude": {"field": "Latitude", "type": "quantitative"},
+        "text": {"field": "State"}
+      }
+    }
+  ],
+  "config": {
+    "padding": {"top": 20, "bottom": 20, "left": 30, "right": 30},
+    "view": {"stroke": null},
+    "font": "Outfit",
+    "legend": {
+      "orient": "none",
+      "direction": "horizontal",
+      "gradientLength": 300,
+      "gradientThickness": 10,
+      "gradientLabelOffset": -25,
+      "labelFontSize": 12,
+      "labelColor": "#433828",
+      "title": null,
+      "legendX": 250,
+      "legendY": -30
+    },
+    "point": {"opacity": 1, "stroke": "darkslategrey", "strokeWidth": 0.7},
+    "text": {"fontSize": 12},
+    "projection": {"type": "albersUsa"},
+    "title": {
+      "align": "left",
+      "fontSize": 45,
+      "fontWeight": "normal",
+      "offset": 80
+    }
+  }
+}

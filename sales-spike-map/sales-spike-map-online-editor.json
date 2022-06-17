@@ -1,0 +1,510 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 500,
+  "title": {"text": "Sales by State"},
+  "data": {
+    "url": "data/us-10m.json",
+    "format": {"type": "topojson", "feature": "states"}
+  },
+  "transform": [
+    {"filter": {"not": {"field": "id", "oneOf": [2, 15]}}},
+    {
+      "lookup": "id",
+      "from": {
+        "data": {
+          "values": [
+            {
+              "id": 1,
+              "State": "Alabama",
+              "State Abbreviation": "AL",
+              "Latitude": 32.31823,
+              "Longitude": -86.902298,
+              "Sales": 247086
+            },
+            {
+              "id": 4,
+              "State": "Arizona",
+              "State Abbreviation": "AZ",
+              "Latitude": 34.048927,
+              "Longitude": -111.093735,
+              "Sales": 337257.9
+            },
+            {
+              "id": 5,
+              "State": "Arkansas",
+              "State Abbreviation": "AR",
+              "Latitude": 34.799999,
+              "Longitude": -92.199997,
+              "Sales": 225130
+            },
+            {
+              "id": 6,
+              "State": "California",
+              "State Abbreviation": "CA",
+              "Latitude": 36.778259,
+              "Longitude": -119.417931,
+              "Sales": 2630107.1
+            },
+            {
+              "id": 8,
+              "State": "Colorado",
+              "State Abbreviation": "CO",
+              "Latitude": 39.113014,
+              "Longitude": -105.358887,
+              "Sales": 990622.8
+            },
+            {
+              "id": 9,
+              "State": "Connecticut",
+              "State Abbreviation": "CT",
+              "Latitude": 41.599998,
+              "Longitude": -72.699997,
+              "Sales": 301426
+            },
+            {
+              "id": 10,
+              "State": "Delaware",
+              "State Abbreviation": "DE",
+              "Latitude": 39,
+              "Longitude": -75.5,
+              "Sales": 292944
+            },
+            {
+              "id": 11,
+              "State": "District of Columbia",
+              "State Abbreviation": "DC",
+              "Latitude": 38.942142,
+              "Longitude": -77.025955,
+              "Sales": 286760
+            },
+            {
+              "id": 12,
+              "State": "Florida",
+              "State Abbreviation": "FL",
+              "Latitude": 27.994402,
+              "Longitude": -81.760254,
+              "Sales": 844014.95
+            },
+            {
+              "id": 13,
+              "State": "Georgia",
+              "State Abbreviation": "GA",
+              "Latitude": 33.247875,
+              "Longitude": -83.441162,
+              "Sales": 1542155
+            },
+            {
+              "id": 16,
+              "State": "Idaho",
+              "State Abbreviation": "ID",
+              "Latitude": 44.068203,
+              "Longitude": -114.742043,
+              "Sales": 247452.6
+            },
+            {
+              "id": 17,
+              "State": "Illinois",
+              "State Abbreviation": "IL",
+              "Latitude": 40,
+              "Longitude": -89,
+              "Sales": 785836.6
+            },
+            {
+              "id": 18,
+              "State": "Indiana",
+              "State Abbreviation": "IN",
+              "Latitude": 40.273502,
+              "Longitude": -86.126976,
+              "Sales": 400099
+            },
+            {
+              "id": 19,
+              "State": "Iowa",
+              "State Abbreviation": "IA",
+              "Latitude": 42.032974,
+              "Longitude": -93.581543,
+              "Sales": 189170
+            },
+            {
+              "id": 20,
+              "State": "Kansas",
+              "State Abbreviation": "KS",
+              "Latitude": 38.5,
+              "Longitude": -98,
+              "Sales": 154950
+            },
+            {
+              "id": 21,
+              "State": "Kentucky",
+              "State Abbreviation": "KY",
+              "Latitude": 37.839333,
+              "Longitude": -84.27002,
+              "Sales": 463824
+            },
+            {
+              "id": 22,
+              "State": "Louisiana",
+              "State Abbreviation": "LA",
+              "Latitude": 30.39183,
+              "Longitude": -92.329102,
+              "Sales": 172866
+            },
+            {
+              "id": 23,
+              "State": "Maine",
+              "State Abbreviation": "ME",
+              "Latitude": 45.367584,
+              "Longitude": -68.972168,
+              "Sales": 212866
+            },
+            {
+              "id": 24,
+              "State": "Maryland",
+              "State Abbreviation": "MD",
+              "Latitude": 39.045753,
+              "Longitude": -76.641273,
+              "Sales": 335488
+            },
+            {
+              "id": 25,
+              "State": "Massachusetts",
+              "State Abbreviation": "MA",
+              "Latitude": 42.407211,
+              "Longitude": -71.382439,
+              "Sales": 141753
+            },
+            {
+              "id": 26,
+              "State": "Michigan",
+              "State Abbreviation": "MI",
+              "Latitude": 44.182205,
+              "Longitude": -84.506836,
+              "Sales": 1712226.9
+            },
+            {
+              "id": 27,
+              "State": "Minnesota",
+              "State Abbreviation": "MN",
+              "Latitude": 46.39241,
+              "Longitude": -94.63623,
+              "Sales": 300131
+            },
+            {
+              "id": 28,
+              "State": "Mississippi",
+              "State Abbreviation": "MS",
+              "Latitude": 33,
+              "Longitude": -90,
+              "Sales": 500465
+            },
+            {
+              "id": 29,
+              "State": "Missouri",
+              "State Abbreviation": "MO",
+              "Latitude": 38.573936,
+              "Longitude": -92.60376,
+              "Sales": 761569
+            },
+            {
+              "id": 30,
+              "State": "Montana",
+              "State Abbreviation": "MT",
+              "Latitude": 38.573936,
+              "Longitude": -92.60376,
+              "Sales": 261933
+            },
+            {
+              "id": 30,
+              "State": "Montana",
+              "State Abbreviation": "MT",
+              "Latitude": 46.96526,
+              "Longitude": -109.533691,
+              "Sales": 299636
+            },
+            {
+              "id": 31,
+              "State": "Nebraska",
+              "State Abbreviation": "NE",
+              "Latitude": 41.5,
+              "Longitude": -100,
+              "Sales": 180000
+            },
+            {
+              "id": 32,
+              "State": "Nevada",
+              "State Abbreviation": "NV",
+              "Latitude": 39.876019,
+              "Longitude": -117.224121,
+              "Sales": 1439276.6
+            },
+            {
+              "id": 33,
+              "State": "New Hampshire",
+              "State Abbreviation": "NH",
+              "Latitude": 44,
+              "Longitude": -71.5,
+              "Sales": 294744
+            },
+            {
+              "id": 34,
+              "State": "New Jersey",
+              "State Abbreviation": "NJ",
+              "Latitude": 39.833851,
+              "Longitude": -74.871826,
+              "Sales": 463619
+            },
+            {
+              "id": 35,
+              "State": "New Mexico",
+              "State Abbreviation": "NM",
+              "Latitude": 34.307144,
+              "Longitude": -106.018066,
+              "Sales": 1757043
+            },
+            {
+              "id": 36,
+              "State": "New York",
+              "State Abbreviation": "NY",
+              "Latitude": 43,
+              "Longitude": -75,
+              "Sales": 2910698.8
+            },
+            {
+              "id": 37,
+              "State": "North Carolina",
+              "State Abbreviation": "NC",
+              "Latitude": 35.782169,
+              "Longitude": -80.793457,
+              "Sales": 359529.5
+            },
+            {
+              "id": 38,
+              "State": "North Dakota",
+              "State Abbreviation": "ND",
+              "Latitude": 47.650589,
+              "Longitude": -100.437012,
+              "Sales": 285765
+            },
+            {
+              "id": 39,
+              "State": "Ohio",
+              "State Abbreviation": "OH",
+              "Latitude": 40.367474,
+              "Longitude": -82.996216,
+              "Sales": 580550.8
+            },
+            {
+              "id": 40,
+              "State": "Oklahoma",
+              "State Abbreviation": "OK",
+              "Latitude": 36.084621,
+              "Longitude": -96.921387,
+              "Sales": 643748
+            },
+            {
+              "id": 41,
+              "State": "Oregon",
+              "State Abbreviation": "OR",
+              "Latitude": 44,
+              "Longitude": -120.5,
+              "Sales": 335044.8
+            },
+            {
+              "id": 42,
+              "State": "Pennsylvania",
+              "State Abbreviation": "PA",
+              "Latitude": 41.203323,
+              "Longitude": -77.194527,
+              "Sales": 633455.1
+            },
+            {
+              "id": 44,
+              "State": "Rhode Island",
+              "State Abbreviation": "RI",
+              "Latitude": 41.700001,
+              "Longitude": -71.5,
+              "Sales": 209856
+            },
+            {
+              "id": 45,
+              "State": "South Carolina",
+              "State Abbreviation": "SC",
+              "Latitude": 33.836082,
+              "Longitude": -81.163727,
+              "Sales": 116178
+            },
+            {
+              "id": 46,
+              "State": "South Dakota",
+              "State Abbreviation": "SD",
+              "Latitude": 33.836082,
+              "Longitude": -81.163727,
+              "Sales": 116178
+            },
+            {
+              "id": 47,
+              "State": "Tennessee",
+              "State Abbreviation": "TN",
+              "Latitude": 35.860119,
+              "Longitude": -86.660156,
+              "Sales": 242597.8
+            },
+            {
+              "id": 48,
+              "State": "Texas",
+              "State Abbreviation": "TX",
+              "Latitude": 31,
+              "Longitude": -100,
+              "Sales": 662197
+            },
+            {
+              "id": 49,
+              "State": "Utah",
+              "State Abbreviation": "UT",
+              "Latitude": 39.41922,
+              "Longitude": -111.950684,
+              "Sales": 195718
+            },
+            {
+              "id": 50,
+              "State": "Vermont",
+              "State Abbreviation": "VT",
+              "Latitude": 44,
+              "Longitude": -72.699997,
+              "Sales": 458718
+            },
+            {
+              "id": 51,
+              "State": "Virginia",
+              "State Abbreviation": "VA",
+              "Latitude": 37.926868,
+              "Longitude": -78.024902,
+              "Sales": 260385
+            },
+            {
+              "id": 53,
+              "State": "Washington",
+              "State Abbreviation": "WA",
+              "Latitude": 47.751076,
+              "Longitude": -120.740135,
+              "Sales": 986468.1
+            },
+            {
+              "id": 54,
+              "State": "West Virginia",
+              "State Abbreviation": "WV",
+              "Latitude": 39,
+              "Longitude": -80.5,
+              "Sales": 519158
+            },
+            {
+              "id": 55,
+              "State": "Wisconsin",
+              "State Abbreviation": "WI",
+              "Latitude": 44.5,
+              "Longitude": -89.5,
+              "Sales": 519158
+            },
+            {
+              "id": 56,
+              "State": "Wyoming",
+              "State Abbreviation": "WY",
+              "Latitude": 43.07597,
+              "Longitude": -107.290283,
+              "Sales": 519158
+            }
+          ]
+        },
+        "key": "id",
+        "fields": ["State", "Sales", "Latitude", "Longitude"]
+      }
+    }
+  ],
+  "layer": [
+    {
+      "mark": {"type": "geoshape", "stroke": "#696464"},
+      "encoding": {
+        "fill": {
+          "field": "Sales",
+          "type": "quantitative",
+          "bin": true,
+          "scale": {
+            "range": [
+              "#F6F5F6",
+              "#DBEFF0",
+              "#B5E2E9",
+              "#8DD4E2",
+              "#65C7D8",
+              "#44B7CF"
+            ]
+          },
+          "legend": {"format": ".2s"}
+        },
+        "tooltip": {"field": "Sales", "format": ".2s"}
+      }
+    },
+    {
+      "mark": {"type": "point", "shape": "M-1 0 L0 -15 L1 0"},
+      "encoding": {
+        "longitude": {"field": "Longitude", "type": "quantitative"},
+        "latitude": {"field": "Latitude", "type": "quantitative"},
+        "size": {"field": "Sales", "type": "quantitative", "legend": null},
+        "fill": {
+          "field": "Sales",
+          "type": "quantitative",
+          "bin": true,
+          "scale": {
+            "range": [
+              "#F6F5F6",
+              "#DBEFF0",
+              "#B5E2E9",
+              "#8DD4E2",
+              "#65C7D8",
+              "#44B7CF"
+            ]
+          },
+          "legend": null
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "color": {"expr": "datum['Sales'] > 1000000 ? '#333333' : ''"},
+        "dy": 12
+      },
+      "encoding": {
+        "longitude": {"field": "Longitude", "type": "quantitative"},
+        "latitude": {"field": "Latitude", "type": "quantitative"},
+        "text": {"field": "State"}
+      }
+    }
+  ],
+  "config": {
+    "padding": {"top": 20, "bottom": 20, "left": 30, "right": 30},
+    "view": {"stroke": null},
+    "font": "Outfit",
+    "legend": {
+      "orient": "none",
+      "direction": "horizontal",
+      "gradientLength": 300,
+      "gradientThickness": 10,
+      "gradientLabelOffset": -25,
+      "labelFontSize": 12,
+      "labelColor": "#433828",
+      "title": null,
+      "legendX": 250,
+      "legendY": -30
+    },
+    "point": {"opacity": 1, "stroke": "darkslategrey", "strokeWidth": 0.7},
+    "text": {"fontSize": 12},
+    "projection": {"type": "albersUsa"},
+    "title": {
+      "align": "left",
+      "fontSize": 45,
+      "fontWeight": "normal",
+      "offset": 80
+    }
+  }
+}
