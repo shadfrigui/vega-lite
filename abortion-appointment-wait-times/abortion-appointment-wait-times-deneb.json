@@ -1,0 +1,214 @@
+{
+  "description": "Add the following columns to Deneb: Median, xPosition, yPosition, State,  State Abbreviation, and Abortion Providers",
+  "data": {"name": "dataset"},
+  "transform": [
+    {
+      "calculate": "datum['Median'] + ' weekdays'",
+      "as": "Tooltip"
+    }
+  ],
+  "vconcat": [
+    {
+      "height": 180,
+      "layer": [
+        {
+          "mark": {
+            "type": "rect",
+            "xOffset": -50
+          }
+        },
+        {
+          "title": {
+            "text": [
+              "Abortion providers in many US states already have weeks-long wait times",
+              "for appointments"
+            ],
+            "fontSize": 20,
+            "lineHeight": 30,
+            "subtitle": [
+              "Median weekday wait times for abortion appointments across 725 abortion providers in 49 states. ",
+              "Hover over each state for median wait times as well as the number of providers per state."
+            ],
+            "subtitlePadding": 30,
+            "subtitleFontSize": 15,
+            "subtitleLineHeight": 20,
+            "subtitleColor": "#373330",
+            "dy": 135
+          },
+          "mark": "text"
+        }
+      ]
+    },
+    {
+      "height": 370,
+      "width": 635,
+      "encoding": {
+        "x": {
+          "field": "xPosition",
+          "type": "quantitative",
+          "axis": null
+        },
+        "y": {
+          "field": "yPosition",
+          "type": "quantitative",
+          "axis": null
+        },
+        "strokeWidth": {
+          "condition": [
+            {
+              "param": "highlight",
+              "empty": false,
+              "value": 1
+            }
+          ],
+          "value": 0
+        }
+      },
+      "layer": [
+        {
+          "params": [
+            {
+              "name": "highlight",
+              "select": {
+                "type": "point",
+                "on": "mouseover"
+              }
+            }
+          ],
+          "mark": {
+            "type": "point",
+            "shape": "M0,-2.3 L 2,-1.2 L 2,1.2 L 0,2.3 L -2,1.2 L -2,-1.2 Z",
+            "fill": {
+              "expr": "datum['State Abbreviation'] === 'OK' ? '#C7C7C7' : ''"
+            }
+          },
+          "encoding": {
+            "tooltip": [
+              {"field": "State"},
+              {
+                "field": "Abortion Providers",
+                "title": "Abortion providers"
+              }
+            ]
+          }
+        },
+        {
+          "mark": {
+            "type": "point",
+            "shape": "M0,-2.3 L 2,-1.2 L 2,1.2 L 0,2.3 L -2,1.2 L -2,-1.2 Z"
+          },
+          "encoding": {
+            "fill": {
+              "field": "Median",
+              "type": "quantitative",
+              "bin": true,
+              "scale": {
+                "domain": [
+                  0,
+                  5,
+                  10,
+                  15,
+                  20,
+                  25
+                ],
+                "range": [
+                  "#E5E48C",
+                  "#DFB646",
+                  "#E17B43",
+                  "#CB4441",
+                  "#962746",
+                  "#962746"
+                ]
+              },
+              "legend": {
+                "title": "Median wait time, weekdays"
+              }
+            },
+            "tooltip": [
+              {"field": "State"},
+              {
+                "field": "Tooltip",
+                "title": "Median wait time"
+              },
+              {
+                "field": "Abortion Providers",
+                "title": "Abortion providers"
+              }
+            ]
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "color": {
+              "expr": "datum['Median'] > 15 ? 'white' : 'black'"
+            }
+          },
+          "encoding": {
+            "text": {
+              "field": "State Abbreviation"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": {
+        "text": [
+          "Sources: Caitlin Myers at Middlebury College and the Texas Policy Evaluation Project",
+          "Note: Wait times based on calls made in March-April 2022; no appointments were available at any",
+          "abortion providers in Oklahoma"
+        ],
+        "fontSize": 12,
+        "color": "#373330",
+        "dx": -30
+      },
+      "mark": "text"
+    }
+  ],
+  "config": {
+    "background": "#FEEFE2",
+    "padding": {
+      "top": 20,
+      "bottom": -10,
+      "left": 30,
+      "right": 30
+    },
+    "view": {"stroke": null},
+    "font": "Outfit",
+    "legend": {
+      "orient": "none",
+      "direction": "horizontal",
+      "gradientLength": 180,
+      "gradientThickness": 17,
+      "labelFontSize": 15,
+      "gradientLabelOffset": 3,
+      "labelColor": "#373330",
+      "titleOrient": "left",
+      "titlePadding": 10,
+      "titleFontSize": 15,
+      "titleFontWeight": "normal",
+      "titleLimit": 200,
+      "titleColor": "#373330",
+      "legendX": 110,
+      "legendY": 160
+    },
+    "rect": {
+      "align": "left",
+      "width": 56,
+      "height": 4,
+      "color": "black"
+    },
+    "point": {
+      "size": 680,
+      "opacity": 1,
+      "stroke": "black",
+      "strokeOpacity": 1
+    },
+    "text": {"fontSize": 15},
+    "title": {
+      "anchor": "start",
+      "fontWeight": "normal"
+    }
+  }
+}

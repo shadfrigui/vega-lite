@@ -1,0 +1,813 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "values": [
+      {
+        "State ID": 1,
+        "State": "Alabama",
+        "State Abbreviation": "AL",
+        "Latitude": 32.31823,
+        "Longitude": -86.902298,
+        "xPosition": 7,
+        "yPosition": 1,
+        "Min": 4,
+        "Max": 12,
+        "Median": 7,
+        "Abortion Providers": 3
+      },
+      {
+        "State ID": 2,
+        "State": "Alaska",
+        "State Abbreviation": "AK",
+        "Latitude": 66.160507,
+        "Longitude": -153.369141,
+        "xPosition": 0,
+        "yPosition": 4,
+        "Min": 5,
+        "Max": 8,
+        "Median": 6,
+        "Abortion Providers": 4
+      },
+      {
+        "State ID": 4,
+        "State": "Arizona",
+        "State Abbreviation": "AZ",
+        "Latitude": 34.048927,
+        "Longitude": -111.093735,
+        "xPosition": 2.5,
+        "yPosition": 1.5,
+        "Min": 1,
+        "Max": 17,
+        "Median": 6.5,
+        "Abortion Providers": 8
+      },
+      {
+        "State ID": 5,
+        "State": "Arkansas",
+        "State Abbreviation": "AR",
+        "Latitude": 34.799999,
+        "Longitude": -92.199997,
+        "xPosition": 5.5,
+        "yPosition": 1.5,
+        "Min": 13,
+        "Max": 22,
+        "Median": 17.5,
+        "Abortion Providers": 2
+      },
+      {
+        "State ID": 6,
+        "State": "California",
+        "State Abbreviation": "CA",
+        "Latitude": 36.778259,
+        "Longitude": -119.417931,
+        "xPosition": 1.5,
+        "yPosition": 1.5,
+        "Min": 0,
+        "Max": 14,
+        "Median": 2,
+        "Abortion Providers": 155
+      },
+      {
+        "State ID": 8,
+        "State": "Colorado",
+        "State Abbreviation": "CO",
+        "Latitude": 39.113014,
+        "Longitude": -105.358887,
+        "xPosition": 3,
+        "yPosition": 2,
+        "Min": 0,
+        "Max": 17,
+        "Median": 7,
+        "Abortion Providers": 19
+      },
+      {
+        "State ID": 9,
+        "State": "Connecticut",
+        "State Abbreviation": "CT",
+        "Latitude": 41.599998,
+        "Longitude": -72.699997,
+        "xPosition": 10.5,
+        "yPosition": 2.5,
+        "Min": 2,
+        "Max": 8,
+        "Median": 5,
+        "Abortion Providers": 17
+      },
+      {
+        "State ID": 10,
+        "State": "Delaware",
+        "State Abbreviation": "DE",
+        "Latitude": 39,
+        "Longitude": -75.5,
+        "xPosition": 9,
+        "yPosition": 2,
+        "Min": 11,
+        "Max": 26,
+        "Median": 16,
+        "Abortion Providers": 3
+      },
+      {
+        "State ID": 11,
+        "State": "District of Columbia",
+        "State Abbreviation": "DC",
+        "Latitude": 38.942142,
+        "Longitude": -77.025955,
+        "xPosition": 11.5,
+        "yPosition": 1.5,
+        "Min": 1,
+        "Max": 13,
+        "Median": 1,
+        "Abortion Providers": 5
+      },
+      {
+        "State ID": 12,
+        "State": "Florida",
+        "State Abbreviation": "FL",
+        "Latitude": 27.994402,
+        "Longitude": -81.760254,
+        "xPosition": 8,
+        "yPosition": 0,
+        "Min": 0,
+        "Max": 14,
+        "Median": 2,
+        "Abortion Providers": 55
+      },
+      {
+        "State ID": 13,
+        "State": "Georgia",
+        "State Abbreviation": "GA",
+        "Latitude": 33.247875,
+        "Longitude": -83.441162,
+        "xPosition": 7.5,
+        "yPosition": 0.5,
+        "Min": 2,
+        "Max": 11,
+        "Median": 4,
+        "Abortion Providers": 13
+      },
+      {
+        "State ID": 15,
+        "State": "Hawaii",
+        "State Abbreviation": "HI",
+        "Latitude": 19.741755,
+        "Longitude": -155.844437,
+        "xPosition": 0,
+        "yPosition": 0,
+        "Min": 0,
+        "Max": 9,
+        "Median": 6,
+        "Abortion Providers": 4
+      },
+      {
+        "State ID": 16,
+        "State": "Idaho",
+        "State Abbreviation": "ID",
+        "Latitude": 44.068203,
+        "Longitude": -114.742043,
+        "xPosition": 1.5,
+        "yPosition": 2.5,
+        "Min": 7,
+        "Max": 19,
+        "Median": 12,
+        "Abortion Providers": 3
+      },
+      {
+        "State ID": 17,
+        "State": "Illinois",
+        "State Abbreviation": "IL",
+        "Latitude": 40,
+        "Longitude": -89,
+        "xPosition": 5.5,
+        "yPosition": 2.5,
+        "Min": 0,
+        "Max": 19,
+        "Median": 3.5,
+        "Abortion Providers": 28
+      },
+      {
+        "State ID": 18,
+        "State": "Indiana",
+        "State Abbreviation": "IN",
+        "Latitude": 40.273502,
+        "Longitude": -86.126976,
+        "xPosition": 6.5,
+        "yPosition": 2.5,
+        "Min": 2,
+        "Max": 16,
+        "Median": 9,
+        "Abortion Providers": 7
+      },
+      {
+        "State ID": 19,
+        "State": "Iowa",
+        "State Abbreviation": "IA",
+        "Latitude": 42.032974,
+        "Longitude": -93.581543,
+        "xPosition": 4.5,
+        "yPosition": 2.5,
+        "Min": 9,
+        "Max": 13,
+        "Median": 11,
+        "Abortion Providers": 6
+      },
+      {
+        "State ID": 20,
+        "State": "Kansas",
+        "State Abbreviation": "KS",
+        "Latitude": 38.5,
+        "Longitude": -98,
+        "xPosition": 4.5,
+        "yPosition": 1.5,
+        "Min": 8,
+        "Max": 16,
+        "Median": 8,
+        "Abortion Providers": 3
+      },
+      {
+        "State ID": 21,
+        "State": "Kentucky",
+        "State Abbreviation": "KY",
+        "Latitude": 37.839333,
+        "Longitude": -84.27002,
+        "xPosition": 6,
+        "yPosition": 2,
+        "Min": 8,
+        "Max": 15,
+        "Median": 11.5,
+        "Abortion Providers": 2
+      },
+      {
+        "State ID": 22,
+        "State": "Louisiana",
+        "State Abbreviation": "LA",
+        "Latitude": 30.39183,
+        "Longitude": -92.329102,
+        "xPosition": 5,
+        "yPosition": 1,
+        "Min": 1,
+        "Max": 9,
+        "Median": 5,
+        "Abortion Providers": 2
+      },
+      {
+        "State ID": 23,
+        "State": "Maine",
+        "State Abbreviation": "ME",
+        "Latitude": 45.367584,
+        "Longitude": -68.972168,
+        "xPosition": 11,
+        "yPosition": 4,
+        "Min": 0,
+        "Max": 19,
+        "Median": 2,
+        "Abortion Providers": 21
+      },
+      {
+        "State ID": 24,
+        "State": "Maryland",
+        "State Abbreviation": "MD",
+        "Latitude": 39.045753,
+        "Longitude": -76.641273,
+        "xPosition": 8,
+        "yPosition": 2,
+        "Min": 0,
+        "Max": 12,
+        "Median": 3,
+        "Abortion Providers": 22
+      },
+      {
+        "State ID": 25,
+        "State": "Massachusetts",
+        "State Abbreviation": "MA",
+        "Latitude": 42.407211,
+        "Longitude": -71.382439,
+        "xPosition": 10,
+        "yPosition": 3,
+        "Min": 1,
+        "Max": 11,
+        "Median": 4,
+        "Abortion Providers": 14
+      },
+      {
+        "State ID": 26,
+        "State": "Michigan",
+        "State Abbreviation": "MI",
+        "Latitude": 44.182205,
+        "Longitude": -84.506836,
+        "xPosition": 7,
+        "yPosition": 3,
+        "Min": 1,
+        "Max": 21,
+        "Median": 5,
+        "Abortion Providers": 25
+      },
+      {
+        "State ID": 27,
+        "State": "Minnesota",
+        "State Abbreviation": "MN",
+        "Latitude": 46.39241,
+        "Longitude": -94.63623,
+        "xPosition": 4,
+        "yPosition": 3,
+        "Min": 1,
+        "Max": 8,
+        "Median": 6,
+        "Abortion Providers": 7
+      },
+      {
+        "State ID": 28,
+        "State": "Mississippi",
+        "State Abbreviation": "MS",
+        "Latitude": 33,
+        "Longitude": -90,
+        "xPosition": 6,
+        "yPosition": 1,
+        "Min": null,
+        "Max": null,
+        "Median": 14,
+        "Abortion Providers": 1
+      },
+      {
+        "State ID": 29,
+        "State": "Missouri",
+        "State Abbreviation": "MO",
+        "Latitude": 38.573936,
+        "Longitude": -92.60376,
+        "xPosition": 5,
+        "yPosition": 2,
+        "Min": null,
+        "Max": null,
+        "Median": 26,
+        "Abortion Providers": 1
+      },
+      {
+        "State ID": 30,
+        "State": "Montana",
+        "State Abbreviation": "MT",
+        "Latitude": 46.96526,
+        "Longitude": -109.533691,
+        "xPosition": 2,
+        "yPosition": 3,
+        "Min": 2,
+        "Max": 6,
+        "Median": 4,
+        "Abortion Providers": 5
+      },
+      {
+        "State ID": 31,
+        "State": "Nebraska",
+        "State Abbreviation": "NE",
+        "Latitude": 41.5,
+        "Longitude": -100,
+        "xPosition": 4,
+        "yPosition": 2,
+        "Min": 1,
+        "Max": 12,
+        "Median": 3,
+        "Abortion Providers": 3
+      },
+      {
+        "State ID": 32,
+        "State": "Nevada",
+        "State Abbreviation": "NV",
+        "Latitude": 39.876019,
+        "Longitude": -117.224121,
+        "xPosition": 2,
+        "yPosition": 2,
+        "Min": 1,
+        "Max": 14,
+        "Median": 3,
+        "Abortion Providers": 9
+      },
+      {
+        "State ID": 33,
+        "State": "New Hampshire",
+        "State Abbreviation": "NH",
+        "Latitude": 44,
+        "Longitude": -71.5,
+        "xPosition": 10.5,
+        "yPosition": 3.5,
+        "Min": 4,
+        "Max": 24,
+        "Median": 9.5,
+        "Abortion Providers": 6
+      },
+      {
+        "State ID": 34,
+        "State": "New Jersey",
+        "State Abbreviation": "NJ",
+        "Latitude": 39.833851,
+        "Longitude": -74.871826,
+        "xPosition": 9.5,
+        "yPosition": 2.5,
+        "Min": 0,
+        "Max": 10,
+        "Median": 2,
+        "Abortion Providers": 38
+      },
+      {
+        "State ID": 35,
+        "State": "New Mexico",
+        "State Abbreviation": "NM",
+        "Latitude": 34.307144,
+        "Longitude": -106.018066,
+        "xPosition": 3,
+        "yPosition": 1,
+        "Min": 0,
+        "Max": 11,
+        "Median": 8.5,
+        "Abortion Providers": 6
+      },
+      {
+        "State ID": 36,
+        "State": "New York",
+        "State Abbreviation": "NY",
+        "Latitude": 43,
+        "Longitude": -75,
+        "xPosition": 9,
+        "yPosition": 3,
+        "Min": 0,
+        "Max": 22,
+        "Median": 4,
+        "Abortion Providers": 84
+      },
+      {
+        "State ID": 37,
+        "State": "North Carolina",
+        "State Abbreviation": "NC",
+        "Latitude": 35.782169,
+        "Longitude": -80.793457,
+        "xPosition": 8.5,
+        "yPosition": 1.5,
+        "Min": 1,
+        "Max": 11,
+        "Median": 4,
+        "Abortion Providers": 15
+      },
+      {
+        "State ID": 38,
+        "State": "North Dakota",
+        "State Abbreviation": "ND",
+        "Latitude": 47.650589,
+        "Longitude": -100.437012,
+        "xPosition": 3,
+        "yPosition": 3,
+        "Min": 8,
+        "Max": 8,
+        "Median": 8,
+        "Abortion Providers": 1
+      },
+      {
+        "State ID": 39,
+        "State": "Ohio",
+        "State Abbreviation": "OH",
+        "Latitude": 40.367474,
+        "Longitude": -82.996216,
+        "xPosition": 7.5,
+        "yPosition": 2.5,
+        "Min": 4,
+        "Max": 18,
+        "Median": 6,
+        "Abortion Providers": 9
+      },
+      {
+        "State ID": 40,
+        "State": "Oklahoma",
+        "State Abbreviation": "OK",
+        "Latitude": 36.084621,
+        "Longitude": -96.921387,
+        "xPosition": 4,
+        "yPosition": 1,
+        "Min": null,
+        "Max": null,
+        "Median": null,
+        "Abortion Providers": 4
+      },
+      {
+        "State ID": 41,
+        "State": "Oregon",
+        "State Abbreviation": "OR",
+        "Latitude": 44,
+        "Longitude": -120.5,
+        "xPosition": 1,
+        "yPosition": 2,
+        "Min": 4,
+        "Max": 13,
+        "Median": 9,
+        "Abortion Providers": 11
+      },
+      {
+        "State ID": 42,
+        "State": "Pennsylvania",
+        "State Abbreviation": "PA",
+        "Latitude": 41.203323,
+        "Longitude": -77.194527,
+        "xPosition": 8.5,
+        "yPosition": 2.5,
+        "Min": 1,
+        "Max": 10,
+        "Median": 3,
+        "Abortion Providers": 19
+      },
+      {
+        "State ID": 44,
+        "State": "Rhode Island",
+        "State Abbreviation": "RI",
+        "Latitude": 41.700001,
+        "Longitude": -71.5,
+        "xPosition": 11,
+        "yPosition": 3,
+        "Min": 1,
+        "Max": 1,
+        "Median": 1,
+        "Abortion Providers": 1
+      },
+      {
+        "State ID": 45,
+        "State": "South Carolina",
+        "State Abbreviation": "SC",
+        "Latitude": 33.836082,
+        "Longitude": -81.163727,
+        "xPosition": 8,
+        "yPosition": 1,
+        "Min": 0,
+        "Max": 14,
+        "Median": 11,
+        "Abortion Providers": 3
+      },
+      {
+        "State ID": 46,
+        "State": "South Dakota",
+        "State Abbreviation": "SD",
+        "Latitude": 44.5,
+        "Longitude": -100,
+        "xPosition": 3.5,
+        "yPosition": 2.5,
+        "Min": null,
+        "Max": null,
+        "Median": 18,
+        "Abortion Providers": 1
+      },
+      {
+        "State ID": 47,
+        "State": "Tennessee",
+        "State Abbreviation": "TN",
+        "Latitude": 35.860119,
+        "Longitude": -86.660156,
+        "xPosition": 6.5,
+        "yPosition": 1.5,
+        "Min": 3,
+        "Max": 17,
+        "Median": 14,
+        "Abortion Providers": 6
+      },
+      {
+        "State ID": 48,
+        "State": "Texas",
+        "State Abbreviation": "TX",
+        "Latitude": 31,
+        "Longitude": -100,
+        "xPosition": 3.5,
+        "yPosition": 0.5,
+        "Min": 1,
+        "Max": 12,
+        "Median": 2,
+        "Abortion Providers": 21
+      },
+      {
+        "State ID": 49,
+        "State": "Utah",
+        "State Abbreviation": "UT",
+        "Latitude": 39.41922,
+        "Longitude": -111.950684,
+        "xPosition": 3.5,
+        "yPosition": 1.5,
+        "Min": null,
+        "Max": null,
+        "Median": 3,
+        "Abortion Providers": 2
+      },
+      {
+        "State ID": 50,
+        "State": "Vermont",
+        "State Abbreviation": "VT",
+        "Latitude": 44,
+        "Longitude": -72.699997,
+        "xPosition": 9.5,
+        "yPosition": 3.5,
+        "Min": 2,
+        "Max": 14,
+        "Median": 4,
+        "Abortion Providers": 7
+      },
+      {
+        "State ID": 51,
+        "State": "Virginia",
+        "State Abbreviation": "VA",
+        "Latitude": 37.926868,
+        "Longitude": -78.024902,
+        "xPosition": 7.5,
+        "yPosition": 1.5,
+        "Min": 1,
+        "Max": 20,
+        "Median": 2,
+        "Abortion Providers": 15
+      },
+      {
+        "State ID": 53,
+        "State": "Washington",
+        "State Abbreviation": "WA",
+        "Latitude": 47.751076,
+        "Longitude": -120.740135,
+        "xPosition": 1,
+        "yPosition": 3,
+        "Min": 1,
+        "Max": 18,
+        "Median": 6,
+        "Abortion Providers": 27
+      },
+      {
+        "State ID": 54,
+        "State": "West Virginia",
+        "State Abbreviation": "WV",
+        "Latitude": 39,
+        "Longitude": -80.5,
+        "xPosition": 7,
+        "yPosition": 2,
+        "Min": null,
+        "Max": null,
+        "Median": 8,
+        "Abortion Providers": 1
+      },
+      {
+        "State ID": 55,
+        "State": "Wisconsin",
+        "State Abbreviation": "WI",
+        "Latitude": 44.5,
+        "Longitude": -89.5,
+        "xPosition": 5,
+        "yPosition": 3,
+        "Min": 7,
+        "Max": 10,
+        "Median": 10,
+        "Abortion Providers": 4
+      },
+      {
+        "State ID": 56,
+        "State": "Wyoming",
+        "State Abbreviation": "WY",
+        "Latitude": 43.07597,
+        "Longitude": -107.290283,
+        "xPosition": 2.5,
+        "yPosition": 2.5,
+        "Min": null,
+        "Max": null,
+        "Median": 10,
+        "Abortion Providers": 1
+      }
+    ]
+  },
+  "transform": [
+    {"calculate": "datum['Median'] + ' weekdays'", "as": "Tooltip"}
+  ],
+  "vconcat": [
+    {
+      "height": 180,
+      "layer": [
+        {"mark": {"type": "rect", "xOffset": -50}},
+        {
+          "title": {
+            "text": [
+              "Abortion providers in many US states already have weeks-long wait times",
+              "for appointments"
+            ],
+            "fontSize": 20,
+            "lineHeight": 30,
+            "subtitle": [
+              "Median weekday wait times for abortion appointments across 725 abortion providers in 49 states. ",
+              "Hover over each state for median wait times as well as the number of providers per state."
+            ],
+            "subtitlePadding": 30,
+            "subtitleFontSize": 15,
+            "subtitleLineHeight": 20,
+            "subtitleColor": "#373330",
+            "dy": 135
+          },
+          "mark": "text"
+        }
+      ]
+    },
+    {
+      "height": 370,
+      "width": 635,
+      "encoding": {
+        "x": {"field": "xPosition", "type": "quantitative", "axis": null},
+        "y": {"field": "yPosition", "type": "quantitative", "axis": null},
+        "strokeWidth": {
+          "condition": [{"param": "highlight", "empty": false, "value": 1}],
+          "value": 0
+        }
+      },
+      "layer": [
+        {
+          "params": [
+            {
+              "name": "highlight",
+              "select": {"type": "point", "on": "mouseover"}
+            }
+          ],
+          "mark": {
+            "type": "point",
+            "shape": "M0,-2.3 L 2,-1.2 L 2,1.2 L 0,2.3 L -2,1.2 L -2,-1.2 Z",
+            "fill": {
+              "expr": "datum['State Abbreviation'] === 'OK' ? '#C7C7C7' : ''"
+            }
+          },
+          "encoding": {
+            "tooltip": [
+              {"field": "State"},
+              {"field": "Abortion Providers", "title": "Abortion providers"}
+            ]
+          }
+        },
+        {
+          "mark": {
+            "type": "point",
+            "shape": "M0,-2.3 L 2,-1.2 L 2,1.2 L 0,2.3 L -2,1.2 L -2,-1.2 Z"
+          },
+          "encoding": {
+            "fill": {
+              "field": "Median",
+              "type": "quantitative",
+              "bin": true,
+              "scale": {
+                "domain": [0, 5, 10, 15, 20, 25],
+                "range": [
+                  "#E5E48C",
+                  "#DFB646",
+                  "#E17B43",
+                  "#CB4441",
+                  "#962746",
+                  "#962746"
+                ]
+              },
+              "legend": {"title": "Median wait time, weekdays"}
+            },
+            "tooltip": [
+              {"field": "State"},
+              {"field": "Tooltip", "title": "Median wait time"},
+              {"field": "Abortion Providers", "title": "Abortion providers"}
+            ]
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "color": {"expr": "datum['Median'] > 15 ? 'white' : 'black'"}
+          },
+          "encoding": {"text": {"field": "State Abbreviation"}}
+        }
+      ]
+    },
+    {
+      "title": {
+        "text": [
+          "Sources: Caitlin Myers at Middlebury College and the Texas Policy Evaluation Project",
+          "Note: Wait times based on calls made in March-April 2022; no appointments were available at any",
+          "abortion providers in Oklahoma"
+        ],
+        "fontSize": 12,
+        "color": "#373330",
+        "dx": -30
+      },
+      "mark": "text"
+    }
+  ],
+  "config": {
+    "background": "#FEEFE2",
+    "padding": {"top": 20, "bottom": -10, "left": 30, "right": 30},
+    "view": {"stroke": null},
+    "font": "Outfit",
+    "legend": {
+      "orient": "none",
+      "direction": "horizontal",
+      "gradientLength": 180,
+      "gradientThickness": 17,
+      "labelFontSize": 15,
+      "gradientLabelOffset": 3,
+      "labelColor": "#373330",
+      "titleOrient": "left",
+      "titlePadding": 10,
+      "titleFontSize": 15,
+      "titleFontWeight": "normal",
+      "titleLimit": 200,
+      "titleColor": "#373330",
+      "legendX": 110,
+      "legendY": 160
+    },
+    "rect": {"align": "left", "width": 56, "height": 4, "color": "black"},
+    "point": {"size": 680, "opacity": 1, "stroke": "black", "strokeOpacity": 1},
+    "text": {"fontSize": 15},
+    "title": {"anchor": "start", "fontWeight": "normal"}
+  }
+}
