@@ -1,0 +1,110 @@
+﻿{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "adolescent-birth-rate-data.json"},
+  "vconcat": [
+    {
+      "height": 100,
+      "layer": [
+        {"mark": {"type": "rect", "xOffset": -150}},
+        {
+          "title": {
+            "text": "Adolescent birth rate",
+            "fontSize": 25,
+            "subtitle": "Births per 1000 women aged 15-19",
+            "subtitlePadding": 10,
+            "subtitleFontSize": 18,
+            "dy": 70
+          },
+          "mark": "text"
+        }
+      ]
+    },
+    {
+      "width": 500,
+      "height": 300,
+      "encoding": {
+        "x": {"field": "Birth Rate", "type": "quantitative"},
+        "y": {
+          "field": "Location",
+          "type": "nominal",
+          "sort": {"field": "Birth Rate", "order": "descending"}
+        }
+      },
+      "layer": [
+        {
+          "mark": {"type": "line"},
+          "encoding": {"detail": {"field": "Location", "type": "nominal"}}
+        },
+        {
+          "mark": {"type": "circle"},
+          "encoding": {
+            "color": {
+              "field": "Period",
+              "type": "ordinal",
+              "scale": {
+                "domain": ["1950-1955", "2000-2005", "2050-2055"],
+                "range": ["#DB6A8B", "#4190CC", "#9BD0E3"]
+              },
+              "title": "Period"
+            },
+            "tooltip": [{"field": "Birth Rate"}]
+          }
+        }
+      ]
+    },
+    {
+      "title": {
+        "text": "Source: United Nations • Graphic: @shadfrigui",
+        "fontSize": 12,
+        "fontWeight": "normal",
+        "color": "#62605F",
+        "dx": -130
+      },
+      "mark": "text"
+    }
+  ],
+  "config": {
+    "background": "#F7F7F7",
+    "padding": {"top": 20, "bottom": -10, "left": 30, "right": 40},
+    "view": {"stroke": null},
+    "font": "Outfit",
+    "axis": {
+      "ticks": false,
+      "labelFontSize": 13,
+      "labelColor": "#433828",
+      "title": null
+    },
+    "axisX": {
+      "domain": false,
+      "gridOpacity": 0.5,
+      "tickCount": 8,
+      "labelPadding": 5,
+      "labelFlush": false
+    },
+    "axisY": {
+      "domainColor": "#433828",
+      "domainOpacity": 0.3,
+      "labelPadding": 15
+    },
+    "legend": {
+      "orient": "none",
+      "direction": "horizontal",
+      "symbolSize": 200,
+      "symbolStrokeColor": "transparent",
+      "labelFontSize": 12,
+      "labelColor": "#433828",
+      "titleOrient": "left",
+      "titlePadding": 10,
+      "titleFontSize": 13,
+      "titleFontWeight": "normal",
+      "titleColor": "#433828",
+      "legendX": 192,
+      "legendY": 110
+    },
+    "rect": {"align": "left", "width": 52, "height": 4, "color": "black"},
+    "line": {"size": 2.5, "color": "#9EDCDD"},
+    "circle": {"size": 250, "opacity": 1},
+    "title": {"anchor": "start"},
+    "concat": {"spacing": 40}
+  }
+}

@@ -1,0 +1,92 @@
+[
+  {
+    "Location": "Africa",
+    "Period": "1950-1955",
+    "Birth Rate": 149.7
+  },
+  {
+    "Location": "Africa",
+    "Period": "2000-2005",
+    "Birth Rate": 110.2
+  },
+  {
+    "Location": "Africa",
+    "Period": "2050-2055",
+    "Birth Rate": 52.9
+  },
+  {
+    "Location": "Asia",
+    "Period": "1950-1955",
+    "Birth Rate": 94.8
+  },
+  {
+    "Location": "Asia",
+    "Period": "2000-2005",
+    "Birth Rate": 39.7
+  },
+  {
+    "Location": "Asia",
+    "Period": "2050-2055",
+    "Birth Rate": 15.6
+  },
+  {
+    "Location": "Europe",
+    "Period": "1950-1955",
+    "Birth Rate": 26.8
+  },
+  {
+    "Location": "Europe",
+    "Period": "2000-2005",
+    "Birth Rate": 19.6
+  },
+  {
+    "Location": "Europe",
+    "Period": "2050-2055",
+    "Birth Rate": 5.6
+  },
+  {
+    "Location": "Latin America",
+    "Period": "1950-1955",
+    "Birth Rate": 104.3
+  },
+  {
+    "Location": "Latin America",
+    "Period": "2000-2005",
+    "Birth Rate": 80.5
+  },
+  {
+    "Location": "Latin America",
+    "Period": "2050-2055",
+    "Birth Rate": 36.5
+  },
+  {
+    "Location": "Northern America",
+    "Period": "1950-1955",
+    "Birth Rate": 82.1
+  },
+  {
+    "Location": "Northern America",
+    "Period": "2000-2005",
+    "Birth Rate": 40.1
+  },
+  {
+    "Location": "Northern America",
+    "Period": "2050-2055",
+    "Birth Rate": 6.6
+  },
+  {
+    "Location": "Oceania",
+    "Period": "1950-1955",
+    "Birth Rate": 58
+  },
+  {
+    "Location": "Oceania",
+    "Period": "2000-2005",
+    "Birth Rate": 33.5
+  },
+  {
+    "Location": "Oceania",
+    "Period": "2050-2055",
+    "Birth Rate": 18.4
+  }
+]
