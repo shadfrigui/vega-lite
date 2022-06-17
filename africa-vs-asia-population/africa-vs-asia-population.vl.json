@@ -1,0 +1,182 @@
+﻿{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "africa-vs-asia-population-data.csv"},
+  "vconcat": [
+    {
+      "height": 100,
+      "layer": [
+        {"mark": {"type": "rect", "width": 840, "height": 2, "xOffset": -120}},
+        {
+          "mark": {
+            "type": "rect",
+            "width": 50,
+            "height": 10,
+            "xOffset": -120,
+            "yOffset": 6
+          }
+        },
+        {
+          "title": {
+            "text": "Africa's growing youth population",
+            "fontSize": 25,
+            "subtitle": "Africa vs Asia population age structure, millions",
+            "subtitlePadding": 10,
+            "subtitleFontSize": 18,
+            "subtitleColor": "#373330",
+            "dy": 75
+          },
+          "mark": "text"
+        }
+      ]
+    },
+    {
+      "facet": {"row": {"field": "Continent", "sort": "descending"}},
+      "spec": {
+        "facet": {"column": {"field": "Year"}},
+        "spec": {
+          "concat": [
+            {
+              "width": 100,
+              "height": 180,
+              "transform": [{"filter": {"field": "Gender", "equal": "Male"}}],
+              "mark": {"type": "bar", "color": "#31C0D0"},
+              "encoding": {
+                "x": {
+                  "field": "Population",
+                  "type": "quantitative",
+                  "sort": "descending",
+                  "scale": {"domain": [0, 200]},
+                  "axis": {
+                    "tickSize": {"expr": "datum.value === 0 ? 0 : 5"},
+                    "labelOffset": {"expr": "datum.value === 200 ? -10 : 0"},
+                    "labelColor": {
+                      "expr": "datum.value === 100 || datum.value === 200 ? '#605A56' : ''"
+                    }
+                  }
+                },
+                "y": {
+                  "field": "Age",
+                  "type": "ordinal",
+                  "sort": {"field": "Age ID", "order": "descending"},
+                  "scale": {"paddingInner": 0.35},
+                  "axis": {"orient": "left"}
+                },
+                "color": {
+                  "field": "Gender",
+                  "scale": {
+                    "domain": ["Male", "Female"],
+                    "range": ["#31C0D0", "#F1A957"]
+                  }
+                },
+                "tooltip": [
+                  {"field": "Gender"},
+                  {"field": "Age", "title": "Age Group"},
+                  {"field": "Population", "format": ".1f"}
+                ]
+              }
+            },
+            {
+              "width": 100,
+              "height": 180,
+              "title": "",
+              "transform": [{"filter": {"field": "Gender", "equal": "Female"}}],
+              "mark": {"type": "bar", "color": "#F1A957"},
+              "encoding": {
+                "x": {
+                  "field": "Population",
+                  "type": "quantitative",
+                  "scale": {"domain": [0, 200]},
+                  "axis": {
+                    "labelOffset": {
+                      "expr": "datum.value === 0 ? -3 : datum.value === 200 ? 10 : 0"
+                    },
+                    "labelColor": {
+                      "expr": "datum.value === 50 || datum.value === 150 ? '' : '#605A56'"
+                    }
+                  }
+                },
+                "y": {
+                  "field": "Age",
+                  "type": "ordinal",
+                  "sort": {"field": "Age ID", "order": "descending"},
+                  "scale": {"paddingInner": 0.35},
+                  "axis": {"labels": false}
+                },
+                "tooltip": [
+                  {"field": "Gender"},
+                  {"field": "Age", "title": "Age Group"},
+                  {"field": "Population", "format": ".1f"}
+                ]
+              }
+            }
+          ],
+          "spacing": -5
+        }
+      },
+      "spacing": 30
+    },
+    {
+      "title": {
+        "text": "Source: United Nations • Graphic: @shadfrigui",
+        "fontSize": 12,
+        "fontWeight": "normal",
+        "color": "#62605F",
+        "dx": 490
+      },
+      "mark": "text"
+    }
+  ],
+  "spacing": 40,
+  "config": {
+    "background": "#FEEFE2",
+    "padding": {"top": 20, "bottom": -10, "left": 30, "right": 40},
+    "view": {"stroke": null},
+    "font": "Outfit",
+    "axis": {
+      "labelFont": "Signika Negative",
+      "labelFontSize": 11,
+      "title": null
+    },
+    "axisXQuantitative": {
+      "domainColor": "#9C8E85",
+      "grid": false,
+      "tickCount": 4,
+      "tickSize": 5,
+      "tickColor": "#9C8E85",
+      "labelPadding": 5
+    },
+    "axisYDiscrete": {
+      "domain": false,
+      "grid": true,
+      "gridColor": "#C9C0B4",
+      "gridOpacity": 0.3,
+      "ticks": false,
+      "labelPadding": {
+        "expr": "datum.value === '0-4' || datum.value === '90+'? 11 : 5"
+      },
+      "labelColor": {"expr": "test(/0/, datum.value) ? '#605A56' : ''"}
+    },
+    "header": {
+      "labelAlign": "left",
+      "labelAngle": 0,
+      "labelFontSize": 16,
+      "labelPadding": 20,
+      "title": null
+    },
+    "legend": {
+      "orient": "none",
+      "direction": "horizontal",
+      "symbolType": "square",
+      "symbolSize": 400,
+      "clipHeight": 8,
+      "symbolStrokeColor": "transparent",
+      "labelFontSize": 13,
+      "labelColor": "#373330",
+      "title": null,
+      "legendX": -100,
+      "legendY": 110
+    },
+    "rect": {"align": "left", "color": "black"},
+    "title": {"anchor": "start"}
+  }
+}

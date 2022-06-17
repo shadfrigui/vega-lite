@@ -1,0 +1,2009 @@
+﻿{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "values": [
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "0-4",
+        "Age ID": 1,
+        "Year": 1950,
+        "Population": 19.129
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "0-4",
+        "Age ID": 1,
+        "Year": 2000,
+        "Population": 64.712
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "0-4",
+        "Age ID": 1,
+        "Year": 2050,
+        "Population": 137.478
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "5-9",
+        "Age ID": 2,
+        "Year": 1950,
+        "Population": 14.824
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "5-9",
+        "Age ID": 2,
+        "Year": 2000,
+        "Population": 55.96
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "5-9",
+        "Age ID": 2,
+        "Year": 2050,
+        "Population": 131.297
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "10-14",
+        "Age ID": 3,
+        "Year": 1950,
+        "Population": 12.918
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "10-14",
+        "Age ID": 3,
+        "Year": 2000,
+        "Population": 50.363
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "10-14",
+        "Age ID": 3,
+        "Year": 2050,
+        "Population": 124.514
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "15-19",
+        "Age ID": 4,
+        "Year": 1950,
+        "Population": 11.518
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "15-19",
+        "Age ID": 4,
+        "Year": 2000,
+        "Population": 44.296
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "15-19",
+        "Age ID": 4,
+        "Year": 2050,
+        "Population": 116.871
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "20-24",
+        "Age ID": 5,
+        "Year": 1950,
+        "Population": 10.091
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "20-24",
+        "Age ID": 5,
+        "Year": 2000,
+        "Population": 37.203
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "20-24",
+        "Age ID": 5,
+        "Year": 2050,
+        "Population": 108.589
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "25-29",
+        "Age ID": 6,
+        "Year": 1950,
+        "Population": 8.668
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "25-29",
+        "Age ID": 6,
+        "Year": 2000,
+        "Population": 30.799
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "25-29",
+        "Age ID": 6,
+        "Year": 2050,
+        "Population": 100.324
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "30-34",
+        "Age ID": 7,
+        "Year": 1950,
+        "Population": 7.428
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "30-34",
+        "Age ID": 7,
+        "Year": 2000,
+        "Population": 25.576
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "30-34",
+        "Age ID": 7,
+        "Year": 2050,
+        "Population": 92.321
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "35-39",
+        "Age ID": 8,
+        "Year": 1950,
+        "Population": 6.301
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "35-39",
+        "Age ID": 8,
+        "Year": 2000,
+        "Population": 21.391
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "35-39",
+        "Age ID": 8,
+        "Year": 2050,
+        "Population": 83.892
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "40-44",
+        "Age ID": 9,
+        "Year": 1950,
+        "Population": 5.453
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "40-44",
+        "Age ID": 9,
+        "Year": 2000,
+        "Population": 17.759
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "40-44",
+        "Age ID": 9,
+        "Year": 2050,
+        "Population": 72.805
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "45-49",
+        "Age ID": 10,
+        "Year": 1950,
+        "Population": 4.603
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "45-49",
+        "Age ID": 10,
+        "Year": 2000,
+        "Population": 14.502
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "45-49",
+        "Age ID": 10,
+        "Year": 2050,
+        "Population": 62.09
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "50-54",
+        "Age ID": 11,
+        "Year": 1950,
+        "Population": 3.917
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "50-54",
+        "Age ID": 11,
+        "Year": 2000,
+        "Population": 11.804
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "50-54",
+        "Age ID": 11,
+        "Year": 2050,
+        "Population": 52.945
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "55-59",
+        "Age ID": 12,
+        "Year": 1950,
+        "Population": 3.165
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "55-59",
+        "Age ID": 12,
+        "Year": 2000,
+        "Population": 9.624
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "55-59",
+        "Age ID": 12,
+        "Year": 2050,
+        "Population": 45.123
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "60-64",
+        "Age ID": 13,
+        "Year": 1950,
+        "Population": 2.493
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "60-64",
+        "Age ID": 13,
+        "Year": 2000,
+        "Population": 7.881
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "60-64",
+        "Age ID": 13,
+        "Year": 2050,
+        "Population": 37.975
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "65-69",
+        "Age ID": 14,
+        "Year": 1950,
+        "Population": 1.826
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "65-69",
+        "Age ID": 14,
+        "Year": 2000,
+        "Population": 6.233
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "65-69",
+        "Age ID": 14,
+        "Year": 2050,
+        "Population": 30.291
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "70-74",
+        "Age ID": 15,
+        "Year": 1950,
+        "Population": 1.208
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "70-74",
+        "Age ID": 15,
+        "Year": 2000,
+        "Population": 4.348
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "70-74",
+        "Age ID": 15,
+        "Year": 2050,
+        "Population": 21.819
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "75-79",
+        "Age ID": 16,
+        "Year": 1950,
+        "Population": 0.648
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "75-79",
+        "Age ID": 16,
+        "Year": 2000,
+        "Population": 2.634
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "75-79",
+        "Age ID": 16,
+        "Year": 2050,
+        "Population": 14.13
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "80-84",
+        "Age ID": 17,
+        "Year": 1950,
+        "Population": 0.281
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "80-84",
+        "Age ID": 17,
+        "Year": 2000,
+        "Population": 1.234
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "80-84",
+        "Age ID": 17,
+        "Year": 2050,
+        "Population": 7.846
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "85-89",
+        "Age ID": 18,
+        "Year": 1950,
+        "Population": 0.088
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "85-89",
+        "Age ID": 18,
+        "Year": 2000,
+        "Population": 0.405
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "85-89",
+        "Age ID": 18,
+        "Year": 2050,
+        "Population": 3.392
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "90+",
+        "Age ID": 19,
+        "Year": 1950,
+        "Population": 0.024
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "90+",
+        "Age ID": 19,
+        "Year": 2000,
+        "Population": 0.098
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Female",
+        "Age": "90+",
+        "Age ID": 19,
+        "Year": 2050,
+        "Population": 1.193
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "0-4",
+        "Age ID": 1,
+        "Year": 1950,
+        "Population": 19.441
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "0-4",
+        "Age ID": 1,
+        "Year": 2000,
+        "Population": 66.395
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "0-4",
+        "Age ID": 1,
+        "Year": 2050,
+        "Population": 141.657
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "5-9",
+        "Age ID": 2,
+        "Year": 1950,
+        "Population": 14.907
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "5-9",
+        "Age ID": 2,
+        "Year": 2000,
+        "Population": 57.149
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "5-9",
+        "Age ID": 2,
+        "Year": 2050,
+        "Population": 134.895
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "10-14",
+        "Age ID": 3,
+        "Year": 1950,
+        "Population": 12.977
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "10-14",
+        "Age ID": 3,
+        "Year": 2000,
+        "Population": 51.347
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "10-14",
+        "Age ID": 3,
+        "Year": 2050,
+        "Population": 127.743
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "15-19",
+        "Age ID": 4,
+        "Year": 1950,
+        "Population": 11.642
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "15-19",
+        "Age ID": 4,
+        "Year": 2000,
+        "Population": 44.856
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "15-19",
+        "Age ID": 4,
+        "Year": 2050,
+        "Population": 119.698
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "20-24",
+        "Age ID": 5,
+        "Year": 1950,
+        "Population": 10.141
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "20-24",
+        "Age ID": 5,
+        "Year": 2000,
+        "Population": 37.343
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "20-24",
+        "Age ID": 5,
+        "Year": 2050,
+        "Population": 110.888
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "25-29",
+        "Age ID": 6,
+        "Year": 1950,
+        "Population": 8.666
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "25-29",
+        "Age ID": 6,
+        "Year": 2000,
+        "Population": 30.521
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "25-29",
+        "Age ID": 6,
+        "Year": 2050,
+        "Population": 102.142
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "30-34",
+        "Age ID": 7,
+        "Year": 1950,
+        "Population": 7.405
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "30-34",
+        "Age ID": 7,
+        "Year": 2000,
+        "Population": 25.006
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "30-34",
+        "Age ID": 7,
+        "Year": 2050,
+        "Population": 93.741
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "35-39",
+        "Age ID": 8,
+        "Year": 1950,
+        "Population": 6.273
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "35-39",
+        "Age ID": 8,
+        "Year": 2000,
+        "Population": 21.036
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "35-39",
+        "Age ID": 8,
+        "Year": 2050,
+        "Population": 84.853
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "40-44",
+        "Age ID": 9,
+        "Year": 1950,
+        "Population": 5.355
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "40-44",
+        "Age ID": 9,
+        "Year": 2000,
+        "Population": 17.322
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "40-44",
+        "Age ID": 9,
+        "Year": 2050,
+        "Population": 73.069
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "45-49",
+        "Age ID": 10,
+        "Year": 1950,
+        "Population": 4.432
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "45-49",
+        "Age ID": 10,
+        "Year": 2000,
+        "Population": 14.054
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "45-49",
+        "Age ID": 10,
+        "Year": 2050,
+        "Population": 61.621
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "50-54",
+        "Age ID": 11,
+        "Year": 1950,
+        "Population": 3.622
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "50-54",
+        "Age ID": 11,
+        "Year": 2000,
+        "Population": 11.144
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "50-54",
+        "Age ID": 11,
+        "Year": 2050,
+        "Population": 51.712
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "55-59",
+        "Age ID": 12,
+        "Year": 1950,
+        "Population": 2.863
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "55-59",
+        "Age ID": 12,
+        "Year": 2000,
+        "Population": 8.784
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "55-59",
+        "Age ID": 12,
+        "Year": 2050,
+        "Population": 43.003
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "60-64",
+        "Age ID": 13,
+        "Year": 1950,
+        "Population": 2.172
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "60-64",
+        "Age ID": 13,
+        "Year": 2000,
+        "Population": 6.985
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "60-64",
+        "Age ID": 13,
+        "Year": 2050,
+        "Population": 34.924
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "65-69",
+        "Age ID": 14,
+        "Year": 1950,
+        "Population": 1.547
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "65-69",
+        "Age ID": 14,
+        "Year": 2000,
+        "Population": 5.398
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "65-69",
+        "Age ID": 14,
+        "Year": 2050,
+        "Population": 26.658
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "70-74",
+        "Age ID": 15,
+        "Year": 1950,
+        "Population": 0.981
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "70-74",
+        "Age ID": 15,
+        "Year": 2000,
+        "Population": 3.58
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "70-74",
+        "Age ID": 15,
+        "Year": 2050,
+        "Population": 18.281
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "75-79",
+        "Age ID": 16,
+        "Year": 1950,
+        "Population": 0.499
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "75-79",
+        "Age ID": 16,
+        "Year": 2000,
+        "Population": 2.049
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "75-79",
+        "Age ID": 16,
+        "Year": 2050,
+        "Population": 11.04
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "80-84",
+        "Age ID": 17,
+        "Year": 1950,
+        "Population": 0.211
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "80-84",
+        "Age ID": 17,
+        "Year": 2000,
+        "Population": 0.89
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "80-84",
+        "Age ID": 17,
+        "Year": 2050,
+        "Population": 5.588
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "85-89",
+        "Age ID": 18,
+        "Year": 1950,
+        "Population": 0.06
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "85-89",
+        "Age ID": 18,
+        "Year": 2000,
+        "Population": 0.258
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "85-89",
+        "Age ID": 18,
+        "Year": 2050,
+        "Population": 2.192
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "90+",
+        "Age ID": 19,
+        "Year": 1950,
+        "Population": 0.014
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "90+",
+        "Age ID": 19,
+        "Year": 2000,
+        "Population": 0.048
+      },
+      {
+        "Continent": "Africa",
+        "Gender": "Male",
+        "Age": "90+",
+        "Age ID": 19,
+        "Year": 2050,
+        "Population": 0.673
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "0-4",
+        "Age ID": 1,
+        "Year": 1950,
+        "Population": 98.18
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "0-4",
+        "Age ID": 1,
+        "Year": 2000,
+        "Population": 175.324
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "0-4",
+        "Age ID": 1,
+        "Year": 2050,
+        "Population": 148.989
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "5-9",
+        "Age ID": 2,
+        "Year": 1950,
+        "Population": 77.407
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "5-9",
+        "Age ID": 2,
+        "Year": 2000,
+        "Population": 178.335
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "5-9",
+        "Age ID": 2,
+        "Year": 2050,
+        "Population": 152.455
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "10-14",
+        "Age ID": 3,
+        "Year": 1950,
+        "Population": 72.841
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "10-14",
+        "Age ID": 3,
+        "Year": 2000,
+        "Population": 191.163
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "10-14",
+        "Age ID": 3,
+        "Year": 2050,
+        "Population": 155.511
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "15-19",
+        "Age ID": 4,
+        "Year": 1950,
+        "Population": 67.429
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "15-19",
+        "Age ID": 4,
+        "Year": 2000,
+        "Population": 170.388
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "15-19",
+        "Age ID": 4,
+        "Year": 2050,
+        "Population": 158.49
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "20-24",
+        "Age ID": 5,
+        "Year": 1950,
+        "Population": 59.399
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "20-24",
+        "Age ID": 5,
+        "Year": 2000,
+        "Population": 156.161
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "20-24",
+        "Age ID": 5,
+        "Year": 2050,
+        "Population": 160.876
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "25-29",
+        "Age ID": 6,
+        "Year": 1950,
+        "Population": 52.4
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "25-29",
+        "Age ID": 6,
+        "Year": 2000,
+        "Population": 158.659
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "25-29",
+        "Age ID": 6,
+        "Year": 2050,
+        "Population": 164.304
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "30-34",
+        "Age ID": 7,
+        "Year": 1950,
+        "Population": 47.449
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "30-34",
+        "Age ID": 7,
+        "Year": 2000,
+        "Population": 151.477
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "30-34",
+        "Age ID": 7,
+        "Year": 2050,
+        "Population": 168.367
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "35-39",
+        "Age ID": 8,
+        "Year": 1950,
+        "Population": 42.785
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "35-39",
+        "Age ID": 8,
+        "Year": 2000,
+        "Population": 130.054
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "35-39",
+        "Age ID": 8,
+        "Year": 2050,
+        "Population": 168.522
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "40-44",
+        "Age ID": 9,
+        "Year": 1950,
+        "Population": 37.359
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "40-44",
+        "Age ID": 9,
+        "Year": 2000,
+        "Population": 110.268
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "40-44",
+        "Age ID": 9,
+        "Year": 2050,
+        "Population": 166.044
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "45-49",
+        "Age ID": 10,
+        "Year": 1950,
+        "Population": 31.99
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "45-49",
+        "Age ID": 10,
+        "Year": 2000,
+        "Population": 100.732
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "45-49",
+        "Age ID": 10,
+        "Year": 2050,
+        "Population": 161.576
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "50-54",
+        "Age ID": 11,
+        "Year": 1950,
+        "Population": 26.646
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "50-54",
+        "Age ID": 11,
+        "Year": 2000,
+        "Population": 76.144
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "50-54",
+        "Age ID": 11,
+        "Year": 2050,
+        "Population": 160.954
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "55-59",
+        "Age ID": 12,
+        "Year": 1950,
+        "Population": 22.169
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "55-59",
+        "Age ID": 12,
+        "Year": 2000,
+        "Population": 60.531
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "55-59",
+        "Age ID": 12,
+        "Year": 2050,
+        "Population": 161.448
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "60-64",
+        "Age ID": 13,
+        "Year": 1950,
+        "Population": 18.562
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "60-64",
+        "Age ID": 13,
+        "Year": 2000,
+        "Population": 53.345
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "60-64",
+        "Age ID": 13,
+        "Year": 2050,
+        "Population": 167.68
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "65-69",
+        "Age ID": 14,
+        "Year": 1950,
+        "Population": 13.625
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "65-69",
+        "Age ID": 14,
+        "Year": 2000,
+        "Population": 43.953
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "65-69",
+        "Age ID": 14,
+        "Year": 2050,
+        "Population": 141.332
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "70-74",
+        "Age ID": 15,
+        "Year": 1950,
+        "Population": 9.031
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "70-74",
+        "Age ID": 15,
+        "Year": 2000,
+        "Population": 32.1
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "70-74",
+        "Age ID": 15,
+        "Year": 2050,
+        "Population": 118.503
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "75-79",
+        "Age ID": 16,
+        "Year": 1950,
+        "Population": 5.187
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "75-79",
+        "Age ID": 16,
+        "Year": 2000,
+        "Population": 21.13
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "75-79",
+        "Age ID": 16,
+        "Year": 2050,
+        "Population": 104.705
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "80-84",
+        "Age ID": 17,
+        "Year": 1950,
+        "Population": 2.224
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "80-84",
+        "Age ID": 17,
+        "Year": 2000,
+        "Population": 12.001
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "80-84",
+        "Age ID": 17,
+        "Year": 2050,
+        "Population": 77.591
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "85-89",
+        "Age ID": 18,
+        "Year": 1950,
+        "Population": 0.675
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "85-89",
+        "Age ID": 18,
+        "Year": 2000,
+        "Population": 5.261
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "85-89",
+        "Age ID": 18,
+        "Year": 2050,
+        "Population": 42.801
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "90+",
+        "Age ID": 19,
+        "Year": 1950,
+        "Population": 0.202
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "90+",
+        "Age ID": 19,
+        "Year": 2000,
+        "Population": 1.873
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Female",
+        "Age": "90+",
+        "Age ID": 19,
+        "Year": 2050,
+        "Population": 25.832
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "0-4",
+        "Age ID": 1,
+        "Year": 1950,
+        "Population": 102.44
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "0-4",
+        "Age ID": 1,
+        "Year": 2000,
+        "Population": 191.585
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "0-4",
+        "Age ID": 1,
+        "Year": 2050,
+        "Population": 158.491
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "5-9",
+        "Age ID": 2,
+        "Year": 1950,
+        "Population": 82.697
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "5-9",
+        "Age ID": 2,
+        "Year": 2000,
+        "Population": 193.761
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "5-9",
+        "Age ID": 2,
+        "Year": 2050,
+        "Population": 162.104
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "10-14",
+        "Age ID": 3,
+        "Year": 1950,
+        "Population": 78.274
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "10-14",
+        "Age ID": 3,
+        "Year": 2000,
+        "Population": 204.662
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "10-14",
+        "Age ID": 3,
+        "Year": 2050,
+        "Population": 165.613
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "15-19",
+        "Age ID": 4,
+        "Year": 1950,
+        "Population": 72.071
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "15-19",
+        "Age ID": 4,
+        "Year": 2000,
+        "Population": 181.182
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "15-19",
+        "Age ID": 4,
+        "Year": 2050,
+        "Population": 169.205
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "20-24",
+        "Age ID": 5,
+        "Year": 1950,
+        "Population": 64.259
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "20-24",
+        "Age ID": 5,
+        "Year": 2000,
+        "Population": 165.104
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "20-24",
+        "Age ID": 5,
+        "Year": 2050,
+        "Population": 173.034
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "25-29",
+        "Age ID": 6,
+        "Year": 1950,
+        "Population": 55.42
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "25-29",
+        "Age ID": 6,
+        "Year": 2000,
+        "Population": 167.112
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "25-29",
+        "Age ID": 6,
+        "Year": 2050,
+        "Population": 178.136
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "30-34",
+        "Age ID": 7,
+        "Year": 1950,
+        "Population": 50.615
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "30-34",
+        "Age ID": 7,
+        "Year": 2000,
+        "Population": 158.287
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "30-34",
+        "Age ID": 7,
+        "Year": 2050,
+        "Population": 183.406
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "35-39",
+        "Age ID": 8,
+        "Year": 1950,
+        "Population": 45.61
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "35-39",
+        "Age ID": 8,
+        "Year": 2000,
+        "Population": 136.41
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "35-39",
+        "Age ID": 8,
+        "Year": 2050,
+        "Population": 183.891
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "40-44",
+        "Age ID": 9,
+        "Year": 1950,
+        "Population": 39.594
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "40-44",
+        "Age ID": 9,
+        "Year": 2000,
+        "Population": 115.741
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "40-44",
+        "Age ID": 9,
+        "Year": 2050,
+        "Population": 181.352
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "45-49",
+        "Age ID": 10,
+        "Year": 1950,
+        "Population": 34.128
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "45-49",
+        "Age ID": 10,
+        "Year": 2000,
+        "Population": 105.157
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "45-49",
+        "Age ID": 10,
+        "Year": 2050,
+        "Population": 175.779
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "50-54",
+        "Age ID": 11,
+        "Year": 1950,
+        "Population": 28.145
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "50-54",
+        "Age ID": 11,
+        "Year": 2000,
+        "Population": 77.845
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "50-54",
+        "Age ID": 11,
+        "Year": 2050,
+        "Population": 172.224
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "55-59",
+        "Age ID": 12,
+        "Year": 1950,
+        "Population": 22.656
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "55-59",
+        "Age ID": 12,
+        "Year": 2000,
+        "Population": 61.734
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "55-59",
+        "Age ID": 12,
+        "Year": 2050,
+        "Population": 168.562
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "60-64",
+        "Age ID": 13,
+        "Year": 1950,
+        "Population": 17.765
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "60-64",
+        "Age ID": 13,
+        "Year": 2000,
+        "Population": 53.413
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "60-64",
+        "Age ID": 13,
+        "Year": 2050,
+        "Population": 168.57
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "65-69",
+        "Age ID": 14,
+        "Year": 1950,
+        "Population": 12.109
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "65-69",
+        "Age ID": 14,
+        "Year": 2000,
+        "Population": 42.126
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "65-69",
+        "Age ID": 14,
+        "Year": 2050,
+        "Population": 137.08
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "70-74",
+        "Age ID": 15,
+        "Year": 1950,
+        "Population": 7.549
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "70-74",
+        "Age ID": 15,
+        "Year": 2000,
+        "Population": 29.116
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "70-74",
+        "Age ID": 15,
+        "Year": 2050,
+        "Population": 110.169
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "75-79",
+        "Age ID": 16,
+        "Year": 1950,
+        "Population": 4.007
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "75-79",
+        "Age ID": 16,
+        "Year": 2000,
+        "Population": 16.862
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "75-79",
+        "Age ID": 16,
+        "Year": 2050,
+        "Population": 91.409
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "80-84",
+        "Age ID": 17,
+        "Year": 1950,
+        "Population": 1.497
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "80-84",
+        "Age ID": 17,
+        "Year": 2000,
+        "Population": 8.407
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "80-84",
+        "Age ID": 17,
+        "Year": 2050,
+        "Population": 61.39
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "85-89",
+        "Age ID": 18,
+        "Year": 1950,
+        "Population": 0.411
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "85-89",
+        "Age ID": 18,
+        "Year": 2000,
+        "Population": 3.06
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "85-89",
+        "Age ID": 18,
+        "Year": 2050,
+        "Population": 30.086
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "90+",
+        "Age ID": 19,
+        "Year": 1950,
+        "Population": 0.099
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "90+",
+        "Age ID": 19,
+        "Year": 2000,
+        "Population": 0.8
+      },
+      {
+        "Continent": "Asia",
+        "Gender": "Male",
+        "Age": "90+",
+        "Age ID": 19,
+        "Year": 2050,
+        "Population": 13.783
+      }
+    ]
+  },
+  "vconcat": [
+    {
+      "height": 100,
+      "layer": [
+        {"mark": {"type": "rect", "width": 840, "height": 2, "xOffset": -120}},
+        {
+          "mark": {
+            "type": "rect",
+            "width": 50,
+            "height": 10,
+            "xOffset": -120,
+            "yOffset": 6
+          }
+        },
+        {
+          "title": {
+            "text": "Africa's growing youth population",
+            "fontSize": 25,
+            "subtitle": "Africa vs Asia population age structure, millions",
+            "subtitlePadding": 10,
+            "subtitleFontSize": 18,
+            "subtitleColor": "#373330",
+            "dy": 75
+          },
+          "mark": "text"
+        }
+      ]
+    },
+    {
+      "facet": {"row": {"field": "Continent", "sort": "descending"}},
+      "spec": {
+        "facet": {"column": {"field": "Year"}},
+        "spec": {
+          "concat": [
+            {
+              "width": 100,
+              "height": 180,
+              "transform": [{"filter": {"field": "Gender", "equal": "Male"}}],
+              "mark": {"type": "bar", "color": "#31C0D0"},
+              "encoding": {
+                "x": {
+                  "field": "Population",
+                  "type": "quantitative",
+                  "sort": "descending",
+                  "scale": {"domain": [0, 200]},
+                  "axis": {
+                    "tickSize": {"expr": "datum.value === 0 ? 0 : 5"},
+                    "labelOffset": {"expr": "datum.value === 200 ? -10 : 0"},
+                    "labelColor": {
+                      "expr": "datum.value === 100 || datum.value === 200 ? '#605A56' : ''"
+                    }
+                  }
+                },
+                "y": {
+                  "field": "Age",
+                  "type": "ordinal",
+                  "sort": {"field": "Age ID", "order": "descending"},
+                  "scale": {"paddingInner": 0.35},
+                  "axis": {"orient": "left"}
+                },
+                "color": {
+                  "field": "Gender",
+                  "scale": {
+                    "domain": ["Male", "Female"],
+                    "range": ["#31C0D0", "#F1A957"]
+                  }
+                },
+                "tooltip": [
+                  {"field": "Gender"},
+                  {"field": "Age", "title": "Age Group"},
+                  {"field": "Population", "format": ".1f"}
+                ]
+              }
+            },
+            {
+              "width": 100,
+              "height": 180,
+              "title": "",
+              "transform": [{"filter": {"field": "Gender", "equal": "Female"}}],
+              "mark": {"type": "bar", "color": "#F1A957"},
+              "encoding": {
+                "x": {
+                  "field": "Population",
+                  "type": "quantitative",
+                  "scale": {"domain": [0, 200]},
+                  "axis": {
+                    "labelOffset": {
+                      "expr": "datum.value === 0 ? -3 : datum.value === 200 ? 10 : 0"
+                    },
+                    "labelColor": {
+                      "expr": "datum.value === 50 || datum.value === 150 ? '' : '#605A56'"
+                    }
+                  }
+                },
+                "y": {
+                  "field": "Age",
+                  "type": "ordinal",
+                  "sort": {"field": "Age ID", "order": "descending"},
+                  "scale": {"paddingInner": 0.35},
+                  "axis": {"labels": false}
+                },
+                "tooltip": [
+                  {"field": "Gender"},
+                  {"field": "Age", "title": "Age Group"},
+                  {"field": "Population", "format": ".1f"}
+                ]
+              }
+            }
+          ],
+          "spacing": -5
+        }
+      },
+      "spacing": 30
+    },
+    {
+      "title": {
+        "text": "Source: United Nations • Graphic: @shadfrigui",
+        "fontSize": 12,
+        "fontWeight": "normal",
+        "color": "#62605F",
+        "dx": 490
+      },
+      "mark": "text"
+    }
+  ],
+  "spacing": 40,
+  "config": {
+    "background": "#FEEFE2",
+    "padding": {"top": 20, "bottom": -10, "left": 30, "right": 40},
+    "view": {"stroke": null},
+    "font": "Outfit",
+    "axis": {
+      "labelFont": "Signika Negative",
+      "labelFontSize": 11,
+      "title": null
+    },
+    "axisXQuantitative": {
+      "domainColor": "#9C8E85",
+      "grid": false,
+      "tickCount": 4,
+      "tickSize": 5,
+      "tickColor": "#9C8E85",
+      "labelPadding": 5
+    },
+    "axisYDiscrete": {
+      "domain": false,
+      "grid": true,
+      "gridColor": "#C9C0B4",
+      "gridOpacity": 0.3,
+      "ticks": false,
+      "labelPadding": {
+        "expr": "datum.value === '0-4' || datum.value === '90+'? 11 : 5"
+      },
+      "labelColor": {"expr": "test(/0/, datum.value) ? '#605A56' : ''"}
+    },
+    "header": {
+      "labelAlign": "left",
+      "labelAngle": 0,
+      "labelFontSize": 16,
+      "labelPadding": 20,
+      "title": null
+    },
+    "legend": {
+      "orient": "none",
+      "direction": "horizontal",
+      "symbolType": "square",
+      "symbolSize": 400,
+      "clipHeight": 8,
+      "symbolStrokeColor": "transparent",
+      "labelFontSize": 13,
+      "labelColor": "#373330",
+      "title": null,
+      "legendX": -100,
+      "legendY": 110
+    },
+    "rect": {"align": "left", "color": "black"},
+    "title": {"anchor": "start"}
+  }
+}
