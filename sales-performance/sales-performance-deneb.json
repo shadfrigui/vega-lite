@@ -1,0 +1,188 @@
+﻿{
+  "description": "Add the following columns to Deneb: SyPosition, SxPosition, Month, Month Number, Sales, Year, State ID, and State Abbreviation",
+  "data": {"name": "dataset"},
+  "vconcat": [
+    {
+      "title": {
+        "text": "Sales Performance",
+        "fontSize": 50,
+        "subtitle": "Last updated: 2022-05-30",
+        "subtitlePadding": 25,
+        "subtitleFontSize": 25,
+        "subtitleColor": "#373330",
+        "dx": -35,
+        "dy": 30
+      },
+      "mark": "text"
+    },
+    {
+      "facet": {
+        "row": {
+          "field": "SyPosition",
+          "type": "quantitative",
+          "sort": "descending",
+          "title": null,
+          "header": null
+        },
+        "column": {
+          "field": "SxPosition",
+          "type": "quantitative",
+          "title": null,
+          "header": null
+        }
+      },
+      "spec": {
+        "width": 80,
+        "height": 55,
+        "layer": [
+          {
+            "encoding": {
+              "x": {
+                "field": "Month",
+                "type": "nominal",
+                "sort": {"field": "Month Number"},
+                "scale": {
+                  "domain": [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec"
+                  ]
+                }
+              },
+              "y": {"field": "Sales", "type": "quantitative"},
+              "color": {
+                "field": "Year",
+                "scale": {
+                  "domain": [2022, 2021],
+                  "range": ["#605A56", "#C9C0B4"]
+                }
+              }
+            },
+            "layer": [
+              {
+                "transform": [{"filter": {"field": "Year", "equal": 2021}}],
+                "mark": {"type": "area"}
+              },
+              {
+                "transform": [{"filter": {"field": "Year", "equal": 2022}}],
+                "mark": {"type": "line"}
+              }
+            ]
+          },
+          {
+            "mark": {
+              "type": "text",
+              "font": "Test Karbon",
+              "fontSize": 30,
+              "color": "black",
+              "xOffset": -5,
+              "yOffset": -70
+            },
+            "encoding": {"text": {"field": "State Abbreviation"}}
+          },
+          {
+            "transform": [
+              {"filter": {"field": "Month Number", "range": [1, 5]}},
+              {"pivot": "Year", "groupby": ["State ID"], "value": "Sales"},
+              {
+                "joinaggregate": [
+                  {"op": "sum", "field": "2021", "as": "SYTD 21"}
+                ],
+                "groupby": ["State ID"]
+              },
+              {
+                "joinaggregate": [{"op": "sum", "field": "2022", "as": "SYTD"}],
+                "groupby": ["State ID"]
+              },
+              {
+                "calculate": "(datum['SYTD']/datum['SYTD 21'])-1",
+                "as": "Variance"
+              },
+              {
+                "calculate": "if(datum['Variance'] > 0, '↑ ' + format(datum['Variance'],'.1%'), '↓ ' + format(datum['Variance'],'.1%'))",
+                "as": "Variance Text"
+              }
+            ],
+            "mark": {
+              "type": "text",
+              "fontSize": 16,
+              "xOffset": -5,
+              "yOffset": -40,
+              "color": {"expr": "datum['Variance'] > 0 ? '#2D87CB' : '#FD8C0B'"}
+            },
+            "encoding": {"text": {"field": "Variance Text"}}
+          }
+        ]
+      },
+      "resolve": {"scale": {"x": "independent", "y": "independent"}},
+      "spacing": {"column": 0, "row": 15}
+    },
+    {
+      "title": {
+        "text": "Graphic: @shadfrigui",
+        "fontSize": 18,
+        "color": "#373330",
+        "dx": -35,
+        "dy": 40
+      },
+      "mark": "text"
+    }
+  ],
+  "spacing": -50,
+  "config": {
+    "background": "#FEEFE2",
+    "padding": {"top": 40, "bottom": 20, "left": 40, "right": 40},
+    "view": {"stroke": null},
+    "font": "Outfit",
+    "axisX": {
+      "domainColor": "#9C8E85",
+      "tickColor": "#9C8E85",
+      "tickSize": {
+        "expr": "datum.value === 'Jan' || datum.value === 'May' || datum.value === 'Dec' ? 6 : 3"
+      },
+      "labelAngle": 0,
+      "labelPadding": 5,
+      "labelFontSize": 12,
+      "labelColor": {
+        "expr": "datum.value === 'Jan' || datum.value === 'May' || datum.value === 'Dec' ? '#605A56' : ''"
+      },
+      "title": null
+    },
+    "axisY": {
+      "domain": false,
+      "gridColor": "#C9C0B4",
+      "gridOpacity": 0.4,
+      "ticks": false,
+      "format": ".1s",
+      "labelPadding": 5,
+      "labelFontSize": 12,
+      "labelColor": "#605A56",
+      "title": null
+    },
+    "area": {"line": {"strokeWidth": 0}, "fill": "#C9C0B4"},
+    "line": {"color": "#605A56", "strokeWidth": 2},
+    "legend": {
+      "orient": "none",
+      "legendX": -35,
+      "legendY": 110,
+      "symbolType": "M -1 0 H 5",
+      "symbolSize": 100,
+      "symbolStrokeWidth": {"expr": "datum.label === '2022' ? 3 : 15"},
+      "labelFontSize": 20,
+      "labelOffset": 25,
+      "labelColor": "#373330",
+      "rowPadding": 10,
+      "title": null
+    },
+    "title": {"anchor": "start", "fontWeight": "normal"}
+  }
+}
