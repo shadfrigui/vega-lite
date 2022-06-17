@@ -1,0 +1,149 @@
+[
+  {
+    "Order Date": "10/31/2021",
+    "Region": "Central",
+    "Fulfillment": 1,
+    "Orders": 2,
+    "Shipments": 2
+  },
+  {
+    "Order Date": "11/01/2021",
+    "Region": "East",
+    "Fulfillment": 1,
+    "Orders": 1,
+    "Shipments": 1
+  },
+  {
+    "Order Date": "11/01/2021",
+    "Region": "West",
+    "Fulfillment": 1,
+    "Orders": 1,
+    "Shipments": 1
+  },
+  {
+    "Order Date": "11/02/2021",
+    "Region": "Central",
+    "Fulfillment": 1,
+    "Orders": 3,
+    "Shipments": 3
+  },
+  {
+    "Order Date": "11/02/2021",
+    "Region": "East",
+    "Fulfillment": 0.666666666666667,
+    "Orders": 3,
+    "Shipments": 2
+  },
+  {
+    "Order Date": "11/02/2021",
+    "Region": "South",
+    "Fulfillment": 1,
+    "Orders": 2,
+    "Shipments": 2
+  },
+  {
+    "Order Date": "11/02/2021",
+    "Region": "West",
+    "Fulfillment": 0.5,
+    "Orders": 4,
+    "Shipments": 2
+  },
+  {
+    "Order Date": "11/03/2021",
+    "Region": "Central",
+    "Fulfillment": 0,
+    "Orders": 1,
+    "Shipments": null
+  },
+  {
+    "Order Date": "11/03/2021",
+    "Region": "East",
+    "Fulfillment": 0,
+    "Orders": 2,
+    "Shipments": null
+  },
+  {
+    "Order Date": "11/03/2021",
+    "Region": "South",
+    "Fulfillment": 0.5,
+    "Orders": 6,
+    "Shipments": 3
+  },
+  {
+    "Order Date": "11/03/2021",
+    "Region": "West",
+    "Fulfillment": 0.285714285714286,
+    "Orders": 7,
+    "Shipments": 2
+  },
+  {
+    "Order Date": "11/04/2021",
+    "Region": "Central",
+    "Fulfillment": 0.5,
+    "Orders": 2,
+    "Shipments": 1
+  },
+  {
+    "Order Date": "11/04/2021",
+    "Region": "East",
+    "Fulfillment": 0,
+    "Orders": 1,
+    "Shipments": null
+  },
+  {
+    "Order Date": "11/04/2021",
+    "Region": "South",
+    "Fulfillment": 0.4,
+    "Orders": 5,
+    "Shipments": 2
+  },
+  {
+    "Order Date": "11/05/2021",
+    "Region": "Central",
+    "Fulfillment": 0,
+    "Orders": 3,
+    "Shipments": null
+  },
+  {
+    "Order Date": "11/05/2021",
+    "Region": "East",
+    "Fulfillment": 0,
+    "Orders": 2,
+    "Shipments": null
+  },
+  {
+    "Order Date": "11/05/2021",
+    "Region": "West",
+    "Fulfillment": 0.333333333333333,
+    "Orders": 3,
+    "Shipments": 1
+  },
+  {
+    "Order Date": "11/06/2021",
+    "Region": "Central",
+    "Fulfillment": 0,
+    "Orders": 4,
+    "Shipments": null
+  },
+  {
+    "Order Date": "11/06/2021",
+    "Region": "East",
+    "Fulfillment": 0,
+    "Orders": 3,
+    "Shipments": null
+  },
+  {
+    "Order Date": "11/06/2021",
+    "Region": "South",
+    "Fulfillment": 0,
+    "Orders": 2,
+    "Shipments": null
+  },
+  {
+    "Order Date": "11/06/2021",
+    "Region": "West",
+    "Fulfillment": 0.25,
+    "Orders": 4,
+    "Shipments": 1
+  }
+]
