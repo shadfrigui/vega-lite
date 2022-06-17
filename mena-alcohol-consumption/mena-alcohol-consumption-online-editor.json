@@ -1,0 +1,129 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "values": [
+      {"Country": "UAE", "Value": 4.97},
+      {"Country": "Tunisia", "Value": 3.61},
+      {"Country": "Lebanon", "Value": 2.58},
+      {"Country": "Qatar", "Value": 1.81},
+      {"Country": "Iran", "Value": 1.76}
+    ]
+  },
+  "vconcat": [
+    {
+      "title": {
+        "text": "Top 5 MENA* countries by alcohol consumption",
+        "fontSize": 25,
+        "color": "black",
+        "subtitle": [
+          "Liters of pure alcohol per person per year, males aged 15+"
+        ],
+        "subtitlePadding": 15,
+        "subtitleFontSize": 16,
+        "subtitleColor": "#373330",
+        "dx": -25
+      },
+      "mark": "text"
+    },
+    {
+      "width": 600,
+      "height": 200,
+      "encoding": {
+        "x": {
+          "field": "Country",
+          "type": "nominal",
+          "sort": {"field": "Value", "order": "descending", "op": "max"}
+        }
+      },
+      "layer": [
+        {
+          "mark": {"type": "bar"},
+          "encoding": {
+            "y": {
+              "field": "Value",
+              "type": "quantitative",
+              "scale": {"domain": [0, 6]}
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "point",
+            "shape": "M -3 0 L -3 -19 C -3 -19 -2.5 -21 -1 -22 L -1 -28 H 1 L 1 -26 H -1 H 1 L 1 -22 C 2.5 -21 3 -19 3 -19 L 3 0 z"
+          },
+          "encoding": {"y": {"datum": 0}}
+        },
+        {
+          "data": {"values": [{}]},
+          "encoding": {"x": {}, "y": {"datum": 1.2}},
+          "layer": [
+            {"mark": {"type": "rule", "xOffset": 10}},
+            {
+              "mark": {
+                "type": "text",
+                "text": ["MENA", "average"],
+                "lineHeight": 16,
+                "color": "#373330",
+                "dx": 290,
+                "dy": -9
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "height": 10,
+      "title": {
+        "text": [
+          "*Middle East and North Africa",
+          "Czechia leads the world in alcohol consumption with 22 liters per person. World average: 9.3",
+          "Source: World Health Organization, 2019 • Graphic: @shadfrigui"
+        ],
+        "fontSize": 12,
+        "lineHeight": 20,
+        "color": "#605A56",
+        "dx": -20
+      },
+      "mark": "text"
+    }
+  ],
+  "config": {
+    "background": "#FAF7F2",
+    "padding": {"top": 20, "left": 30, "right": 20},
+    "view": {"stroke": null},
+    "font": "Outfit",
+    "axis": {
+      "domain": false,
+      "ticks": false,
+      "labelPadding": 15,
+      "labelFontSize": 14,
+      "title": null
+    },
+    "axisX": {"labelAngle": 0, "labelColor": "#373330"},
+    "axisY": {
+      "gridColor": {
+        "expr": "datum.value === 0 || datum.value === 6 ? '': '#C9C0B4'"
+      },
+      "gridOpacity": 0.4,
+      "labelColor": {
+        "expr": "datum.value === 0 || datum.value === 6? '': '#373330'"
+      }
+    },
+    "bar": {"width": 50, "color": "#FF5773"},
+    "point": {
+      "size": 300,
+      "opacity": 0.9,
+      "stroke": "#060807",
+      "strokeWidth": 2
+    },
+    "rule": {
+      "color": "black",
+      "strokeDash": [2, 3],
+      "strokeWidth": 1.5,
+      "strokeOpacity": 1
+    },
+    "title": {"anchor": "start", "fontWeight": "normal"},
+    "concat": {"spacing": 30}
+  }
+}
