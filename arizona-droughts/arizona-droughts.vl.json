@@ -1,0 +1,134 @@
+﻿{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "vconcat": [
+    {
+      "title": {
+        "text": "Droughts in Arizona",
+        "subtitle": "Drought conditions since January 2020"
+      },
+      "width": 1000,
+      "height": {"step": 29},
+      "data": {"url": "arizona-droughts-data.csv"},
+      "transform": [
+        {"calculate": "timeFormat(datum.Date,'%b %d, %Y')", "as": "DateTooltip"}
+      ],
+      "params": [
+        {"name": "highlight", "select": {"type": "point", "on": "mouseover"}}
+      ],
+      "mark": {"type": "rect"},
+      "encoding": {
+        "x": {
+          "field": "Date",
+          "type": "temporal",
+          "scale": {"domainMin": {"year": 2020, "month": "jan", "date": 1}}
+        },
+        "y": {"field": "County", "type": "nominal"},
+        "fill": {
+          "field": "DSCI",
+          "type": "quantitative",
+          "bin": true,
+          "scale": {
+            "range": ["#FCF7E1", "#FCEFD5", "#FACC87", "#FA8D53", "#DF4B2A"]
+          },
+          "legend": {
+            "description": "Vega-Lite doesn't show the first value of the legend's gradient so I used zero twice in the values array",
+            "values": [0, 0, 100, 200, 300, 400, 500],
+            "title": [
+              "Drought Severity and Coverage Index (DSCI)",
+              "0: No drought ; 500: Exceptional drought"
+            ]
+          }
+        },
+        "strokeWidth": {
+          "condition": [{"param": "highlight", "empty": false, "value": 1}],
+          "value": 0
+        },
+        "tooltip": [
+          {"field": "County"},
+          {"field": "DateTooltip", "title": "Date"},
+          {"field": "DSCI"}
+        ]
+      }
+    },
+    {
+      "data": {"values": [{}]},
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "text": "Last updated: June 7, 2022",
+            "font": "Outfit",
+            "dx": -73,
+            "dy": 18
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "text": "Source: National Integrated Drought Information System • Graphic: @shadfrigui",
+            "font": "Outfit",
+            "dx": 765,
+            "dy": 18
+          }
+        }
+      ]
+    }
+  ],
+  "config": {
+    "background": "white",
+    "padding": {"top": 10, "bottom": 10, "left": 30, "right": 30},
+    "view": {"stroke": null},
+    "font": "Test Karbon",
+    "axis": {
+      "grid": false,
+      "labelColor": "black",
+      "labelFontSize": 17,
+      "title": null
+    },
+    "axisX": {
+      "orient": "top",
+      "domainColor": "black",
+      "offset": 5,
+      "tickCount": 10,
+      "tickOffset": 5,
+      "tickSize": 8,
+      "tickColor": "black",
+      "labelPadding": 5,
+      "labelExpr": "timeFormat(datum.value, '%m') == 1 ? timeFormat(datum.value, '%b %Y') : timeFormat(datum.value, '%b')",
+      "labelFlush": false
+    },
+    "axisY": {
+      "domain": false,
+      "ticks": false,
+      "labelAlign": "left",
+      "labelPadding": 140
+    },
+    "rect": {"width": 6.5, "height": 20, "stroke": "black"},
+    "text": {"fontSize": 13},
+    "legend": {
+      "orient": "none",
+      "direction": "horizontal",
+      "gradientLength": 300,
+      "gradientThickness": 10,
+      "gradientLabelOffset": 5,
+      "labelFont": "Outfit",
+      "labelFontSize": 13,
+      "titlePadding": 5,
+      "titleFont": "Outfit",
+      "titleFontSize": 14,
+      "titleFontWeight": "normal",
+      "titleLineHeight": 20,
+      "titleLimit": 300,
+      "legendX": 703,
+      "legendY": -140
+    },
+    "title": {
+      "anchor": "start",
+      "offset": 40,
+      "fontSize": 35,
+      "subtitlePadding": 10,
+      "subtitleFontSize": 25
+    },
+    "concat": {"spacing": 0}
+  }
+}
