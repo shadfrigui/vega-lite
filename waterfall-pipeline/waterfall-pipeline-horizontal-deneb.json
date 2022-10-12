@@ -1,0 +1,227 @@
+{
+  "data": {"name": "dataset"},
+  "transform": [
+    {
+      "joinaggregate": [
+        {
+          "op": "count",
+          "field": "Stage",
+          "as": "LastRow"
+        }
+      ]
+    },
+    {
+      "window": [
+        {
+          "op": "sum",
+          "field": "Amount",
+          "as": "RunningTotal"
+        }
+      ]
+    },
+    {
+      "calculate": "datum.StageSort == datum.LastRow ? 0 : datum.RunningTotal - datum.Amount",
+      "as": "PreviousTotal"
+    },
+    {
+      "calculate": "(datum.RunningTotal + datum.PreviousTotal) / 2",
+      "as": "Center"
+    },
+    {
+      "calculate": "(datum.StageSort != datum.LastRow && datum.Amount > 0 ? '+' : '') + if(abs(datum.Amount) < 100000000, format(datum.Amount,'.3s'), format(datum.Amount,'.4s'))",
+      "as": "AmountLabels"
+    },
+    {
+      "calculate": "datum.StageSort == 6 || datum.StageSort == 7 ? split(datum.Stage, '/') :  split(datum.Stage, ' ')",
+      "as": "AxisYLables"
+    },
+    {
+      "window": [
+        {
+          "op": "lead",
+          "field": "AxisYLables",
+          "as": "Lead"
+        }
+      ]
+    },
+    {
+      "calculate": "datum.Lead == null ? datum.AxisYLables : datum.Lead",
+      "as": "Lead"
+    }
+  ],
+  "params": [
+    {"name": "BarBand", "value": 0.9}
+  ],
+  "encoding": {
+    "y": {
+      "field": "AxisYLables",
+      "type": "ordinal",
+      "sort": {"field": "StageSort"}
+    }
+  },
+  "layer": [
+    {
+      "mark": {"type": "bar"},
+      "encoding": {
+        "x": {
+          "field": "PreviousTotal",
+          "type": "quantitative",
+          "axis": {
+            "format": "$2s",
+            "title": "Amount"
+          }
+        },
+        "x2": {"field": "RunningTotal"},
+        "color": {
+          "field": "Stage",
+          "scale": {
+            "domain": [
+              "Prospecting",
+              "Qualification",
+              "Needs Analysis",
+              "Value Proposition",
+              "Perception Analysis",
+              "Proposal/Price Quote",
+              "Negotiation/Review",
+              "Closed Won",
+              "Closed Lost",
+              "Total"
+            ],
+            "range": [
+              "#B1E1BB",
+              "#B1E1BB",
+              "#88D1C0",
+              "#88D1C0",
+              "#69C2CA",
+              "#69C2CA",
+              "#43A5C9",
+              "#43A5C9",
+              "#FDAF6D",
+              "#CDCDCD"
+            ]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          {"field": "Stage"},
+          {
+            "field": "RunningTotal",
+            "format": ".4s",
+            "title": "Running Total"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "yOffset": {
+          "expr": "datum.StageSort == datum.LastRow ? bandwidth('y') * BarBand / 2: -bandwidth('y') * (BarBand / 2)"
+        },
+        "y2Offset": {
+          "expr": "bandwidth('y') * (BarBand / 2)"
+        }
+      },
+      "encoding": {
+        "x": {
+          "field": "RunningTotal",
+          "type": "quantitative"
+        },
+        "y2": {"field": "Lead"}
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.StageSort != datum.LastRow"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 16,
+        "xOffset": {
+          "expr": "datum.Amount < 0  ? -35: 30"
+        }
+      },
+      "encoding": {
+        "x": {
+          "field": "RunningTotal",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "AmountLabels"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.StageSort == datum.LastRow"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 18,
+        "fontWeight": 600
+      },
+      "encoding": {
+        "x": {
+          "field": "Center",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "RunningTotal",
+          "format": ".4s"
+        }
+      }
+    }
+  ],
+  "config": {
+    "background": "snow",
+    "view": {"stroke": null},
+    "padding": {
+      "top": 20,
+      "bottom": 20,
+      "left": 20,
+      "right": 20
+    },
+    "font": "Source Sans Pro",
+    "axis": {
+      "ticks": false,
+      "labelFontSize": 15,
+      "labelPadding": 10
+    },
+    "axisX": {
+      "domain": false,
+      "gridOpacity": 0.5,
+      "tickCount": 8,
+      "titleFontSize": 18,
+      "titlePadding": 15
+    },
+    "axisY": {
+      "offset": 1,
+      "domainOpacity": 0.9,
+      "labelBaseline": {
+        "expr": "datum.value == 'Prospecting' || datum.value == 'Qualification' || datum.value == 'Total' ? 'middle': 'bottom'"
+      },
+      "labelFontWeight": {
+        "expr": "datum.label == 'Total' ? 'bold': 'normal'"
+      },
+      "title": null
+    },
+    "bar": {
+      "height": {
+        "expr": "bandwidth('y') * BarBand"
+      }
+    },
+    "rule": {"strokeWidth": 0.5},
+    "locale": {
+      "number": {
+        "currency": ["£", ""],
+        "decimal": ".",
+        "thousands": ",",
+        "grouping": [3]
+      }
+    }
+  }
+}
