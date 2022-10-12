@@ -1,4 +1,5 @@
 {
+  "description": "This chart was created as part of Power BI Workout Wednesday Week 38. Add a dimension table with the stages and their sort order, including a Total stage. Now add the Stage, StageSort, and Amount fields to the Values fields well. Right-click the Stage field and select Show items with no data from the menu that appears. No DAX measures needed. Unlike Vega-Lite, Vega supports adding data objects to the dataset. So with Vega, you can add the Total row and its sort order directly in Deneb.",
   "title": {
     "text": "Waterfall Pipeline"
   },
