@@ -1,0 +1,254 @@
+{
+  "data": {"name": "dataset"},
+  "vconcat": [
+    {
+      "title": {
+        "text": [
+          "Warren Buffett's Top 5 Holdings, 2012–2022"
+        ],
+        "fontSize": 44,
+        "subtitle": [
+          "Although old-guard favorites such as Coca-Cola and American Express still form the core of the portfolio,",
+          "Buffett's Berkshire Hathaway has taken a shine to names such as Apple and Bank of America. Hover over",
+          "each point for the value of the holdings and the percentage of Berkshire’s total portfolio."
+        ],
+        "subtitleFontSize": 19,
+        "subtitlePadding": 10,
+        "subtitleLineHeight": 25,
+        "dx": -65
+      },
+      "mark": "text"
+    },
+    {
+      "width": 700,
+      "height": 350,
+      "transform": [
+        {
+          "joinaggregate": [
+            {
+              "op": "sum",
+              "field": "Holdings",
+              "as": "Sum"
+            }
+          ],
+          "groupby": ["Year"]
+        },
+        {
+          "calculate": "datum.Holdings / datum.Sum",
+          "as": "Percentage"
+        },
+        {
+          "filter": "datum.Company != 'Others' && datum.Year >= 2012"
+        },
+        {
+          "window": [
+            {"op": "rank", "as": "Rank"}
+          ],
+          "groupby": ["Year"],
+          "sort": [
+            {
+              "field": "Holdings",
+              "order": "descending"
+            }
+          ]
+        },
+        {"filter": "datum.Rank <= 5"},
+        {
+          "calculate": "datum.Company == 'American Express' ?['American','Express']: datum.Company == 'Bank of America' ?['Bank','of America'] : datum.Company",
+          "as": "YLabels"
+        },
+        {
+          "calculate": "replace(format(datum.Holdings, '.3s'), 'G', 'B')",
+          "as": "HoldingsTooltip"
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "ordinal"
+        },
+        "y": {
+          "field": "Rank",
+          "type": "ordinal",
+          "axis": null
+        },
+        "color": {
+          "field": "Company",
+          "scale": {
+            "scheme": "tableau20"
+          },
+          "legend": null
+        },
+        "tooltip": [
+          {"field": "Year"},
+          {"field": "Company"},
+          {"field": "Rank"},
+          {
+            "field": "HoldingsTooltip",
+            "title": "Holdings"
+          },
+          {
+            "field": "Percentage",
+            "format": ".1%"
+          }
+        ]
+      },
+      "layer": [
+        {"mark": {"type": "line"}},
+        {
+          "params": [
+            {
+              "name": "highlight",
+              "select": {
+                "type": "point",
+                "on": "mouseover"
+              }
+            }
+          ],
+          "mark": {"type": "point"},
+          "encoding": {
+            "stroke": {
+              "condition": [
+                {
+                  "param": "highlight",
+                  "empty": false,
+                  "value": "#000000"
+                }
+              ],
+              "value": "#FFFFFF"
+            }
+          }
+        },
+        {
+          "transform": [
+            {
+              "filter": {
+                "field": "Year",
+                "oneOf": [2012, 2022]
+              }
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "fontSize": 15
+          },
+          "encoding": {
+            "text": {"field": "Rank"},
+            "color": {"value": "white"}
+          }
+        },
+        {
+          "transform": [
+            {
+              "filter": {
+                "field": "Year",
+                "oneOf": [2012, 2022]
+              }
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "fontSize": 17,
+            "xOffset": {
+              "expr": "datum.Year == 2012 ? -55 : 55"
+            },
+            "baseline": {
+              "expr": "datum.Company == 'American Express' || datum.Company == 'Bank of America' ? 'bottom':'middle'"
+            }
+          },
+          "encoding": {
+            "text": {
+              "field": "YLabels"
+            },
+            "color": {"value": "black"}
+          }
+        },
+        {
+          "transform": [
+            {
+              "filter": {
+                "field": "Year",
+                "oneOf": [
+                  2013,
+                  2015,
+                  2020,
+                  2021
+                ]
+              }
+            },
+            {
+              "filter": "datum.Rank == 5"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "fontSize": 17,
+            "yOffset": -20,
+            "xOffset": {
+              "expr": "datum.Year == 2020 ? -15 : datum.Year == 2021 ? 15 : 0 "
+            }
+          },
+          "encoding": {
+            "text": {
+              "field": "Company"
+            },
+            "color": {"value": "black"}
+          }
+        }
+      ]
+    },
+    {
+      "title": {
+        "text": [
+          "Note: Data as of 30 June 2022 | Sources: Berkshire Hathaway Annual, Quarterly Reports, and 13F filings",
+          "Data collected and formatted by Sjoerd Tilmans: sjdataviz.com | Graphic: @shadfrigui"
+        ],
+        "fontSize": 16.5,
+        "fontWeight": "normal",
+        "color": "#707070",
+        "dx": -65
+      },
+      "mark": "text"
+    }
+  ],
+  "spacing": 10,
+  "config": {
+    "background": "#FDFBF9",
+    "view": {"stroke": null},
+    "padding": {
+      "top": 30,
+      "bottom": -10,
+      "left": 30,
+      "right": 30
+    },
+    "font": "Source Sans Pro",
+    "axisX": {
+      "orient": "top",
+      "domain": false,
+      "ticks": false,
+      "grid": true,
+      "gridColor": "#62605F",
+      "gridOpacity": 0.05,
+      "labelAngle": 0,
+      "labelFontSize": 17,
+      "labelPadding": 5,
+      "title": null
+    },
+    "line": {
+      "interpolate": "monotone",
+      "strokeWidth": 8,
+      "strokeOpacity": 0.5
+    },
+    "point": {
+      "size": {
+        "expr": "datum.Year == 2012 || datum.Year == 2022 ? 500: 120"
+      },
+      "filled": true,
+      "opacity": {
+        "expr": "datum.Year == 2012 || datum.Year == 2022 ? 1: 0.8"
+      },
+      "strokeWidth": 1.5
+    },
+    "title": {"anchor": "start"}
+  }
+}

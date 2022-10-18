@@ -1,0 +1,625 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "values": [
+      {"Year": 1994, "Company": "Coca-Cola", "Holdings": 5150000000},
+      {"Year": 1994, "Company": "Others", "Holdings": 2458200000},
+      {"Year": 1994, "Company": "American Express", "Holdings": 818900000},
+      {"Year": 1994, "Company": "Wells Fargo", "Holdings": 984700000},
+      {"Year": 1994, "Company": "Gillette", "Holdings": 1797000000},
+      {"Year": 1994, "Company": "ABC", "Holdings": 1705000000},
+      {"Year": 1994, "Company": "GEICO", "Holdings": 1678300000},
+      {"Year": 1994, "Company": "Freddie Mac", "Holdings": 644400000},
+      {"Year": 1995, "Company": "Coca-Cola", "Holdings": 7425000000},
+      {"Year": 1995, "Company": "Others", "Holdings": 2655400000},
+      {"Year": 1995, "Company": "American Express", "Holdings": 2046300000},
+      {"Year": 1995, "Company": "Wells Fargo", "Holdings": 1466900000},
+      {"Year": 1995, "Company": "Gillette", "Holdings": 2502000000},
+      {"Year": 1995, "Company": "ABC", "Holdings": 2467500000},
+      {"Year": 1995, "Company": "GEICO", "Holdings": 2393200000},
+      {"Year": 1995, "Company": "Freddie Mac", "Holdings": 1044000000},
+      {"Year": 1996, "Company": "Coca-Cola", "Holdings": 10499700000},
+      {"Year": 1996, "Company": "Others", "Holdings": 3862100000},
+      {"Year": 1996, "Company": "American Express", "Holdings": 2731800000},
+      {"Year": 1996, "Company": "Wells Fargo", "Holdings": 1916800000},
+      {"Year": 1996, "Company": "Gillette", "Holdings": 3732000000},
+      {"Year": 1996, "Company": "Freddie Mac", "Holdings": 1772800000},
+      {"Year": 1996, "Company": "Walt Disney", "Holdings": 1680200000},
+      {"Year": 1996, "Company": "Mc Donalds", "Holdings": 1356200000},
+      {"Year": 1997, "Company": "Coca-Cola", "Holdings": 13305000000},
+      {"Year": 1997, "Company": "Others", "Holdings": 6526000000},
+      {"Year": 1997, "Company": "American Express", "Holdings": 4315000000},
+      {"Year": 1997, "Company": "Wells Fargo", "Holdings": 2208000000},
+      {"Year": 1997, "Company": "Gillette", "Holdings": 4821000000},
+      {"Year": 1997, "Company": "Freddie Mac", "Holdings": 2683000000},
+      {"Year": 1997, "Company": "Walt Disney", "Holdings": 2083000000},
+      {"Year": 1998, "Company": "Coca-Cola", "Holdings": 13368000000},
+      {"Year": 1998, "Company": "Others", "Holdings": 8629000000},
+      {"Year": 1998, "Company": "American Express", "Holdings": 5067000000},
+      {"Year": 1998, "Company": "Wells Fargo", "Holdings": 2466000000},
+      {"Year": 1998, "Company": "Gillette", "Holdings": 4590000000},
+      {"Year": 1998, "Company": "Freddie Mac", "Holdings": 3885000000},
+      {"Year": 1998, "Company": "Walt Disney", "Holdings": 1489000000},
+      {"Year": 1999, "Company": "Coca-Cola", "Holdings": 11622000000},
+      {"Year": 1999, "Company": "Others", "Holdings": 10256000000},
+      {"Year": 1999, "Company": "American Express", "Holdings": 8218000000},
+      {"Year": 1999, "Company": "Wells Fargo", "Holdings": 2316000000},
+      {"Year": 1999, "Company": "Gillette", "Holdings": 3954000000},
+      {"Year": 1999, "Company": "Freddie Mac", "Holdings": 2803000000},
+      {"Year": 2000, "Company": "Coca-Cola", "Holdings": 12159000000},
+      {"Year": 2000, "Company": "Others", "Holdings": 12008000000},
+      {"Year": 2000, "Company": "American Express", "Holdings": 8147000000},
+      {"Year": 2000, "Company": "Wells Fargo", "Holdings": 2964000000},
+      {"Year": 2000, "Company": "Gillette", "Holdings": 3468000000},
+      {"Year": 2000, "Company": "Freddie Mac", "Holdings": 146000000},
+      {"Year": 2001, "Company": "Coca-Cola", "Holdings": 9430000000},
+      {"Year": 2001, "Company": "Others", "Holdings": 8314000000},
+      {"Year": 2001, "Company": "American Express", "Holdings": 5410000000},
+      {"Year": 2001, "Company": "Wells Fargo", "Holdings": 2315000000},
+      {"Year": 2001, "Company": "Gillette", "Holdings": 3206000000},
+      {"Year": 2002, "Company": "Coca-Cola", "Holdings": 8768000000},
+      {"Year": 2002, "Company": "Others", "Holdings": 5383000000},
+      {"Year": 2002, "Company": "American Express", "Holdings": 5359000000},
+      {"Year": 2002, "Company": "Moody's", "Holdings": 991000000},
+      {"Year": 2002, "Company": "Wells Fargo", "Holdings": 2497000000},
+      {"Year": 2002, "Company": "Gillette", "Holdings": 2915000000},
+      {"Year": 2002, "Company": "The Washington Post", "Holdings": 1275000000},
+      {"Year": 2002, "Company": "H&R Block", "Holdings": 643000000},
+      {"Year": 2002, "Company": "M&T Bank", "Holdings": 532000000},
+      {"Year": 2003, "Company": "Coca-Cola", "Holdings": 10150000000},
+      {"Year": 2003, "Company": "Others", "Holdings": 4682000000},
+      {"Year": 2003, "Company": "American Express", "Holdings": 7312000000},
+      {"Year": 2003, "Company": "Moody's", "Holdings": 1453000000},
+      {"Year": 2003, "Company": "Wells Fargo", "Holdings": 3324000000},
+      {"Year": 2003, "Company": "Gillette", "Holdings": 3526000000},
+      {"Year": 2003, "Company": "The Washington Post", "Holdings": 1367000000},
+      {"Year": 2003, "Company": "H&R Block", "Holdings": 809000000},
+      {"Year": 2003, "Company": "M&T Bank", "Holdings": 659000000},
+      {"Year": 2003, "Company": "PetroChina", "Holdings": 1340000000},
+      {"Year": 2003, "Company": "HCA", "Holdings": 665000000},
+      {"Year": 2004, "Company": "Coca-Cola", "Holdings": 8328000000},
+      {"Year": 2004, "Company": "Others", "Holdings": 5465000000},
+      {"Year": 2004, "Company": "American Express", "Holdings": 8546000000},
+      {"Year": 2004, "Company": "Moody's", "Holdings": 2084000000},
+      {"Year": 2004, "Company": "Wells Fargo", "Holdings": 3508000000},
+      {"Year": 2004, "Company": "Gillette", "Holdings": 4299000000},
+      {"Year": 2004, "Company": "The Washington Post", "Holdings": 1698000000},
+      {"Year": 2004, "Company": "H&R Block", "Holdings": 703000000},
+      {"Year": 2004, "Company": "PetroChina", "Holdings": 1249000000},
+      {
+        "Year": 2004,
+        "Company": "White Mountains Insurance",
+        "Holdings": 1114000000
+      },
+      {"Year": 2005, "Company": "Coca-Cola", "Holdings": 8062000000},
+      {"Year": 2005, "Company": "Others", "Holdings": 7154000000},
+      {"Year": 2005, "Company": "American Express", "Holdings": 7802000000},
+      {"Year": 2005, "Company": "Moody's", "Holdings": 2948000000},
+      {"Year": 2005, "Company": "Wells Fargo", "Holdings": 5975000000},
+      {"Year": 2005, "Company": "The Washington Post", "Holdings": 1322000000},
+      {"Year": 2005, "Company": "H&R Block", "Holdings": 732000000},
+      {"Year": 2005, "Company": "PetroChina", "Holdings": 1915000000},
+      {
+        "Year": 2005,
+        "Company": "White Mountains Insurance",
+        "Holdings": 963000000
+      },
+      {"Year": 2005, "Company": "Ameriprise Financial", "Holdings": 1243000000},
+      {"Year": 2005, "Company": "P&G", "Holdings": 5788000000},
+      {"Year": 2005, "Company": "Anheuser-Busch Cos", "Holdings": 1884000000},
+      {"Year": 2005, "Company": "Wal-Mart", "Holdings": 933000000},
+      {"Year": 2006, "Company": "Coca-Cola", "Holdings": 9650000000},
+      {"Year": 2006, "Company": "Others", "Holdings": 8315000000},
+      {"Year": 2006, "Company": "American Express", "Holdings": 9198000000},
+      {"Year": 2006, "Company": "Moody's", "Holdings": 3315000000},
+      {"Year": 2006, "Company": "Wells Fargo", "Holdings": 7758000000},
+      {"Year": 2006, "Company": "US Bancorp", "Holdings": 1123000000},
+      {"Year": 2006, "Company": "The Washington Post", "Holdings": 1288000000},
+      {"Year": 2006, "Company": "M&T Bank", "Holdings": 820000000},
+      {"Year": 2006, "Company": "PetroChina", "Holdings": 3313000000},
+      {
+        "Year": 2006,
+        "Company": "White Mountains Insurance",
+        "Holdings": 999000000
+      },
+      {"Year": 2006, "Company": "P&G", "Holdings": 6427000000},
+      {"Year": 2006, "Company": "Anheuser-Busch Cos", "Holdings": 1792000000},
+      {"Year": 2006, "Company": "Wal-Mart", "Holdings": 921000000},
+      {"Year": 2006, "Company": "Phillips 66", "Holdings": 2449000000},
+      {"Year": 2006, "Company": "Tesco", "Holdings": 1820000000},
+      {"Year": 2006, "Company": "J&J", "Holdings": 1409000000},
+      {"Year": 2006, "Company": "USG Corp", "Holdings": 936000000},
+      {"Year": 2007, "Company": "Coca-Cola", "Holdings": 12274000000},
+      {"Year": 2007, "Company": "Others", "Holdings": 7633000000},
+      {"Year": 2007, "Company": "American Express", "Holdings": 7887000000},
+      {"Year": 2007, "Company": "Kraft Foods", "Holdings": 4059000000},
+      {"Year": 2007, "Company": "Moody's", "Holdings": 1714000000},
+      {"Year": 2007, "Company": "Wells Fargo", "Holdings": 9160000000},
+      {"Year": 2007, "Company": "US Bancorp", "Holdings": 2386000000},
+      {"Year": 2007, "Company": "The Washington Post", "Holdings": 1367000000},
+      {
+        "Year": 2007,
+        "Company": "White Mountains Insurance",
+        "Holdings": 886000000
+      },
+      {"Year": 2007, "Company": "P&G", "Holdings": 7450000000},
+      {"Year": 2007, "Company": "Anheuser-Busch Cos", "Holdings": 1861000000},
+      {"Year": 2007, "Company": "Wal-Mart", "Holdings": 948000000},
+      {"Year": 2007, "Company": "Phillips 66", "Holdings": 2837000000},
+      {"Year": 2007, "Company": "Tesco", "Holdings": 2156000000},
+      {"Year": 2007, "Company": "J&J", "Holdings": 4287000000},
+      {"Year": 2007, "Company": "USG Corp", "Holdings": 611000000},
+      {
+        "Year": 2007,
+        "Company": "Burlington North Santa Fe",
+        "Holdings": 5063000000
+      },
+      {"Year": 2007, "Company": "Sanofi", "Holdings": 1575000000},
+      {"Year": 2008, "Company": "Coca-Cola", "Holdings": 9054000000},
+      {"Year": 2008, "Company": "Others", "Holdings": 4870000000},
+      {"Year": 2008, "Company": "American Express", "Holdings": 2812000000},
+      {"Year": 2008, "Company": "Kraft Foods", "Holdings": 3498000000},
+      {"Year": 2008, "Company": "Wells Fargo", "Holdings": 8973000000},
+      {"Year": 2008, "Company": "US Bancorp", "Holdings": 1879000000},
+      {"Year": 2008, "Company": "The Washington Post", "Holdings": 674000000},
+      {"Year": 2008, "Company": "P&G", "Holdings": 5684000000},
+      {"Year": 2008, "Company": "Wal-Mart", "Holdings": 1118000000},
+      {"Year": 2008, "Company": "Phillips 66", "Holdings": 5589000000},
+      {"Year": 2008, "Company": "Tesco", "Holdings": 1193000000},
+      {"Year": 2008, "Company": "J&J", "Holdings": 1795000000},
+      {"Year": 2008, "Company": "Sanofi", "Holdings": 1404000000},
+      {"Year": 2008, "Company": "Swiss Re", "Holdings": 530000000},
+      {"Year": 2009, "Company": "Coca-Cola", "Holdings": 11400000000},
+      {"Year": 2009, "Company": "Others", "Holdings": 8636000000},
+      {"Year": 2009, "Company": "American Express", "Holdings": 6143000000},
+      {"Year": 2009, "Company": "Kraft Foods", "Holdings": 3541000000},
+      {"Year": 2009, "Company": "Wells Fargo", "Holdings": 9021000000},
+      {"Year": 2009, "Company": "US Bancorp", "Holdings": 1725000000},
+      {"Year": 2009, "Company": "P&G", "Holdings": 5040000000},
+      {"Year": 2009, "Company": "Wal-Mart", "Holdings": 2087000000},
+      {"Year": 2009, "Company": "Phillips 66", "Holdings": 4018000000},
+      {"Year": 2009, "Company": "Tesco", "Holdings": 1620000000},
+      {"Year": 2009, "Company": "J&J", "Holdings": 1838000000},
+      {"Year": 2009, "Company": "Sanofi", "Holdings": 1979000000},
+      {"Year": 2010, "Company": "Coca-Cola", "Holdings": 13154000000},
+      {"Year": 2010, "Company": "Others", "Holdings": 4956000000},
+      {"Year": 2010, "Company": "American Express", "Holdings": 6507000000},
+      {"Year": 2010, "Company": "Kraft Foods", "Holdings": 3063000000},
+      {"Year": 2010, "Company": "Wells Fargo", "Holdings": 11123000000},
+      {"Year": 2010, "Company": "US Bancorp", "Holdings": 2105000000},
+      {"Year": 2010, "Company": "P&G", "Holdings": 4657000000},
+      {"Year": 2010, "Company": "Wal-Mart", "Holdings": 2105000000},
+      {"Year": 2010, "Company": "Phillips 66", "Holdings": 3688000000},
+      {"Year": 2010, "Company": "Tesco", "Holdings": 1608000000},
+      {"Year": 2010, "Company": "J&J", "Holdings": 2785000000},
+      {"Year": 2010, "Company": "Sanofi", "Holdings": 1656000000},
+      {"Year": 2010, "Company": "Munich Re", "Holdings": 2924000000},
+      {"Year": 2010, "Company": "BYD", "Holdings": 1182000000},
+      {"Year": 2011, "Company": "Coca-Cola", "Holdings": 13994000000},
+      {"Year": 2011, "Company": "Others", "Holdings": 9171000000},
+      {"Year": 2011, "Company": "American Express", "Holdings": 7151000000},
+      {"Year": 2011, "Company": "Kraft Foods", "Holdings": 2953000000},
+      {"Year": 2011, "Company": "Wells Fargo", "Holdings": 11024000000},
+      {"Year": 2011, "Company": "US Bancorp", "Holdings": 2112000000},
+      {"Year": 2011, "Company": "P&G", "Holdings": 4829000000},
+      {"Year": 2011, "Company": "Wal-Mart", "Holdings": 2333000000},
+      {"Year": 2011, "Company": "Phillips 66", "Holdings": 3422000000},
+      {"Year": 2011, "Company": "Tesco", "Holdings": 1827000000},
+      {"Year": 2011, "Company": "J&J", "Holdings": 2060000000},
+      {"Year": 2011, "Company": "Sanofi", "Holdings": 1900000000},
+      {"Year": 2011, "Company": "Munich Re", "Holdings": 2464000000},
+      {"Year": 2011, "Company": "IBM", "Holdings": 11751000000},
+      {"Year": 2012, "Company": "Coca-Cola", "Holdings": 14500000000},
+      {"Year": 2012, "Company": "Others", "Holdings": 11330000000},
+      {"Year": 2012, "Company": "American Express", "Holdings": 8715000000},
+      {"Year": 2012, "Company": "Moody's", "Holdings": 1430000000},
+      {"Year": 2012, "Company": "Wells Fargo", "Holdings": 15592000000},
+      {"Year": 2012, "Company": "US Bancorp", "Holdings": 2493000000},
+      {"Year": 2012, "Company": "P&G", "Holdings": 3563000000},
+      {"Year": 2012, "Company": "Wal-Mart", "Holdings": 3741000000},
+      {"Year": 2012, "Company": "Phillips 66", "Holdings": 3791000000},
+      {"Year": 2012, "Company": "Tesco", "Holdings": 2268000000},
+      {"Year": 2012, "Company": "Sanofi", "Holdings": 2438000000},
+      {"Year": 2012, "Company": "Munich Re", "Holdings": 3599000000},
+      {"Year": 2012, "Company": "IBM", "Holdings": 13048000000},
+      {"Year": 2012, "Company": "DIRECTV", "Holdings": 1154000000},
+      {"Year": 2013, "Company": "Coca-Cola", "Holdings": 16524000000},
+      {"Year": 2013, "Company": "Others", "Holdings": 19894000000},
+      {"Year": 2013, "Company": "American Express", "Holdings": 13756000000},
+      {"Year": 2013, "Company": "Moody's", "Holdings": 1936000000},
+      {"Year": 2013, "Company": "Wells Fargo", "Holdings": 21950000000},
+      {"Year": 2013, "Company": "US Bancorp", "Holdings": 3883000000},
+      {"Year": 2013, "Company": "P&G", "Holdings": 4272000000},
+      {"Year": 2013, "Company": "Wal-Mart", "Holdings": 4470000000},
+      {"Year": 2013, "Company": "Phillips 66", "Holdings": 1594000000},
+      {"Year": 2013, "Company": "Tesco", "Holdings": 1666000000},
+      {"Year": 2013, "Company": "Sanofi", "Holdings": 2354000000},
+      {"Year": 2013, "Company": "Munich Re", "Holdings": 4415000000},
+      {"Year": 2013, "Company": "IBM", "Holdings": 12778000000},
+      {"Year": 2013, "Company": "DIRECTV", "Holdings": 1536000000},
+      {"Year": 2013, "Company": "Exxon Mobil", "Holdings": 4162000000},
+      {"Year": 2013, "Company": "Goldman Sachs", "Holdings": 2315000000},
+      {"Year": 2014, "Company": "Coca-Cola", "Holdings": 16888000000},
+      {"Year": 2014, "Company": "Others", "Holdings": 15704000000},
+      {"Year": 2014, "Company": "American Express", "Holdings": 14106000000},
+      {"Year": 2014, "Company": "Moody's", "Holdings": 2364000000},
+      {"Year": 2014, "Company": "Wells Fargo", "Holdings": 26504000000},
+      {"Year": 2014, "Company": "US Bancorp", "Holdings": 4355000000},
+      {
+        "Year": 2014,
+        "Company": "DaVita HealthCare Partners",
+        "Holdings": 1402000000
+      },
+      {"Year": 2014, "Company": "P&G", "Holdings": 4683000000},
+      {"Year": 2014, "Company": "Wal-Mart", "Holdings": 5815000000},
+      {"Year": 2014, "Company": "USG Corp", "Holdings": 1214000000},
+      {"Year": 2014, "Company": "Sanofi", "Holdings": 2032000000},
+      {"Year": 2014, "Company": "Munich Re", "Holdings": 4023000000},
+      {"Year": 2014, "Company": "IBM", "Holdings": 12349000000},
+      {"Year": 2014, "Company": "DIRECTV", "Holdings": 2134000000},
+      {"Year": 2014, "Company": "Goldman Sachs", "Holdings": 2532000000},
+      {"Year": 2014, "Company": "Deere", "Holdings": 1365000000},
+      {"Year": 2015, "Company": "Coca-Cola", "Holdings": 17184000000},
+      {"Year": 2015, "Company": "Others", "Holdings": 16450000000},
+      {"Year": 2015, "Company": "American Express", "Holdings": 10545000000},
+      {"Year": 2015, "Company": "Moody's", "Holdings": 2475000000},
+      {"Year": 2015, "Company": "Wells Fargo", "Holdings": 27180000000},
+      {"Year": 2015, "Company": "US Bancorp", "Holdings": 4346000000},
+      {
+        "Year": 2015,
+        "Company": "DaVita HealthCare Partners",
+        "Holdings": 1291000000
+      },
+      {
+        "Year": 2015,
+        "Company": "Charter Communications",
+        "Holdings": 1367000000
+      },
+      {"Year": 2015, "Company": "P&G", "Holdings": 4683000000},
+      {"Year": 2015, "Company": "Wal-Mart", "Holdings": 3893000000},
+      {"Year": 2015, "Company": "Phillips 66", "Holdings": 4530000000},
+      {"Year": 2015, "Company": "Sanofi", "Holdings": 1896000000},
+      {"Year": 2015, "Company": "IBM", "Holdings": 11152000000},
+      {"Year": 2015, "Company": "Goldman Sachs", "Holdings": 2053000000},
+      {"Year": 2015, "Company": "Deere", "Holdings": 1690000000},
+      {"Year": 2015, "Company": "AT&T", "Holdings": 1603000000},
+      {"Year": 2016, "Company": "Apple", "Holdings": 7093000000},
+      {"Year": 2016, "Company": "Coca-Cola", "Holdings": 16584000000},
+      {"Year": 2016, "Company": "Others", "Holdings": 17560000000},
+      {"Year": 2016, "Company": "American Express", "Holdings": 11231000000},
+      {"Year": 2016, "Company": "Moody's", "Holdings": 2326000000},
+      {"Year": 2016, "Company": "Wells Fargo", "Holdings": 27555000000},
+      {"Year": 2016, "Company": "US Bancorp", "Holdings": 5233000000},
+      {
+        "Year": 2016,
+        "Company": "Charter Communications",
+        "Holdings": 1955000000
+      },
+      {"Year": 2016, "Company": "Phillips 66", "Holdings": 6445000000},
+      {"Year": 2016, "Company": "USG Corp", "Holdings": 1253000000},
+      {"Year": 2016, "Company": "Sanofi", "Holdings": 1791000000},
+      {"Year": 2016, "Company": "IBM", "Holdings": 13484000000},
+      {"Year": 2016, "Company": "Goldman Sachs", "Holdings": 2727000000},
+      {"Year": 2016, "Company": "Delta Airlines", "Holdings": 2702000000},
+      {"Year": 2016, "Company": "Southwest Airlines", "Holdings": 2153000000},
+      {
+        "Year": 2016,
+        "Company": "United Continental Holdings",
+        "Holdings": 1940000000
+      },
+      {"Year": 2017, "Company": "Apple", "Holdings": 28213000000},
+      {"Year": 2017, "Company": "Bank of America", "Holdings": 20664000000},
+      {"Year": 2017, "Company": "Coca-Cola", "Holdings": 18352000000},
+      {"Year": 2017, "Company": "Others", "Holdings": 24294000000},
+      {"Year": 2017, "Company": "American Express", "Holdings": 15056000000},
+      {"Year": 2017, "Company": "Moody's", "Holdings": 3642000000},
+      {"Year": 2017, "Company": "Wells Fargo", "Holdings": 29276000000},
+      {"Year": 2017, "Company": "US Bancorp", "Holdings": 5565000000},
+      {
+        "Year": 2017,
+        "Company": "The Bank of New York Mellon",
+        "Holdings": 2871000000
+      },
+      {
+        "Year": 2017,
+        "Company": "Charter Communications",
+        "Holdings": 2281000000
+      },
+      {"Year": 2017, "Company": "General Motors", "Holdings": 1825000000},
+      {"Year": 2017, "Company": "Phillips 66", "Holdings": 7545000000},
+      {"Year": 2017, "Company": "BYD", "Holdings": 1961000000},
+      {"Year": 2017, "Company": "Goldman Sachs", "Holdings": 2902000000},
+      {"Year": 2017, "Company": "Delta Airlines", "Holdings": 2974000000},
+      {"Year": 2017, "Company": "Southwest Airlines", "Holdings": 3119000000},
+      {"Year": 2018, "Company": "Apple", "Holdings": 40271000000},
+      {"Year": 2018, "Company": "Bank of America", "Holdings": 22642000000},
+      {"Year": 2018, "Company": "Coca-Cola", "Holdings": 18940000000},
+      {"Year": 2018, "Company": "Others", "Holdings": 20706000000},
+      {"Year": 2018, "Company": "American Express", "Holdings": 14452000000},
+      {"Year": 2018, "Company": "Moody's", "Holdings": 3455000000},
+      {"Year": 2018, "Company": "Wells Fargo", "Holdings": 20706000000},
+      {"Year": 2018, "Company": "US Bancorp", "Holdings": 6688000000},
+      {
+        "Year": 2018,
+        "Company": "The Bank of New York Mellon",
+        "Holdings": 3977000000
+      },
+      {
+        "Year": 2018,
+        "Company": "Charter Communications",
+        "Holdings": 1935000000
+      },
+      {"Year": 2018, "Company": "JPMorgan Chase", "Holdings": 4946000000},
+      {"Year": 2018, "Company": "USG Corp", "Holdings": 1851000000},
+      {"Year": 2018, "Company": "Goldman Sachs", "Holdings": 3138000000},
+      {"Year": 2018, "Company": "Delta Airlines", "Holdings": 3270000000},
+      {"Year": 2018, "Company": "Southwest Airlines", "Holdings": 2226000000},
+      {
+        "Year": 2018,
+        "Company": "United Continental Holdings",
+        "Holdings": 1837000000
+      },
+      {"Year": 2019, "Company": "Apple", "Holdings": 73667000000},
+      {"Year": 2019, "Company": "Bank of America", "Holdings": 33380000000},
+      {"Year": 2019, "Company": "Coca-Cola", "Holdings": 22140000000},
+      {"Year": 2019, "Company": "Others", "Holdings": 38159000000},
+      {"Year": 2019, "Company": "American Express", "Holdings": 18874000000},
+      {"Year": 2019, "Company": "Moody's", "Holdings": 5857000000},
+      {"Year": 2019, "Company": "Wells Fargo", "Holdings": 18598000000},
+      {"Year": 2019, "Company": "US Bancorp", "Holdings": 8864000000},
+      {
+        "Year": 2019,
+        "Company": "The Bank of New York Mellon",
+        "Holdings": 4101000000
+      },
+      {
+        "Year": 2019,
+        "Company": "Charter Communications",
+        "Holdings": 2632000000
+      },
+      {"Year": 2019, "Company": "JPMorgan Chase", "Holdings": 8372000000},
+      {"Year": 2019, "Company": "Visa", "Holdings": 1924000000},
+      {"Year": 2019, "Company": "Goldman Sachs", "Holdings": 2859000000},
+      {"Year": 2019, "Company": "Delta Airlines", "Holdings": 4147000000},
+      {"Year": 2019, "Company": "Southwest Airlines", "Holdings": 2520000000},
+      {
+        "Year": 2019,
+        "Company": "United Continental Holdings",
+        "Holdings": 1933000000
+      },
+      {"Year": 2020, "Company": "Apple", "Holdings": 117864800000},
+      {"Year": 2020, "Company": "Bank of America", "Holdings": 35674700000},
+      {"Year": 2020, "Company": "Coca-Cola", "Holdings": 20044000000},
+      {"Year": 2020, "Company": "Others", "Holdings": 23476038176},
+      {"Year": 2020, "Company": "American Express", "Holdings": 19968600000},
+      {"Year": 2020, "Company": "Kraft Foods", "Holdings": 12204800000},
+      {"Year": 2020, "Company": "Verizon", "Holdings": 8282100000},
+      {"Year": 2020, "Company": "Moody's", "Holdings": 6917900000},
+      {"Year": 2020, "Company": "Chevron", "Holdings": 4646200000},
+      {"Year": 2020, "Company": "US Bancorp", "Holdings": 7441300000},
+      {
+        "Year": 2020,
+        "Company": "DaVita HealthCare Partners",
+        "Holdings": 3684200000
+      },
+      {
+        "Year": 2020,
+        "Company": "The Bank of New York Mellon",
+        "Holdings": 3146400000
+      },
+      {
+        "Year": 2020,
+        "Company": "Charter Communications",
+        "Holdings": 3166100000
+      },
+      {"Year": 2020, "Company": "AbbVie", "Holdings": 2681200000},
+      {"Year": 2020, "Company": "Merck & Co", "Holdings": 2132500000},
+      {"Year": 2020, "Company": "Visa", "Holdings": 2044700000},
+      {"Year": 2020, "Company": "General Motors", "Holdings": 3811300000},
+      {"Year": 2020, "Company": "Verisign", "Holdings": 2536900000},
+      {"Year": 2021, "Company": "Apple", "Holdings": 161155000000},
+      {"Year": 2021, "Company": "Bank of America", "Holdings": 45952000000},
+      {"Year": 2021, "Company": "Coca-Cola", "Holdings": 23684000000},
+      {"Year": 2021, "Company": "Others", "Holdings": 39972000000},
+      {"Year": 2021, "Company": "American Express", "Holdings": 24804000000},
+      {"Year": 2021, "Company": "Verizon", "Holdings": 8253000000},
+      {"Year": 2021, "Company": "Moody's", "Holdings": 9636000000},
+      {"Year": 2021, "Company": "Chevron", "Holdings": 4488000000},
+      {"Year": 2021, "Company": "US Bancorp", "Holdings": 8058000000},
+      {
+        "Year": 2021,
+        "Company": "The Bank of New York Mellon",
+        "Holdings": 3882000000
+      },
+      {
+        "Year": 2021,
+        "Company": "Charter Communications",
+        "Holdings": 2496000000
+      },
+      {"Year": 2021, "Company": "General Motors", "Holdings": 3106000000},
+      {"Year": 2021, "Company": "BYD", "Holdings": 7693000000},
+      {"Year": 2021, "Company": "ITOCHU", "Holdings": 2728000000},
+      {"Year": 2021, "Company": "Mitsubishi", "Holdings": 2593000000},
+      {"Year": 2021, "Company": "Mitsui & Co.", "Holdings": 2219000000},
+      {"Year": 2022, "Company": "Apple", "Holdings": 122337000000},
+      {"Year": 2022, "Company": "HP", "Holdings": 3424000000},
+      {"Year": 2022, "Company": "Activision Blizzard", "Holdings": 5326000000},
+      {
+        "Year": 2022,
+        "Company": "Occidental Petroleum",
+        "Holdings": 16344000000
+      },
+      {"Year": 2022, "Company": "Bank of America", "Holdings": 31444000000},
+      {"Year": 2022, "Company": "Coca-Cola", "Holdings": 25164000000},
+      {"Year": 2022, "Company": "Others", "Holdings": 31181000000},
+      {"Year": 2022, "Company": "American Express", "Holdings": 21016000000},
+      {"Year": 2022, "Company": "Kraft Foods", "Holdings": 12419000000},
+      {"Year": 2022, "Company": "Moody's", "Holdings": 6709000000},
+      {"Year": 2022, "Company": "Chevron", "Holdings": 23373000000},
+      {"Year": 2022, "Company": "US Bancorp", "Holdings": 5513000000},
+      {
+        "Year": 2022,
+        "Company": "DaVita HealthCare Partners",
+        "Holdings": 3062000000
+      }
+    ]
+  },
+  "vconcat": [
+    {
+      "title": {
+        "text": ["Warren Buffett's Top 5 Holdings, 2012–2022"],
+        "fontSize": 44,
+        "subtitle": [
+          "Although old-guard favorites such as Coca-Cola and American Express still form the core of the portfolio,",
+          "Buffett's Berkshire Hathaway has taken a shine to names such as Apple and Bank of America. Hover over",
+          "each point for the value of the holdings and the percentage of Berkshire’s total portfolio."
+        ],
+        "subtitleFontSize": 19,
+        "subtitlePadding": 10,
+        "subtitleLineHeight": 25,
+        "dx": -65
+      },
+      "mark": "text"
+    },
+    {
+      "width": 700,
+      "height": 350,
+      "transform": [
+        {
+          "joinaggregate": [{"op": "sum", "field": "Holdings", "as": "Sum"}],
+          "groupby": ["Year"]
+        },
+        {"calculate": "datum.Holdings / datum.Sum", "as": "Percentage"},
+        {"filter": "datum.Company != 'Others' && datum.Year >= 2012"},
+        {
+          "window": [{"op": "rank", "as": "Rank"}],
+          "groupby": ["Year"],
+          "sort": [{"field": "Holdings", "order": "descending"}]
+        },
+        {"filter": "datum.Rank <= 5"},
+        {
+          "calculate": "datum.Company == 'American Express' ?['American','Express']: datum.Company == 'Bank of America' ?['Bank','of America'] : datum.Company",
+          "as": "YLabels"
+        },
+        {
+          "calculate": "replace(format(datum.Holdings, '.3s'), 'G', 'B')",
+          "as": "HoldingsTooltip"
+        }
+      ],
+      "encoding": {
+        "x": {"field": "Year", "type": "ordinal"},
+        "y": {"field": "Rank", "type": "ordinal", "axis": null},
+        "color": {
+          "field": "Company",
+          "scale": {"scheme": "tableau20"},
+          "legend": null
+        },
+        "tooltip": [
+          {"field": "Year"},
+          {"field": "Company"},
+          {"field": "Rank"},
+          {"field": "HoldingsTooltip", "title": "Holdings"},
+          {"field": "Percentage", "format": ".1%"}
+        ]
+      },
+      "layer": [
+        {"mark": {"type": "line"}},
+        {
+          "params": [
+            {
+              "name": "highlight",
+              "select": {"type": "point", "on": "mouseover"}
+            }
+          ],
+          "mark": {"type": "point"},
+          "encoding": {
+            "stroke": {
+              "condition": [
+                {"param": "highlight", "empty": false, "value": "#000000"}
+              ],
+              "value": "#FFFFFF"
+            }
+          }
+        },
+        {
+          "transform": [{"filter": {"field": "Year", "oneOf": [2012, 2022]}}],
+          "mark": {"type": "text", "fontSize": 15},
+          "encoding": {"text": {"field": "Rank"}, "color": {"value": "white"}}
+        },
+        {
+          "transform": [{"filter": {"field": "Year", "oneOf": [2012, 2022]}}],
+          "mark": {
+            "type": "text",
+            "fontSize": 17,
+            "xOffset": {"expr": "datum.Year == 2012 ? -55 : 55"},
+            "baseline": {
+              "expr": "datum.Company == 'American Express' || datum.Company == 'Bank of America' ? 'bottom':'middle'"
+            }
+          },
+          "encoding": {
+            "text": {"field": "YLabels"},
+            "color": {"value": "black"}
+          }
+        },
+        {
+          "transform": [
+            {"filter": {"field": "Year", "oneOf": [2013, 2015, 2020, 2021]}},
+            {"filter": "datum.Rank == 5"}
+          ],
+          "mark": {
+            "type": "text",
+            "fontSize": 17,
+            "yOffset": -20,
+            "xOffset": {
+              "expr": "datum.Year == 2020 ? -15 : datum.Year == 2021 ? 15 : 0 "
+            }
+          },
+          "encoding": {
+            "text": {"field": "Company"},
+            "color": {"value": "black"}
+          }
+        }
+      ]
+    },
+    {
+      "title": {
+        "text": [
+          "Note: Data as of 30 June 2022 | Sources: Berkshire Hathaway Annual, Quarterly Reports, and 13F filings",
+          "Data collected and formatted by Sjoerd Tilmans: sjdataviz.com | Graphic: @shadfrigui"
+        ],
+        "fontSize": 16.5,
+        "fontWeight": "normal",
+        "color": "#707070",
+        "dx": -65
+      },
+      "mark": "text"
+    }
+  ],
+  "spacing": 10,
+  "config": {
+    "background": "#FDFBF9",
+    "view": {"stroke": null},
+    "padding": {"top": 30, "bottom": -10, "left": 30, "right": 30},
+    "font": "Source Sans Pro",
+    "axisX": {
+      "orient": "top",
+      "domain": false,
+      "ticks": false,
+      "grid": true,
+      "gridColor": "#62605F",
+      "gridOpacity": 0.05,
+      "labelAngle": 0,
+      "labelFontSize": 17,
+      "labelPadding": 5,
+      "title": null
+    },
+    "line": {"interpolate": "monotone", "strokeWidth": 8, "strokeOpacity": 0.5},
+    "point": {
+      "size": {"expr": "datum.Year == 2012 || datum.Year == 2022 ? 500: 120"},
+      "filled": true,
+      "opacity": {"expr": "datum.Year == 2012 || datum.Year == 2022 ? 1: 0.8"},
+      "strokeWidth": 1.5
+    },
+    "title": {"anchor": "start"}
+  }
+}
