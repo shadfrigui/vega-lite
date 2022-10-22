@@ -1,0 +1,504 @@
+{
+  "data": {"name": "dataset"},
+  "params": [
+    {
+      "name": "highlight",
+      "select": {
+        "type": "point",
+        "on": "mouseover",
+        "clear": "mouseout"
+      },
+      "views": [
+        "concat_0_layer_0",
+        "concat_1_layer_0"
+      ]
+    }
+  ],
+  "vconcat": [
+    {
+      "width": 550,
+      "title": {
+        "text": "FDA Inspections, Fiscal Year 2022",
+        "fontSize": 30,
+        "dx": -80
+      },
+      "mark": "text"
+    },
+    {
+      "width": 550,
+      "title": {
+        "text": "Inspections by classification",
+        "fontSize": 20,
+        "dx": -80,
+        "offset": 20
+      },
+      "transform": [
+        {
+          "joinaggregate": [
+            {
+              "op": "sum",
+              "field": "Inspections",
+              "as": "TotalInspections"
+            }
+          ]
+        },
+        {
+          "joinaggregate": [
+            {
+              "op": "sum",
+              "field": "Inspections",
+              "as": "InspectionsByClass"
+            }
+          ],
+          "groupby": ["Classification"]
+        },
+        {
+          "calculate": "datum.InspectionsByClass / datum.TotalInspections",
+          "as": "PercentageByClass"
+        },
+        {
+          "stack": "PercentageByClass",
+          "as": ["x1", "x2"],
+          "groupby": ["ProductType"],
+          "sort": [
+            {
+              "field": "PercentageByClass",
+              "order": "descending"
+            }
+          ]
+        },
+        {
+          "calculate": "(datum.x1 + datum.x2) / 2",
+          "as": "xc"
+        }
+      ],
+      "layer": [
+        {
+          "name": "concat_0_layer_0",
+          "mark": {
+            "type": "bar",
+            "height": 40
+          },
+          "encoding": {
+            "x": {
+              "field": "Inspections",
+              "aggregate": "sum",
+              "stack": "normalize",
+              "axis": null
+            },
+            "order": {
+              "field": "PercentageByClass",
+              "sort": "descending"
+            },
+            "stroke": {
+              "condition": {
+                "value": "black",
+                "param": "highlight",
+                "empty": false
+              },
+              "value": null
+            },
+            "color": {
+              "field": "Classification",
+              "scale": {
+                "domain": [
+                  "No Action Indicated",
+                  "Voluntary Action Indicated",
+                  "Official Action Indicated"
+                ],
+                "range": [
+                  "#3B5B90",
+                  "#9BD0E3",
+                  "indianred"
+                ]
+              },
+              "legend": {
+                "orient": "none",
+                "symbolSize": 250,
+                "clipHeight": 7,
+                "labelExpr": "datum.value == 'No Action Indicated' ? datum.value  + '¹' : datum.value == 'Voluntary Action Indicated' ? datum.value  + '²' : datum.value + '³'",
+                "labelFontSize": 17,
+                "labelLimit": 200,
+                "titleFontSize": 17,
+                "titlePadding": 10,
+                "legendX": {
+                  "expr": "width - 120"
+                },
+                "legendY": -10
+              }
+            },
+            "tooltip": [
+              {
+                "field": "Classification"
+              },
+              {
+                "field": "InspectionsByClass",
+                "title": "Inspections"
+              },
+              {
+                "field": "PercentageByClass",
+                "title": "Percentage",
+                "format": ".1%"
+              }
+            ]
+          }
+        },
+        {
+          "description": "The filter transform was added to avoid having the text mark rendered 5 times (for each product type), which makes the text bold. I used the same hack for some layers below.",
+          "transform": [
+            {
+              "filter": "datum.ProductType == 'Drugs'"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "fontSize": 17,
+            "color": {
+              "expr": "datum.ClassAbb == 'NAI' ? 'white' : 'black'"
+            },
+            "align": {
+              "expr": "datum.ClassAbb == 'OAI' ? 'left' : 'center'"
+            },
+            "xOffset": {
+              "expr": "datum.ClassAbb == 'OAI' ? 10 : 0"
+            }
+          },
+          "encoding": {
+            "x": {
+              "field": "xc",
+              "type": "quantitative"
+            },
+            "text": {
+              "field": "PercentageByClass",
+              "format": ".0%"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "width": 550,
+      "height": 550,
+      "title": {
+        "text": "Inspections by product type and classification",
+        "fontSize": 20,
+        "offset": 30
+      },
+      "transform": [
+        {
+          "joinaggregate": [
+            {
+              "op": "sum",
+              "field": "Inspections",
+              "as": "InspectionsByProduct"
+            }
+          ],
+          "groupby": ["ProductType"]
+        },
+        {
+          "joinaggregate": [
+            {
+              "op": "sum",
+              "field": "Inspections",
+              "as": "InspectionsByProductClass"
+            }
+          ],
+          "groupby": [
+            "ProductType",
+            "Classification"
+          ]
+        },
+        {
+          "calculate": "datum.InspectionsByProductClass / datum.InspectionsByProduct",
+          "as": "ClassPercentage"
+        },
+        {
+          "stack": "InspectionsByProduct",
+          "as": ["y1", "y2"],
+          "groupby": ["Classification"],
+          "sort": [
+            {
+              "field": "InspectionsByProduct"
+            }
+          ]
+        },
+        {
+          "calculate": "(datum.y1 + datum.y2) / 2",
+          "as": "yc"
+        },
+        {
+          "calculate": "datum.ProductType == 'Food/Cosmetics' ? ['Food/', 'Cosmetics'] : datum.ProductType",
+          "as": "YLabels"
+        },
+        {
+          "calculate": "indexof(['No Action Indicated','Voluntary Action Indicated','Official Action Indicated'], datum.Classification)",
+          "as": "SortClass"
+        }
+      ],
+      "layer": [
+        {
+          "name": "concat_1_layer_0",
+          "mark": {
+            "type": "bar",
+            "yOffset": -1
+          },
+          "encoding": {
+            "x": {
+              "field": "Inspections",
+              "type": "quantitative",
+              "stack": "normalize",
+              "axis": {
+                "orient": "top",
+                "offset": -7,
+                "tickCount": 6,
+                "tickSize": 5,
+                "tickColor": {
+                  "expr": "datum.value == 1 || datum.value == 0? '' :'black'"
+                }
+              }
+            },
+            "y": {
+              "field": "y1",
+              "type": "quantitative",
+              "scale": {
+                "domainMin": 0,
+                "domainMax": 13000
+              },
+              "axis": null
+            },
+            "y2": {"field": "y2"},
+            "order": {
+              "field": "SortClass"
+            },
+            "stroke": {
+              "condition": {
+                "value": "black",
+                "param": "highlight",
+                "empty": false
+              },
+              "value": null
+            },
+            "color": {
+              "field": "Classification"
+            },
+            "tooltip": [
+              {
+                "field": "ProductType",
+                "title": "Product Type"
+              },
+              {
+                "field": "Classification"
+              },
+              {
+                "field": "InspectionsByProductClass",
+                "title": "Inspections"
+              },
+              {
+                "field": "ClassPercentage",
+                "title": "Percentage",
+                "format": ".1%"
+              }
+            ]
+          }
+        },
+        {
+          "description": "This layer was added to have another axis at the bottom",
+          "mark": {
+            "type": "bar",
+            "color": ""
+          },
+          "encoding": {
+            "x": {
+              "field": "Inspections",
+              "type": "quantitative",
+              "stack": "normalize",
+              "axis": {
+                "orient": "bottom",
+                "offset": -1,
+                "values": [
+                  0.2,
+                  0.4,
+                  0.6,
+                  0.8
+                ],
+                "tickSize": 4,
+                "tickColor": "black"
+              }
+            }
+          }
+        },
+        {
+          "transform": [
+            {
+              "filter": "datum.ClassAbb == 'NAI'"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "fontSize": 17,
+            "align": "right",
+            "x": -5
+          },
+          "encoding": {
+            "y": {
+              "field": "yc",
+              "type": "quantitative"
+            },
+            "text": {"field": "YLabels"}
+          }
+        },
+        {
+          "transform": [
+            {
+              "filter": "datum.ClassAbb == 'NAI'"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "fontSize": 17,
+            "x": {"expr": "width + 35"}
+          },
+          "encoding": {
+            "y": {
+              "field": "yc",
+              "type": "quantitative"
+            },
+            "text": {
+              "field": "InspectionsByProduct"
+            }
+          }
+        },
+        {
+          "transform": [
+            {
+              "filter": "datum.ProductType == 'Food/Cosmetics' && datum.ClassAbb == 'NAI'"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "text": "inspections",
+            "fontSize": 16,
+            "align": "left",
+            "x": {"expr": "width + 20"},
+            "yOffset": 20
+          },
+          "encoding": {
+            "y": {
+              "field": "yc",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "transform": [
+            {
+              "filter": "datum.ProductType == 'Food/Cosmetics' && datum.ClassAbb == 'NAI'"
+            }
+          ],
+          "mark": {
+            "type": "rule",
+            "size": 1,
+            "x": {"expr": "width + 10"},
+            "yOffset": -1
+          },
+          "encoding": {
+            "y": {
+              "field": "y1",
+              "type": "quantitative"
+            },
+            "y2": {"field": "y2"}
+          }
+        },
+        {
+          "description": "This layer was added for the bottom arrow-head. I prefer adding the custom SVG path below instead of adding the triangle-down shape.",
+          "transform": [
+            {
+              "filter": "datum.ProductType == 'Food/Cosmetics' && datum.ClassAbb == 'NAI'"
+            }
+          ],
+          "mark": {
+            "type": "point",
+            "shape": "M -1 0 L 0 1 M 1 0 L 0 1",
+            "size": 100,
+            "x": {"expr": "width + 10"},
+            "yOffset": -6
+          },
+          "encoding": {
+            "y": {
+              "field": "y1",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "transform": [
+            {
+              "filter": "datum.ProductType == 'Food/Cosmetics' && datum.ClassAbb == 'NAI'"
+            }
+          ],
+          "mark": {
+            "type": "point",
+            "shape": "M -1 0 L 0 -1 M 1 0 L 0 -1",
+            "size": 100,
+            "x": {"expr": "width + 10"},
+            "yOffset": 5
+          },
+          "encoding": {
+            "y": {
+              "field": "y2",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "data": {"values": [{}]},
+          "mark": {
+            "type": "text",
+            "text": [
+              "¹No objectionable conditions or practices were found during the inspection or the objectionable",
+              "conditions found do not justify further regulatory action.",
+              "²Objectionable conditions or practices were found but the agency is not prepared to take or",
+              "recommend any administrative or regulatory action.",
+              "³Regulatory and/or administrative actions will be recommended.",
+              "Note: Fiscal Year 2022 is October 1, 2021 through September 30, 2022.",
+              "Source: Food and Drug Administration (FDA) | Visualization: @shadfrigui"
+            ],
+            "fontSize": 16,
+            "align": "left",
+            "color": "#707070",
+            "x": -80,
+            "y": {"expr": "height + 50"}
+          }
+        }
+      ]
+    }
+  ],
+  "config": {
+    "background": "white",
+    "view": {"stroke": null},
+    "padding": {
+      "top": 30,
+      "bottom": 20,
+      "left": 30,
+      "right": 30
+    },
+    "font": "Source Sans Pro",
+    "axis": {
+      "domain": false,
+      "tickCap": "square",
+      "labelFontSize": 16,
+      "labelPadding": 5,
+      "labelFlush": false,
+      "format": ".0%",
+      "title": null
+    },
+    "bar": {"strokeWidth": 1.5},
+    "point": {
+      "stroke": "black",
+      "strokeWidth": 1,
+      "opacity": 1
+    },
+    "title": {"anchor": "start"},
+    "concat": {"spacing": 30}
+  }
+}

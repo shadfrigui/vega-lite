@@ -1,0 +1,19 @@
+ProductType,Classification,ClassAbb,Inspections
+Biologics,Voluntary Action Indicated,VAI,177
+Biologics,Official Action Indicated,OAI,5
+Biologics,No Action Indicated,NAI,2058
+Devices,Voluntary Action Indicated,VAI,516
+Devices,Official Action Indicated,OAI,14
+Devices,No Action Indicated,NAI,941
+Drugs,Voluntary Action Indicated,VAI,344
+Drugs,Official Action Indicated,OAI,74
+Drugs,No Action Indicated,NAI,405
+Food/Cosmetics,Voluntary Action Indicated,VAI,2092
+Food/Cosmetics,Official Action Indicated,OAI,131
+Food/Cosmetics,No Action Indicated,NAI,5220
+Tobacco,Voluntary Action Indicated,VAI,13
+Tobacco,Official Action Indicated,OAI,6
+Tobacco,No Action Indicated,NAI,78
+Veterinary,Voluntary Action Indicated,VAI,160
+Veterinary,Official Action Indicated,OAI,24
+Veterinary,No Action Indicated,NAI,551
