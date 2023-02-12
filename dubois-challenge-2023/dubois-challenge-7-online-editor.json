@@ -1,0 +1,146 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/ajstarks/dubois-data-portraits/master/challenge/2023/challenge07/data.csv"
+  },
+  "width": 500,
+  "height": 650,
+  "title": "OCCUPATIONS OF NEGROES AND WHITES IN GEORGIA .",
+  "params": [
+    {"name": "deg_to_rad", "expr": "PI / 180"},
+    {"name": "r", "value": 300}
+  ],
+  "transform": [
+    {
+      "calculate": "indexof(['Agriculture, Fisheries and Mining', 'Domestic and Personal Service', 'Manufacturing and Mechanical Industries', 'Trade and Transportation', 'Professions'], datum.Occupation)",
+      "as": "occupation_id"
+    },
+    {"calculate": "datum.Percentage * 110 / 100 * deg_to_rad", "as": "rad"},
+    {
+      "calculate": "if(datum.Group == 'Negroes', - 55 * deg_to_rad, 125 * deg_to_rad)",
+      "as": "offset"
+    },
+    {
+      "window": [{"op": "sum", "field": "rad", "as": "end"}],
+      "groupby": ["Group"],
+      "sort": [{"field": "occupation_id"}]
+    },
+    {"calculate": "datum.end + datum.offset", "as": "end"},
+    {
+      "window": [{"op": "lag", "field": "end", "as": "start"}],
+      "groupby": ["Group"],
+      "sort": [{"field": "occupation_id"}]
+    },
+    {
+      "calculate": "if(datum.start == null, datum.offset, datum.start)",
+      "as": "start"
+    },
+    {"calculate": "(datum.start + datum.end) / 2", "as": "mid"}
+  ],
+  "layer": [
+    {
+      "mark": {"type": "arc", "radius": {"expr": "r"}},
+      "encoding": {
+        "theta": {"field": "start", "type": "quantitative", "scale": null},
+        "theta2": {"field": "end"},
+        "color": {
+          "field": "Occupation",
+          "sort": {"field": "occupation_id"},
+          "scale": {
+            "range": ["#E2324A", "#FEC910", "#5C6EA2", "#D3C4B2", "#BA9578"]
+          },
+          "legend": {
+            "labelExpr": "datum.value == 'Agriculture, Fisheries and Mining' ? split(upper(replace(datum.value, 'and', '/and')),'/') : split(upper(replace(datum.value, 'and', 'and/')),'/')"
+          }
+        }
+      }
+    },
+    {
+      "description": "Background/halo for the percentage labels",
+      "mark": {
+        "type": "text",
+        "theta": {
+          "expr": "datum.Group == 'Negroes' && datum.occupation_id == 4 ? datum.mid + 0.04 : datum.mid"
+        },
+        "radius": {"expr": "r * 0.88"},
+        "text": {"expr": "datum.Percentage + '%'"},
+        "size": 14,
+        "strokeWidth": 3
+      },
+      "encoding": {
+        "stroke": {
+          "field": "Occupation",
+          "sort": {"field": "occupation_id"},
+          "scale": {
+            "range": ["#FF9FA6", "#FFE4B3", "#A3B3E8", "#EFE0CE", "#EDE1D1"]
+          }
+        }
+      }
+    },
+    {
+      "description": "Percentage labels",
+      "mark": {
+        "type": "text",
+        "theta": {
+          "expr": "datum.Group == 'Negroes' && datum.occupation_id == 4 ? datum.mid + 0.04 : datum.mid"
+        },
+        "radius": {"expr": "r * 0.88"},
+        "text": {"expr": "datum.Percentage + '%'"},
+        "size": 14
+      }
+    },
+    {
+      "description": "Group labels",
+      "transform": [{"filter": "datum.occupation_id == 0"}],
+      "mark": {
+        "type": "text",
+        "theta": {"expr": "datum.Group == 'Negroes'? 0 : PI"},
+        "radius": {"expr": "r * 1.035"},
+        "text": {"expr": "upper(datum.Group) + '.'"},
+        "size": 19
+      }
+    },
+    {
+      "description": "Caption",
+      "data": {"values": [{}]},
+      "mark": {
+        "type": "text",
+        "text": "#DuboisChallenge2023 | Graphic: Shad Frigui",
+        "font": "Source Sans Pro",
+        "fontSize": 14,
+        "x": {"expr": "width / 2"},
+        "y": {"expr": "height + 40"}
+      }
+    }
+  ],
+  "config": {
+    "background": "#EDE1D1",
+    "padding": {"top": 20, "bottom": 10, "left": 50, "right": 50},
+    "font": "Jefferies",
+    "arc": {"stroke": "black", "strokeWidth": 0.2},
+    "legend": {
+      "orient": "none",
+      "legendX": -15,
+      "legendY": 250,
+      "columns": 2,
+      "symbolSize": 850,
+      "labelFontSize": 12.5,
+      "labelAlign": "center",
+      "labelBaseline": {
+        "expr": "if(datum.value == 'Professions', 'middle','bottom')"
+      },
+      "labelOffset": {
+        "expr": "if(datum.value == 'Professions' || datum.value == 'Trade and Transportation', -80, 65)"
+      },
+      "rowPadding": 30,
+      "columnPadding": 250,
+      "title": null
+    },
+    "title": {
+      "anchor": "middle",
+      "fontSize": 25,
+      "fontWeight": "normal",
+      "offset": 35
+    }
+  }
+}
